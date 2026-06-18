@@ -30,15 +30,11 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-12">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-gold font-semibold mb-8">
-          <span className="w-2 h-2 bg-gold rounded-full" />
-          11th Edition · 2026
-        </div>
 
         {/* Logo (dark-background variant) */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-4">
           <img
             src="/logos/ICT-AWARD-Logo-Dark-Bg.png"
             alt="ICT Award"
@@ -47,6 +43,11 @@ export default function HeroSection() {
               (e.target as HTMLImageElement).src = '/logos/ICT-AWARD-Logo.png'
             }}
           />
+        </div>
+
+        <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-full px-4 py-1.5 text-sm text-gold font-semibold mb-8">
+          <span className="w-2 h-2 bg-gold rounded-full" />
+          11th Edition · 2026
         </div>
 
         {/* Spectrum accent line */}
@@ -69,7 +70,7 @@ export default function HeroSection() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link
             to="/apply"
-            className="bg-gold text-ink font-black px-8 py-4 rounded-full text-lg hover:bg-gold-light transition-all shadow-gold hover:scale-105 active:scale-95"
+            className="bg-gold text-ink font-black px-8 py-4 rounded-full text-lg hover:bg-gold-light transition-all hover:scale-105 active:scale-100"
           >
             Apply Now
           </Link>
