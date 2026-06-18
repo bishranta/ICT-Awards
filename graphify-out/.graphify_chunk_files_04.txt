@@ -1,0 +1,21 @@
+/home/dhiraj/work/ICT-awards/.agents/skills/image-to-code/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/imagegen-frontend-mobile/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/imagegen-frontend-web/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/industrial-brutalist-ui/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/minimalist-ui/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/redesign-existing-projects/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/stitch-design-taste/DESIGN.md
+/home/dhiraj/work/ICT-awards/.agents/skills/stitch-design-taste/SKILL.md
+/home/dhiraj/work/ICT-awards/.agents/skills/ui-ux-pro-max/SKILL.md
+/home/dhiraj/work/ICT-awards/CLAUDE.md
+/home/dhiraj/work/ICT-awards/graphify-out/converted/ICT AWARD Design Guidelines_4b29a72d.md
+/home/dhiraj/work/ICT-awards/graphify-out/converted/ICT Award Website Content_2a8cd05d.md
+/home/dhiraj/work/ICT-awards/index.html
+/home/dhiraj/work/ICT-awards/Logos/ICT-AWARD-2026-Logo-Dark-Bg.png
+/home/dhiraj/work/ICT-awards/Logos/ICT-AWARD-2026-Logo.png
+/home/dhiraj/work/ICT-awards/Logos/ICT-AWARD-Logo-Dark-Bg.png
+/home/dhiraj/work/ICT-awards/Logos/ICT-AWARD-Logo.png
+/home/dhiraj/work/ICT-awards/public/logos/ICT-AWARD-2026-Logo-Dark-Bg.png
+/home/dhiraj/work/ICT-awards/public/logos/ICT-AWARD-2026-Logo.png
+/home/dhiraj/work/ICT-awards/public/logos/ICT-AWARD-Logo-Dark-Bg.png
+/home/dhiraj/work/ICT-awards/public/logos/ICT-AWARD-Logo.png

@@ -1,0 +1,178 @@
+import { useState, useEffect } from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { CaretDown, List, X } from '@phosphor-icons/react'
+import clsx from 'clsx'
+
+const NAV_ITEMS = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    label: 'About',
+    to: '/about',
+    children: [
+      { label: 'Introduction', to: '/about#introduction' },
+      { label: 'Selection Procedure', to: '/about#selection' },
+      { label: 'ICT Award History', to: '/about#history' },
+      { label: 'Team & Jury', to: '/about#team' },
+      { label: 'FAQs', to: '/about#faq' },
+    ],
+  },
+  { label: 'Categories', to: '/categories' },
+  { label: 'Pre-Activities', to: '/pre-activities' },
+  { label: 'Winners', to: '/winners' },
+  {
+    label: 'Media',
+    to: '/media',
+    children: [
+      { label: 'TV Shows', to: '/media?tab=tv-shows' },
+      { label: 'Grand Finale', to: '/media?tab=grand-finale' },
+    ],
+  },
+]
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <header
+      className={clsx(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100' : 'bg-white/95 backdrop-blur-sm'
+      )}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0">
+            <img
+              src="/logos/ICT-AWARD-Logo.png"
+              alt="ICT Award"
+              className="h-10 lg:h-12 w-auto"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/logos/ICT-AWARD-Logo-Dark-Bg.png'
+              }}
+            />
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setActiveDropdown(item.label)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    clsx(
+                      'px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-150 flex items-center gap-1',
+                      isActive ? 'text-gold' : 'text-ink/70 hover:text-gold'
+                    )
+                  }
+                >
+                  {item.label}
+                  {item.children && (
+                    <CaretDown size={12} className="opacity-60" />
+                  )}
+                </NavLink>
+
+                {item.children && activeDropdown === item.label && (
+                  <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-gray-100 rounded-xl shadow-md py-2 z-50">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.to}
+                        className="block px-4 py-2.5 text-sm text-ink/70 hover:text-gold hover:bg-gold/5 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Apply Now CTA */}
+          <div className="hidden lg:block">
+            <Link
+              to="/apply"
+              className="bg-gold text-ink font-bold px-5 py-2.5 rounded-full text-sm hover:bg-gold-light transition-colors shadow-gold-sm"
+            >
+              Apply Now
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="lg:hidden p-2 text-ink"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={22} /> : <List size={22} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100">
+          <div className="px-4 py-4 space-y-1">
+            {NAV_ITEMS.map((item) => (
+              <div key={item.label}>
+                <NavLink
+                  to={item.to}
+                  className={({ isActive }) =>
+                    clsx(
+                      'block px-4 py-3 rounded-lg font-semibold',
+                      isActive ? 'text-gold bg-gold/10' : 'text-ink/70 hover:text-gold hover:bg-gold/5'
+                    )
+                  }
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
+                {item.children && (
+                  <div className="ml-4 mt-1 space-y-1">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.to}
+                        className="block px-4 py-2 text-sm text-ink/60 hover:text-gold hover:bg-gold/5 rounded-lg"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="pt-2">
+              <Link
+                to="/apply"
+                className="block text-center bg-gold text-ink font-bold px-5 py-3 rounded-full hover:bg-gold-light transition-colors"
+                onClick={() => setMobileOpen(false)}
+              >
+                Apply Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}

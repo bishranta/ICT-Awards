@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-white text-ink;
+    scrollbar-width: thin;
+    scrollbar-color: #F7B313 #F1F3F5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gold-border-card {
+    @apply border-l-4 border-gold bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300;
+  }
+}
+
+/* Lite YouTube embed override */
+lite-youtube {
+  @apply rounded-xl overflow-hidden;
+}
+
+/* Signature gradient text — for large/bold display headings only */
+.text-gradient-spectrum {
+  background-image: linear-gradient(90deg, #4C2D75 0%, #822B5E 42%, #BD203A 74%, #DC0E1D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
