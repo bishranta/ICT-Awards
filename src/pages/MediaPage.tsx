@@ -20,20 +20,20 @@ export default function MediaPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-white section-padding text-center">
+      <section className="bg-surface section-padding text-center">
         <div className="container-max">
           <div className="w-12 h-1 bg-gold rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-black text-ink">
-            Media & <span className="text-gold">Videos</span>
+            Media & <span className="text-spectrum-a">Videos</span>
           </h1>
-          <p className="mt-4 text-ink/60 max-w-xl mx-auto">
+          <p className="mt-4 text-ink/80 max-w-xl mx-auto">
             Watch ICT Award TV shows, grand finale broadcasts, and recap videos from past editions.
           </p>
         </div>
       </section>
 
       {/* Tab Nav */}
-      <div className="bg-surface-muted border-b border-gray-100 sticky top-16 lg:top-20 z-30">
+      <div className="bg-surface-muted border-b border-border-subtle sticky top-16 lg:top-20 z-30">
         <div className="container-max px-4 sm:px-6 lg:px-8">
           <div className="flex gap-1 py-3">
             {(['tv-shows', 'grand-finale'] as Tab[]).map((tab) => (
@@ -42,7 +42,7 @@ export default function MediaPage() {
                 onClick={() => setTab(tab)}
                 className={clsx(
                   'flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold transition-all',
-                  activeTab === tab ? 'bg-gold text-ink' : 'text-ink/60 hover:text-gold hover:bg-gold/10'
+                  activeTab === tab ? 'bg-gold text-ink' : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
                 )}
               >
                 {tab === 'tv-shows'
@@ -71,7 +71,7 @@ export default function MediaPage() {
                     onClick={() => setTvYear(y)}
                     className={clsx(
                       'px-4 py-2 rounded-full text-sm font-bold transition-all',
-                      tvYear === y ? 'bg-gold text-ink' : 'border border-gold/30 text-gold hover:bg-gold/10'
+                      tvYear === y ? 'bg-gold text-ink' : 'border border-gold/30 text-ink hover:bg-gold/10'
                     )}
                   >
                     {y}
@@ -81,19 +81,19 @@ export default function MediaPage() {
             </div>
 
             {episodes.length > 0 && (
-              <p className="text-ink/40 text-sm mb-6">
+              <p className="text-ink/70 text-sm mb-6">
                 Season {tvYear} · Broadcasted on {episodes[0].channel}
               </p>
             )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {episodes.map((ep) => (
-                <div key={ep.id} className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-gold/20 transition-colors">
+                <div key={ep.id} className="bg-surface rounded-xl overflow-hidden border border-border-subtle hover:border-gold/20 transition-colors">
                   <YoutubeEmbed videoId={ep.youtubeId} title={`ICT Award ${ep.year} Episode ${ep.episodeNumber}`} />
                   <div className="p-4">
-                    <div className="text-gold text-xs font-bold uppercase tracking-wider mb-1">Episode {ep.episodeNumber}</div>
+                    <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1">Episode {ep.episodeNumber}</div>
                     <div className="text-ink font-semibold">ICT Award {ep.year} — Episode {ep.episodeNumber}</div>
-                    <div className="text-ink/40 text-xs mt-1">{ep.channel}</div>
+                    <div className="text-ink/70 text-xs mt-1">{ep.channel}</div>
                   </div>
                 </div>
               ))}
@@ -113,10 +113,10 @@ export default function MediaPage() {
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {GRAND_FINALES.map((finale) => (
-                <div key={finale.year} className="bg-white rounded-xl overflow-hidden border border-gray-100 hover:border-gold/20 transition-colors">
+                <div key={finale.year} className="bg-surface rounded-xl overflow-hidden border border-border-subtle hover:border-gold/20 transition-colors">
                   <YoutubeEmbed videoId={finale.youtubeId} title={`ICT Award ${finale.year} Grand Finale`} />
                   <div className="p-4">
-                    <div className="text-gold text-xs font-bold uppercase tracking-wider mb-1">Grand Finale</div>
+                    <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1">Grand Finale</div>
                     <div className="text-ink font-semibold">ICT Award {finale.year}</div>
                   </div>
                 </div>

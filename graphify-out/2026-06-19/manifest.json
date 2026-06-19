@@ -1,0 +1,592 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1781349913.0902944,
+    "ast_hash": "cd5822489af5b27b2a6a3b3bd2141d5b",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1781246576.1859884,
+    "ast_hash": "c6e4ee5f4f5f0d40102e59fc1159d879",
+    "semantic_hash": "c6e4ee5f4f5f0d40102e59fc1159d879"
+  },
+  "postcss.config.js": {
+    "mtime": 1781244738.166902,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
+  },
+  "src/App.tsx": {
+    "mtime": 1781245402.1831603,
+    "ast_hash": "47a1bf08e1389dbabb1083cff9e43f6e",
+    "semantic_hash": "47a1bf08e1389dbabb1083cff9e43f6e"
+  },
+  "src/components/home/AboutBlurb.tsx": {
+    "mtime": 1781348511.33163,
+    "ast_hash": "1ffcec00a8bbfbbf855f3d0d7623b171",
+    "semantic_hash": ""
+  },
+  "src/components/home/CategoriesPreview.tsx": {
+    "mtime": 1781350035.101004,
+    "ast_hash": "b7c830bac698f4101cfdf8c51c1dded5",
+    "semantic_hash": ""
+  },
+  "src/components/home/HeroSection.tsx": {
+    "mtime": 1781349469.0007765,
+    "ast_hash": "4f39c87b87c10888e7814f4e6b2f6758",
+    "semantic_hash": ""
+  },
+  "src/components/home/PreEventsSection.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "f9d3b38970702398e145e9e89fb20908",
+    "semantic_hash": ""
+  },
+  "src/components/home/RecentWinnersSection.tsx": {
+    "mtime": 1781348511.33163,
+    "ast_hash": "607367ee2334c3e5bca809a96a9a7aa3",
+    "semantic_hash": ""
+  },
+  "src/components/home/StatsSection.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "d5c30bc13214e6b5e91757e72991c30b",
+    "semantic_hash": ""
+  },
+  "src/components/home/TimelineSection.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "0b225584dc0f0c1146ea4dc406c00923",
+    "semantic_hash": ""
+  },
+  "src/components/layout/Footer.tsx": {
+    "mtime": 1781349467.9606965,
+    "ast_hash": "47fa03de7b8f8e699155d2eac61e5d97",
+    "semantic_hash": ""
+  },
+  "src/components/layout/Navbar.tsx": {
+    "mtime": 1781348920.7946324,
+    "ast_hash": "6e5803cde27cfe7630c83a62ce34c7bb",
+    "semantic_hash": ""
+  },
+  "src/components/layout/PageWrapper.tsx": {
+    "mtime": 1781245148.349656,
+    "ast_hash": "6a039a28cdb41a7cf5ba960d6b9fe7ee",
+    "semantic_hash": "6a039a28cdb41a7cf5ba960d6b9fe7ee"
+  },
+  "src/components/ui/Button.tsx": {
+    "mtime": 1781348511.3396308,
+    "ast_hash": "ec79ea40a8d1ccce3625c5a754b516a6",
+    "semantic_hash": ""
+  },
+  "src/components/ui/CounterStat.tsx": {
+    "mtime": 1781348511.33163,
+    "ast_hash": "2b854d48c79742db3e0dff99f4fa7eff",
+    "semantic_hash": ""
+  },
+  "src/components/ui/GoldDivider.tsx": {
+    "mtime": 1781348842.8646462,
+    "ast_hash": "0cf34f396f7a2b960fc4bf52aa6a5fdc",
+    "semantic_hash": ""
+  },
+  "src/components/ui/SectionHeading.tsx": {
+    "mtime": 1781348890.3122895,
+    "ast_hash": "9bf68a0748dede77a63db8287566f598",
+    "semantic_hash": ""
+  },
+  "src/components/ui/YoutubeEmbed.tsx": {
+    "mtime": 1781245087.170403,
+    "ast_hash": "66758e05b0686671ed1c0da15b46275d",
+    "semantic_hash": "66758e05b0686671ed1c0da15b46275d"
+  },
+  "src/data/categories.ts": {
+    "mtime": 1781348667.9992015,
+    "ast_hash": "a3021a54f2231b69d8a8a5a751bb472e",
+    "semantic_hash": ""
+  },
+  "src/data/faqs.ts": {
+    "mtime": 1781244989.26519,
+    "ast_hash": "db25c7e0778b651fae24fb953d2ae649",
+    "semantic_hash": "db25c7e0778b651fae24fb953d2ae649"
+  },
+  "src/data/history.ts": {
+    "mtime": 1781244971.7242572,
+    "ast_hash": "9cd7342ea6803e9b1922eae0fb34c2ae",
+    "semantic_hash": "9cd7342ea6803e9b1922eae0fb34c2ae"
+  },
+  "src/data/media.ts": {
+    "mtime": 1781245015.090567,
+    "ast_hash": "795347bd504be9060584566ed14e90f3",
+    "semantic_hash": "795347bd504be9060584566ed14e90f3"
+  },
+  "src/data/preActivities.ts": {
+    "mtime": 1781246837.835965,
+    "ast_hash": "8428074942a8d18c4d997f5b175739ba",
+    "semantic_hash": "8428074942a8d18c4d997f5b175739ba"
+  },
+  "src/data/stats.ts": {
+    "mtime": 1781246639.8244147,
+    "ast_hash": "dfaf20821635188d324c3abdd25a9f37",
+    "semantic_hash": "dfaf20821635188d324c3abdd25a9f37"
+  },
+  "src/data/timeline.ts": {
+    "mtime": 1781244837.8171227,
+    "ast_hash": "f5f0a0d4dd43fb0401b47a4e34caf6ba",
+    "semantic_hash": "f5f0a0d4dd43fb0401b47a4e34caf6ba"
+  },
+  "src/data/winners.ts": {
+    "mtime": 1781244958.8315697,
+    "ast_hash": "cf7ae4ed2d7e5465bc48691d59ee0d09",
+    "semantic_hash": "cf7ae4ed2d7e5465bc48691d59ee0d09"
+  },
+  "src/hooks/useCountdown.ts": {
+    "mtime": 1781245038.4318082,
+    "ast_hash": "941a97798c7b7a427cbfa7f5058cfa20",
+    "semantic_hash": "941a97798c7b7a427cbfa7f5058cfa20"
+  },
+  "src/lib/renderIcon.tsx": {
+    "mtime": 1781247139.780097,
+    "ast_hash": "5fd996013d8a915b93f8411ab97d8606",
+    "semantic_hash": "5fd996013d8a915b93f8411ab97d8606"
+  },
+  "src/main.tsx": {
+    "mtime": 1781245405.6673458,
+    "ast_hash": "ffa4d40f674607de66ed490654b447d3",
+    "semantic_hash": "ffa4d40f674607de66ed490654b447d3"
+  },
+  "src/pages/AboutPage.tsx": {
+    "mtime": 1781348511.3396308,
+    "ast_hash": "c6014b170d7b16b694e3789105964bb1",
+    "semantic_hash": ""
+  },
+  "src/pages/ApplyNowPage.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "91b252f7605c5751ba877d9ec405568c",
+    "semantic_hash": ""
+  },
+  "src/pages/CategoriesPage.tsx": {
+    "mtime": 1781350036.6010864,
+    "ast_hash": "1add2114b5089234d250ec5b933290b8",
+    "semantic_hash": ""
+  },
+  "src/pages/HomePage.tsx": {
+    "mtime": 1781245248.4629803,
+    "ast_hash": "78654a6cfe36b7dfe72e81497bdba001",
+    "semantic_hash": "78654a6cfe36b7dfe72e81497bdba001"
+  },
+  "src/pages/MediaPage.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "ea872e315a70fe8bf83386f2a6c282d0",
+    "semantic_hash": ""
+  },
+  "src/pages/PreActivitiesPage.tsx": {
+    "mtime": 1781348511.3356304,
+    "ast_hash": "3997c3db2da54714072456cc48567cc1",
+    "semantic_hash": ""
+  },
+  "src/pages/WinnersPage.tsx": {
+    "mtime": 1781348511.33163,
+    "ast_hash": "ca8a0750d90836412a336ad406c96be2",
+    "semantic_hash": ""
+  },
+  "src/types/index.ts": {
+    "mtime": 1781244825.8726072,
+    "ast_hash": "f1919c9af3cb76ce7cfdfc27b6febb40",
+    "semantic_hash": "f1919c9af3cb76ce7cfdfc27b6febb40"
+  },
+  "tailwind.config.ts": {
+    "mtime": 1781350033.664925,
+    "ast_hash": "aa0eab87fdac9a4d7f26f20ab279972b",
+    "semantic_hash": ""
+  },
+  "tsconfig.app.json": {
+    "mtime": 1781244714.47714,
+    "ast_hash": "eba4987b2fb8a7c8a8c26f4ea5be1560",
+    "semantic_hash": "eba4987b2fb8a7c8a8c26f4ea5be1560"
+  },
+  "tsconfig.json": {
+    "mtime": 1781244707.9566548,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "tsconfig.node.json": {
+    "mtime": 1781245452.965864,
+    "ast_hash": "9cfaeaa5a9945bba3742438f39813a8b",
+    "semantic_hash": "9cfaeaa5a9945bba3742438f39813a8b"
+  },
+  "vite.config.ts": {
+    "mtime": 1781245436.020962,
+    "ast_hash": "bdfa91b2c42f824650852b7b4a8a9496",
+    "semantic_hash": "bdfa91b2c42f824650852b7b4a8a9496"
+  },
+  "graphify-out/converted/ICT AWARD Design Guidelines_4b29a72d.md": {
+    "mtime": 1781247786.4496863,
+    "ast_hash": "d5bc2e000fc7213bba0b70e607994d8c",
+    "semantic_hash": "d5bc2e000fc7213bba0b70e607994d8c"
+  },
+  "graphify-out/converted/ICT Award Website Content_2a8cd05d.md": {
+    "mtime": 1781247786.621691,
+    "ast_hash": "355a3a45300af5eb93dec920f2c1a7d5",
+    "semantic_hash": "355a3a45300af5eb93dec920f2c1a7d5"
+  },
+  "index.html": {
+    "mtime": 1781244760.3725529,
+    "ast_hash": "2c0dbe51a091b4761e2e99b73e92b46e",
+    "semantic_hash": "2c0dbe51a091b4761e2e99b73e92b46e"
+  },
+  "Logos/ICT-AWARD-2026-Logo-Dark-Bg.png": {
+    "mtime": 1781241809.875438,
+    "ast_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9",
+    "semantic_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9"
+  },
+  "Logos/ICT-AWARD-2026-Logo.png": {
+    "mtime": 1781241809.8664408,
+    "ast_hash": "ad47185e811e56ecbcb2fa9cffac45f8",
+    "semantic_hash": "ad47185e811e56ecbcb2fa9cffac45f8"
+  },
+  "Logos/ICT-AWARD-Logo-Dark-Bg.png": {
+    "mtime": 1781241809.8307693,
+    "ast_hash": "5b671e368fa3e236040e3f1725c9d228",
+    "semantic_hash": "5b671e368fa3e236040e3f1725c9d228"
+  },
+  "Logos/ICT-AWARD-Logo.png": {
+    "mtime": 1781241809.8559182,
+    "ast_hash": "b166f5a70ff35fb853bc47385b0c0ee0",
+    "semantic_hash": "b166f5a70ff35fb853bc47385b0c0ee0"
+  },
+  "public/logos/ICT-AWARD-2026-Logo-Dark-Bg.png": {
+    "mtime": 1781244765.4329293,
+    "ast_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9",
+    "semantic_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9"
+  },
+  "public/logos/ICT-AWARD-2026-Logo.png": {
+    "mtime": 1781244765.4329293,
+    "ast_hash": "ad47185e811e56ecbcb2fa9cffac45f8",
+    "semantic_hash": "ad47185e811e56ecbcb2fa9cffac45f8"
+  },
+  "public/logos/ICT-AWARD-Logo-Dark-Bg.png": {
+    "mtime": 1781244765.4369295,
+    "ast_hash": "5b671e368fa3e236040e3f1725c9d228",
+    "semantic_hash": "5b671e368fa3e236040e3f1725c9d228"
+  },
+  "public/logos/ICT-AWARD-Logo.png": {
+    "mtime": 1781244765.4369295,
+    "ast_hash": "b166f5a70ff35fb853bc47385b0c0ee0",
+    "semantic_hash": "b166f5a70ff35fb853bc47385b0c0ee0"
+  },
+  "docs/superpowers/plans/2026-06-13-logo-derived-color-system.md": {
+    "mtime": 1781347479.6532161,
+    "ast_hash": "28939cead65df48d6136da4d25eee127",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-13-logo-derived-color-system-design.md": {
+    "mtime": 1781346535.087466,
+    "ast_hash": "1c6fd1a3580393d06e51ad17c48e01ac",
+    "semantic_hash": ""
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/settings.local.json": {
+    "mtime": 1781845686.9212997,
+    "ast_hash": "101c05b77f825dad5f4c5b775c140d8a",
+    "semantic_hash": "101c05b77f825dad5f4c5b775c140d8a"
+  },
+  "/home/dhiraj/work/ICT-Awards/package.json": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "c6e4ee5f4f5f0d40102e59fc1159d879",
+    "semantic_hash": "c6e4ee5f4f5f0d40102e59fc1159d879"
+  },
+  "/home/dhiraj/work/ICT-Awards/postcss.config.js": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0",
+    "semantic_hash": "ef3ba2a81ba19f8ea5ddf625521e96f0"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/App.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "47a1bf08e1389dbabb1083cff9e43f6e",
+    "semantic_hash": "47a1bf08e1389dbabb1083cff9e43f6e"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/AboutBlurb.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "1ffcec00a8bbfbbf855f3d0d7623b171",
+    "semantic_hash": "1ffcec00a8bbfbbf855f3d0d7623b171"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/CategoriesPreview.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "b7c830bac698f4101cfdf8c51c1dded5",
+    "semantic_hash": "b7c830bac698f4101cfdf8c51c1dded5"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/HeroSection.tsx": {
+    "mtime": 1781844421.5912094,
+    "ast_hash": "f0a7f70ae857e5f76a6783ad7eb00ac1",
+    "semantic_hash": "f0a7f70ae857e5f76a6783ad7eb00ac1"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/PreEventsSection.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "f9d3b38970702398e145e9e89fb20908",
+    "semantic_hash": "f9d3b38970702398e145e9e89fb20908"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/RecentWinnersSection.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "607367ee2334c3e5bca809a96a9a7aa3",
+    "semantic_hash": "607367ee2334c3e5bca809a96a9a7aa3"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/StatsSection.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "d5c30bc13214e6b5e91757e72991c30b",
+    "semantic_hash": "d5c30bc13214e6b5e91757e72991c30b"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/home/TimelineSection.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "0b225584dc0f0c1146ea4dc406c00923",
+    "semantic_hash": "0b225584dc0f0c1146ea4dc406c00923"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/layout/Footer.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "47fa03de7b8f8e699155d2eac61e5d97",
+    "semantic_hash": "47fa03de7b8f8e699155d2eac61e5d97"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/layout/Navbar.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "6e5803cde27cfe7630c83a62ce34c7bb",
+    "semantic_hash": "6e5803cde27cfe7630c83a62ce34c7bb"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/layout/PageWrapper.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "6a039a28cdb41a7cf5ba960d6b9fe7ee",
+    "semantic_hash": "6a039a28cdb41a7cf5ba960d6b9fe7ee"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/ui/Button.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "ec79ea40a8d1ccce3625c5a754b516a6",
+    "semantic_hash": "ec79ea40a8d1ccce3625c5a754b516a6"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/ui/CounterStat.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "2b854d48c79742db3e0dff99f4fa7eff",
+    "semantic_hash": "2b854d48c79742db3e0dff99f4fa7eff"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/ui/GoldDivider.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "0cf34f396f7a2b960fc4bf52aa6a5fdc",
+    "semantic_hash": "0cf34f396f7a2b960fc4bf52aa6a5fdc"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/ui/SectionHeading.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "9bf68a0748dede77a63db8287566f598",
+    "semantic_hash": "9bf68a0748dede77a63db8287566f598"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/components/ui/YoutubeEmbed.tsx": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "66758e05b0686671ed1c0da15b46275d",
+    "semantic_hash": "66758e05b0686671ed1c0da15b46275d"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/categories.ts": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "a3021a54f2231b69d8a8a5a751bb472e",
+    "semantic_hash": "a3021a54f2231b69d8a8a5a751bb472e"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/faqs.ts": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "db25c7e0778b651fae24fb953d2ae649",
+    "semantic_hash": "db25c7e0778b651fae24fb953d2ae649"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/history.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "9cd7342ea6803e9b1922eae0fb34c2ae",
+    "semantic_hash": "9cd7342ea6803e9b1922eae0fb34c2ae"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/media.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "795347bd504be9060584566ed14e90f3",
+    "semantic_hash": "795347bd504be9060584566ed14e90f3"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/preActivities.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "8428074942a8d18c4d997f5b175739ba",
+    "semantic_hash": "8428074942a8d18c4d997f5b175739ba"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/stats.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "dfaf20821635188d324c3abdd25a9f37",
+    "semantic_hash": "dfaf20821635188d324c3abdd25a9f37"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/timeline.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "f5f0a0d4dd43fb0401b47a4e34caf6ba",
+    "semantic_hash": "f5f0a0d4dd43fb0401b47a4e34caf6ba"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/data/winners.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "cf7ae4ed2d7e5465bc48691d59ee0d09",
+    "semantic_hash": "cf7ae4ed2d7e5465bc48691d59ee0d09"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/hooks/useCountdown.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "941a97798c7b7a427cbfa7f5058cfa20",
+    "semantic_hash": "941a97798c7b7a427cbfa7f5058cfa20"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/lib/renderIcon.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "5fd996013d8a915b93f8411ab97d8606",
+    "semantic_hash": "5fd996013d8a915b93f8411ab97d8606"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/main.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "ffa4d40f674607de66ed490654b447d3",
+    "semantic_hash": "ffa4d40f674607de66ed490654b447d3"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/AboutPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "c6014b170d7b16b694e3789105964bb1",
+    "semantic_hash": "c6014b170d7b16b694e3789105964bb1"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/ApplyNowPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "91b252f7605c5751ba877d9ec405568c",
+    "semantic_hash": "91b252f7605c5751ba877d9ec405568c"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/CategoriesPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "1add2114b5089234d250ec5b933290b8",
+    "semantic_hash": "1add2114b5089234d250ec5b933290b8"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/HomePage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "78654a6cfe36b7dfe72e81497bdba001",
+    "semantic_hash": "78654a6cfe36b7dfe72e81497bdba001"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/MediaPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "ea872e315a70fe8bf83386f2a6c282d0",
+    "semantic_hash": "ea872e315a70fe8bf83386f2a6c282d0"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/PreActivitiesPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "3997c3db2da54714072456cc48567cc1",
+    "semantic_hash": "3997c3db2da54714072456cc48567cc1"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/pages/WinnersPage.tsx": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "ca8a0750d90836412a336ad406c96be2",
+    "semantic_hash": "ca8a0750d90836412a336ad406c96be2"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/types/index.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "f1919c9af3cb76ce7cfdfc27b6febb40",
+    "semantic_hash": "f1919c9af3cb76ce7cfdfc27b6febb40"
+  },
+  "/home/dhiraj/work/ICT-Awards/src/vite-env.d.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": "0352474ba2918efe13895edbc3780d94"
+  },
+  "/home/dhiraj/work/ICT-Awards/tailwind.config.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "aa0eab87fdac9a4d7f26f20ab279972b",
+    "semantic_hash": "aa0eab87fdac9a4d7f26f20ab279972b"
+  },
+  "/home/dhiraj/work/ICT-Awards/tsconfig.app.json": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "2caef952baaae668c6acaaefd803ac76",
+    "semantic_hash": "2caef952baaae668c6acaaefd803ac76"
+  },
+  "/home/dhiraj/work/ICT-Awards/tsconfig.json": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "/home/dhiraj/work/ICT-Awards/tsconfig.node.json": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "9cfaeaa5a9945bba3742438f39813a8b",
+    "semantic_hash": "9cfaeaa5a9945bba3742438f39813a8b"
+  },
+  "/home/dhiraj/work/ICT-Awards/vite.config.ts": {
+    "mtime": 1781843584.9263308,
+    "ast_hash": "bdfa91b2c42f824650852b7b4a8a9496",
+    "semantic_hash": "bdfa91b2c42f824650852b7b4a8a9496"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/banner-design/SKILL.md": {
+    "mtime": 1781847825.9403753,
+    "ast_hash": "494e050ec32a0d68a8d6d1a910bd9e54",
+    "semantic_hash": "494e050ec32a0d68a8d6d1a910bd9e54"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/brand/SKILL.md": {
+    "mtime": 1781847825.9443753,
+    "ast_hash": "b113f6c0c254f5981bb288470287f71d",
+    "semantic_hash": "b113f6c0c254f5981bb288470287f71d"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/design-system/SKILL.md": {
+    "mtime": 1781847825.9603753,
+    "ast_hash": "3db3950089fedd92241915f7a72edebf",
+    "semantic_hash": "3db3950089fedd92241915f7a72edebf"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/design/SKILL.md": {
+    "mtime": 1781847825.9523752,
+    "ast_hash": "b75aa621e1b6aa7c65515cdeb9238a49",
+    "semantic_hash": "b75aa621e1b6aa7c65515cdeb9238a49"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/slides/SKILL.md": {
+    "mtime": 1781847825.9643753,
+    "ast_hash": "4ef68b8e71124c324b5625fa49ee5275",
+    "semantic_hash": "4ef68b8e71124c324b5625fa49ee5275"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/ui-styling/SKILL.md": {
+    "mtime": 1781847825.9723752,
+    "ast_hash": "7a4a2ad9709466441a46d5e9c262a4d2",
+    "semantic_hash": "7a4a2ad9709466441a46d5e9c262a4d2"
+  },
+  "/home/dhiraj/work/ICT-Awards/.claude/skills/ui-ux-pro-max/SKILL.md": {
+    "mtime": 1781847825.9803753,
+    "ast_hash": "333e886d9c027730a6a24b4f34fba801",
+    "semantic_hash": "333e886d9c027730a6a24b4f34fba801"
+  },
+  "/home/dhiraj/work/ICT-Awards/docs/superpowers/plans/2026-06-13-logo-derived-color-system.md": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "28939cead65df48d6136da4d25eee127",
+    "semantic_hash": "28939cead65df48d6136da4d25eee127"
+  },
+  "/home/dhiraj/work/ICT-Awards/docs/superpowers/specs/2026-06-13-logo-derived-color-system-design.md": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "1c6fd1a3580393d06e51ad17c48e01ac",
+    "semantic_hash": "1c6fd1a3580393d06e51ad17c48e01ac"
+  },
+  "/home/dhiraj/work/ICT-Awards/index.html": {
+    "mtime": 1781843584.918331,
+    "ast_hash": "2c0dbe51a091b4761e2e99b73e92b46e",
+    "semantic_hash": "2c0dbe51a091b4761e2e99b73e92b46e"
+  },
+  "/home/dhiraj/work/ICT-Awards/Logos/ICT-AWARD-2026-Logo-Dark-Bg.png": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9",
+    "semantic_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9"
+  },
+  "/home/dhiraj/work/ICT-Awards/Logos/ICT-AWARD-2026-Logo.png": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "ad47185e811e56ecbcb2fa9cffac45f8",
+    "semantic_hash": "ad47185e811e56ecbcb2fa9cffac45f8"
+  },
+  "/home/dhiraj/work/ICT-Awards/Logos/ICT-AWARD-Logo-Dark-Bg.png": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "5b671e368fa3e236040e3f1725c9d228",
+    "semantic_hash": "5b671e368fa3e236040e3f1725c9d228"
+  },
+  "/home/dhiraj/work/ICT-Awards/Logos/ICT-AWARD-Logo.png": {
+    "mtime": 1781843584.8903308,
+    "ast_hash": "b166f5a70ff35fb853bc47385b0c0ee0",
+    "semantic_hash": "b166f5a70ff35fb853bc47385b0c0ee0"
+  },
+  "/home/dhiraj/work/ICT-Awards/public/logos/ICT-AWARD-2026-Logo-Dark-Bg.png": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9",
+    "semantic_hash": "aa61469b9bbbcf0ead9cba4e05b72bc9"
+  },
+  "/home/dhiraj/work/ICT-Awards/public/logos/ICT-AWARD-2026-Logo.png": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "ad47185e811e56ecbcb2fa9cffac45f8",
+    "semantic_hash": "ad47185e811e56ecbcb2fa9cffac45f8"
+  },
+  "/home/dhiraj/work/ICT-Awards/public/logos/ICT-AWARD-Logo-Dark-Bg.png": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "5b671e368fa3e236040e3f1725c9d228",
+    "semantic_hash": "5b671e368fa3e236040e3f1725c9d228"
+  },
+  "/home/dhiraj/work/ICT-Awards/public/logos/ICT-AWARD-Logo.png": {
+    "mtime": 1781843584.9223309,
+    "ast_hash": "b166f5a70ff35fb853bc47385b0c0ee0",
+    "semantic_hash": "b166f5a70ff35fb853bc47385b0c0ee0"
+  }
+}

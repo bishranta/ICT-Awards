@@ -18,7 +18,7 @@ export default function CounterStat({ value, suffix, label, icon }: Stat) {
           <span>0{suffix}</span>
         )}
       </div>
-      <div className="mt-2 text-sm md:text-base text-ink/60 font-semibold uppercase tracking-wider">
+      <div className="mt-2 text-sm md:text-base text-ink/80 font-semibold uppercase tracking-wider">
         {label}
       </div>
     </div>

@@ -3,13 +3,13 @@ import CounterStat from '@/components/ui/CounterStat'
 
 export default function StatsSection() {
   return (
-    <section className="bg-surface-muted border-y border-gray-100">
+    <section className="bg-surface-muted border-y border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-10">
-          <p className="text-gold/70 text-xs uppercase tracking-widest font-bold">ICT Award 2016–2026</p>
+          <p className="text-spectrum-a text-xs uppercase tracking-widest font-bold">ICT Award 2016–2026</p>
           <h2 className="text-2xl md:text-3xl font-black text-ink mt-1">10 Years of Impact</h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-border-light">
           {STATS.map((stat) => (
             <CounterStat key={stat.label} {...stat} />
           ))}

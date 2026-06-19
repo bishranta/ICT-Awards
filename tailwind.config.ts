@@ -13,30 +13,39 @@ const config: Config = {
         ink: {
           DEFAULT: '#1B1233', // body text + darkest backgrounds
           light: '#2C1A52',   // raised dark surface (hero gradient top)
-          accent: '#4C2D75',  // logo indigo = category A
+          accent: '#4C2D75',  // logo indigo = Spectrum A; cool accent on dark surfaces
         },
+        // Signature Spectrum — 5 canonical stops (DESIGN.md §2). Same values as GROUP_COLOR.
+        // E is unified to #C20F1A (AA-safe red) across gradients, live, and group color.
         spectrum: {
           a: '#4C2D75',
           b: '#6E2C68',
           c: '#9B2850',
           d: '#BD203A',
-          e: '#E0121E', // vivid logo red (gradient / large fills); GROUP_COLOR.E (#C20F1A) is the AA-safe variant for small group-E text
+          e: '#C20F1A',
         },
-        live: '#E0121E', // urgency / live accent
+        live: '#C20F1A',       // urgency / live accent (== spectrum.e)
         cream: '#FEF9EE',
-        surface: '#FFFFFF',
-        'surface-alt': '#F8F9FA',
-        'surface-muted': '#F1F3F5',
-        'border-light': '#E5E7EB',
-        'text-muted': '#6B7280',
+        surface: {
+          DEFAULT: '#FFFFFF',  // bg-surface (default page background)
+          alt: '#F8F9FA',      // bg-surface-alt (class name unchanged)
+          muted: '#F1F3F5',    // bg-surface-muted (class name unchanged)
+        },
+        // Border scale — flat keys to avoid colliding with the `border` width utility.
+        // border-subtle == gray-100 so existing borders are NOT darkened.
+        'border-subtle': '#F3F4F6', // gray-100 — pervasive card/divider border
+        'border-light': '#E5E7EB',  // gray-200 — slightly stronger
+        'border-strong': '#D1D5DB', // gray-300 — timeline dots, emphasis
+        'text-muted': '#5A6472',    // retuned from #6B7280 for AA on small copy
       },
       fontFamily: {
         sans: ['"Nunito Sans"', 'Calibri', 'Arial', 'sans-serif'],
         display: ['"Nunito Sans"', 'Calibri', 'Georgia', 'serif'],
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(135deg, #FDCE62 0%, #F7B413 50%, #CF7B0F 100%)',
-        'spectrum-gradient': 'linear-gradient(90deg, #4C2D75 0%, #822B5E 42%, #BD203A 74%, #DC0E1D 100%)',
+        // Canonical Signature Spectrum — 5 stops built from the spectrum tokens.
+        // 'gold-gradient' removed (only consumer GoldDivider is unmounted).
+        'spectrum-gradient': 'linear-gradient(90deg, #4C2D75 0%, #6E2C68 25%, #9B2850 50%, #BD203A 75%, #C20F1A 100%)',
       },
       boxShadow: {
         gold: '0 4px 24px rgba(247,179,19,0.25)',

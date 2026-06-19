@@ -47,7 +47,7 @@ export default function Navbar() {
     <header
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100' : 'bg-white/95 backdrop-blur-sm'
+        scrolled ? 'bg-surface/95 backdrop-blur-sm shadow-sm border-b border-border-subtle' : 'bg-surface/95 backdrop-blur-sm'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +78,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     clsx(
                       'px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-150 flex items-center gap-1',
-                      isActive ? 'text-gold' : 'text-ink/70 hover:text-gold'
+                      isActive ? 'text-spectrum-a' : 'text-ink/70 hover:text-spectrum-a'
                     )
                   }
                 >
@@ -89,12 +89,12 @@ export default function Navbar() {
                 </NavLink>
 
                 {item.children && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-gray-100 rounded-xl shadow-md py-2 z-50">
+                  <div className="absolute top-full left-0 mt-1 w-52 bg-surface border border-border-subtle rounded-xl shadow-md py-2 z-50">
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         to={child.to}
-                        className="block px-4 py-2.5 text-sm text-ink/70 hover:text-gold hover:bg-gold/5 transition-colors"
+                        className="block px-4 py-2.5 text-sm text-ink/70 hover:text-spectrum-a hover:bg-gold/5 transition-colors"
                         onClick={() => setActiveDropdown(null)}
                       >
                         {child.label}
@@ -129,7 +129,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
+        <div className="lg:hidden bg-surface border-t border-border-subtle">
           <div className="px-4 py-4 space-y-1">
             {NAV_ITEMS.map((item) => (
               <div key={item.label}>
@@ -138,7 +138,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     clsx(
                       'block px-4 py-3 rounded-lg font-semibold',
-                      isActive ? 'text-gold bg-gold/10' : 'text-ink/70 hover:text-gold hover:bg-gold/5'
+                      isActive ? 'text-spectrum-a bg-gold/10' : 'text-ink/70 hover:text-spectrum-a hover:bg-gold/5'
                     )
                   }
                   onClick={() => setMobileOpen(false)}
@@ -151,7 +151,7 @@ export default function Navbar() {
                       <Link
                         key={child.label}
                         to={child.to}
-                        className="block px-4 py-2 text-sm text-ink/60 hover:text-gold hover:bg-gold/5 rounded-lg"
+                        className="block px-4 py-2 text-sm text-ink/80 hover:text-spectrum-a hover:bg-gold/5 rounded-lg"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}

@@ -18,7 +18,7 @@ export default function SectionHeading({
   className,
 }: SectionHeadingProps) {
   const highlighted = accentWord
-    ? title.replace(accentWord, `<span class="text-gold">${accentWord}</span>`)
+    ? title.replace(accentWord, `<span class="${dark ? 'text-gold' : 'text-spectrum-a'}">${accentWord}</span>`)
     : title
 
   return (

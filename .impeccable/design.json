@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-19T00:00:00Z",
+  "title": "Design System: ICT Awards Nepal",
+  "extensions": {
+    "colorMeta": {
+      "trophy-gold": {
+        "role": "primary",
+        "displayName": "Trophy Gold",
+        "canonical": "#F7B413",
+        "tonalRamp": ["#3D2A00", "#6B4D00", "#9B7200", "#C99400", "#F7B413", "#FDCE62", "#FEE8A0", "#FFF5D4"]
+      },
+      "trophy-gold-dark": {
+        "role": "primary",
+        "displayName": "Trophy Gold Dark",
+        "canonical": "#CF7B0E",
+        "tonalRamp": ["#3D2000", "#6B3A00", "#9B5500", "#CF7B0E", "#E8A040", "#F4C880", "#FAE0B8", "#FEF4E0"]
+      },
+      "trophy-gold-light": {
+        "role": "primary",
+        "displayName": "Trophy Gold Light",
+        "canonical": "#FDCE62",
+        "tonalRamp": ["#5A4000", "#8A6500", "#BA9000", "#E8B830", "#FDCE62", "#FEE08E", "#FFF0C0", "#FFFAE8"]
+      },
+      "deep-indigo-night": {
+        "role": "neutral",
+        "displayName": "Deep Indigo Night",
+        "canonical": "#1B1233",
+        "tonalRamp": ["#060410", "#1B1233", "#2C1A52", "#3E2868", "#5C4090", "#8B72B8", "#BBA8D8", "#E8E0F5"]
+      },
+      "indigo-night-raised": {
+        "role": "neutral",
+        "displayName": "Indigo Night Raised",
+        "canonical": "#2C1A52",
+        "tonalRamp": ["#0A0620", "#1B1233", "#2C1A52", "#3E2868", "#5C4090", "#8B72B8", "#BBA8D8", "#E8E0F5"]
+      },
+      "indigo-accent": {
+        "role": "secondary",
+        "displayName": "Indigo Accent (Spectrum A)",
+        "canonical": "#4C2D75",
+        "tonalRamp": ["#1A0A2E", "#2C1A52", "#4C2D75", "#6B4599", "#8F6AB8", "#B49AD5", "#D8C8EC", "#F2EDF9"]
+      },
+      "spectrum-a": {
+        "role": "secondary",
+        "displayName": "Spectrum A — Indigo",
+        "canonical": "#4C2D75",
+        "tonalRamp": ["#1A0A2E", "#2C1A52", "#4C2D75", "#6B4599", "#8F6AB8", "#B49AD5", "#D8C8EC", "#F2EDF9"]
+      },
+      "spectrum-b": {
+        "role": "secondary",
+        "displayName": "Spectrum B — Purple",
+        "canonical": "#6E2C68",
+        "tonalRamp": ["#250A24", "#4A1A48", "#6E2C68", "#904888", "#B070A8", "#CC9EC8", "#E4CCE0", "#F6EEF5"]
+      },
+      "spectrum-c": {
+        "role": "secondary",
+        "displayName": "Spectrum C — Magenta",
+        "canonical": "#9B2850",
+        "tonalRamp": ["#300A1A", "#601830", "#9B2850", "#C04070", "#D87898", "#EAAAB8", "#F5D0D8", "#FBF0F2"]
+      },
+      "spectrum-d": {
+        "role": "secondary",
+        "displayName": "Spectrum D — Crimson",
+        "canonical": "#BD203A",
+        "tonalRamp": ["#380A10", "#6A1020", "#BD203A", "#D84858", "#E87888", "#F4A8B0", "#F9D0D5", "#FDF0F1"]
+      },
+      "spectrum-e": {
+        "role": "secondary",
+        "displayName": "Spectrum E — Red (AA-safe, unified)",
+        "canonical": "#C20F1A",
+        "tonalRamp": ["#380008", "#700010", "#A80018", "#C20F1A", "#D84050", "#EC8090", "#F5C0C5", "#FDE8EA"]
+      },
+      "live-red": {
+        "role": "tertiary",
+        "displayName": "Live Red",
+        "canonical": "#C20F1A",
+        "tonalRamp": ["#380008", "#700010", "#A80018", "#C20F1A", "#D84050", "#EC8090", "#F5C0C5", "#FDE8EA"]
+      },
+      "warm-stage": {
+        "role": "neutral",
+        "displayName": "Warm Stage",
+        "canonical": "#FEF9EE",
+        "tonalRamp": ["#8C7040", "#B8A060", "#D8C090", "#EED8B0", "#F5EAD0", "#FAF2E0", "#FCF6EC", "#FEF9EE"]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#A0A0A0", "#B8B8B8", "#CCCCCC", "#DCDCDC", "#EBEBEB", "#F4F4F4", "#FAFAFA", "#FFFFFF"]
+      },
+      "border-subtle": {
+        "role": "neutral",
+        "displayName": "Border Subtle",
+        "canonical": "#F3F4F6",
+        "tonalRamp": ["#9CA3AF", "#C4C9CF", "#D8DADF", "#E9EAEC", "#F3F4F6", "#F8F9FA", "#FAFBFC", "#FFFFFF"]
+      },
+      "border-light": {
+        "role": "neutral",
+        "displayName": "Border Light",
+        "canonical": "#E5E7EB",
+        "tonalRamp": ["#9CA3AF", "#C0C4CA", "#D4D7DC", "#E5E7EB", "#ECEEF1", "#F3F4F6", "#F8F9FA", "#FFFFFF"]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Border Strong",
+        "canonical": "#D1D5DB",
+        "tonalRamp": ["#6B7280", "#9CA3AF", "#C4C9CF", "#D1D5DB", "#E0E3E7", "#ECEEF1", "#F3F4F6", "#FFFFFF"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "#5A6472",
+        "tonalRamp": ["#1C2128", "#2E3B45", "#435060", "#5A6472", "#7A8A98", "#A0B0BE", "#C8D5DF", "#EDF2F5"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. One per page. The <h1> on HeroSection. Never use for section headings." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings via SectionHeading component. One gold accent word allowed per heading." },
+      "title": { "displayName": "Title", "purpose": "Card titles, category names, nav items, modal headings." },
+      "body": { "displayName": "Body", "purpose": "All prose. Max 65–75ch. Use text-white/60 or text-white/70 on dark backgrounds." },
+      "label": { "displayName": "Label", "purpose": "Short structural labels only (≤5 words), 0.75rem, uppercase, tracked. Not a default kicker." }
+    },
+    "shadows": [
+      {
+        "name": "trophy-glow",
+        "value": "0 4px 24px rgba(247,179,19,0.25)",
+        "purpose": "Primary CTA buttons and gold-fill elements. The action signal."
+      },
+      {
+        "name": "trophy-glow-subtle",
+        "value": "0 2px 10px rgba(247,179,19,0.15)",
+        "purpose": "Smaller gold elements — navbar CTA, gold icon containers."
+      },
+      {
+        "name": "ink-ambient",
+        "value": "0 10px 40px rgba(27,18,51,0.12)",
+        "purpose": "Light-surface cards on hover lift. Not at rest."
+      },
+      {
+        "name": "nav-scroll",
+        "value": "0 1px 2px rgba(0,0,0,0.05)",
+        "purpose": "Navbar scroll state. Paired with border-bottom: 1px solid #F3F4F6 (border-subtle)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "fade-up",
+        "value": "opacity 0s, transform 0s",
+        "purpose": "Default entrance animation — 0.6s ease-out, translateY(20px) → 0. Disable under prefers-reduced-motion."
+      },
+      {
+        "name": "state-transition",
+        "value": "all 200ms ease-out",
+        "purpose": "Default transition for interactive state changes (button hover, nav link, color). Applied via Tailwind transition-all duration-200."
+      },
+      {
+        "name": "countdown-tick",
+        "value": "none",
+        "purpose": "The useCountdown hook updates state every 1s. No CSS animation needed; React re-renders the tabular-nums span."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA — apply, explore, submit. Gold fill, ink text, pill shape.",
+      "html": "<button class=\"ds-btn-primary\">Apply Now</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; background: #F7B413; color: #1B1233; font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 12px 24px; border-radius: 9999px; border: none; cursor: pointer; box-shadow: 0 2px 10px rgba(247,179,19,0.15); transition: all 200ms ease-out; } .ds-btn-primary:hover { background: #FDCE62; box-shadow: 0 4px 24px rgba(247,179,19,0.25); transform: scale(1.02); } .ds-btn-primary:active { background: #CF7B0E; transform: scale(0.99); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(247,179,19,0.5); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA — explore categories, learn more. Gold border, transparent fill.",
+      "html": "<button class=\"ds-btn-outline\">Explore Categories</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #F7B413; font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-weight: 700; font-size: 1rem; padding: 10px 22px; border-radius: 9999px; border: 2px solid #F7B413; cursor: pointer; transition: all 200ms ease-out; } .ds-btn-outline:hover { background: #F7B413; color: #1B1233; } .ds-btn-outline:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(247,179,19,0.5); }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Section entrance heading with spectrum gradient underline rule and optional gold accent word.",
+      "html": "<div class=\"ds-section-heading\"><div class=\"ds-section-heading__rule\"></div><h2 class=\"ds-section-heading__title\">Award <span class=\"ds-section-heading__accent\">Categories</span></h2><p class=\"ds-section-heading__subtitle\">Five tracks spanning the breadth of Nepal's ICT ecosystem.</p></div>",
+      "css": ".ds-section-heading { } .ds-section-heading__rule { width: 48px; height: 4px; border-radius: 9999px; background: linear-gradient(90deg, #4C2D75 0%, #6E2C68 25%, #9B2850 50%, #BD203A 75%, #C20F1A 100%); margin-bottom: 1rem; } .ds-section-heading__title { font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-weight: 900; font-size: clamp(1.875rem, 4vw, 2.25rem); line-height: 1.2; color: #1B1233; margin: 0 0 1rem 0; text-wrap: balance; } .ds-section-heading__accent { color: #F7B413; } .ds-section-heading__subtitle { font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-size: 1.125rem; line-height: 1.6; color: rgba(27,18,51,0.70); margin: 0; max-width: 65ch; }"
+    },
+    {
+      "name": "Navbar",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Fixed top navigation — light surface, gold active state, blur backdrop.",
+      "html": "<header class=\"ds-navbar\"><div class=\"ds-navbar__inner\"><div class=\"ds-navbar__logo\">ICT AWARD</div><nav class=\"ds-navbar__links\"><a href=\"/\" class=\"ds-nav-link ds-nav-link--active\">Home</a><a href=\"/categories\" class=\"ds-nav-link\">Categories</a><a href=\"/winners\" class=\"ds-nav-link\">Winners</a></nav><a href=\"/apply\" class=\"ds-navbar__cta\">Apply Now</a></div></header>",
+      "css": ".ds-navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(255,255,255,0.95); backdrop-filter: blur(4px); border-bottom: 1px solid #F3F4F6; box-shadow: 0 1px 2px rgba(0,0,0,0.05); font-family: 'Nunito Sans', Calibri, Arial, sans-serif; } .ds-navbar__inner { max-width: 80rem; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 4rem; } .ds-navbar__logo { font-weight: 900; font-size: 1.125rem; color: #1B1233; } .ds-navbar__links { display: flex; align-items: center; gap: 0.25rem; } .ds-nav-link { padding: 0.5rem 0.75rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600; color: rgba(27,18,51,0.70); text-decoration: none; transition: color 150ms; } .ds-nav-link:hover { color: #F7B413; } .ds-nav-link--active { color: #F7B413; } .ds-navbar__cta { background: #F7B413; color: #1B1233; font-weight: 700; font-size: 0.875rem; padding: 0.625rem 1.25rem; border-radius: 9999px; text-decoration: none; box-shadow: 0 2px 10px rgba(247,179,19,0.15); transition: all 200ms; } .ds-navbar__cta:hover { background: #FDCE62; }"
+    },
+    {
+      "name": "Category Group Badge",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Group identifier chip with spectrum color. Applied via inline style — not dynamic Tailwind classes.",
+      "html": "<div class=\"ds-group-badge\"><span class=\"ds-group-badge__letter\" style=\"background-color: #4C2D75; color: white;\">A</span><span class=\"ds-group-badge__label\" style=\"color: #4C2D75;\">Startup & Innovation</span></div>",
+      "css": ".ds-group-badge { display: inline-flex; align-items: center; gap: 0.5rem; } .ds-group-badge__letter { display: inline-flex; align-items: center; justify-content: center; width: 1.75rem; height: 1.75rem; border-radius: 9999px; font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-weight: 900; font-size: 0.875rem; } .ds-group-badge__label { font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-size: 0.875rem; font-weight: 600; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Standard light-surface card. Flat at rest, ink-ambient shadow on hover.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card__title\">Startup ICT Award 2026</h3><p class=\"ds-card__body\">Recognizes a Nepali tech startup that has effectively leveraged ICT to drive innovation, growth, and impact.</p><a href=\"/categories\" class=\"ds-card__link\">View eligibility <svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\"><path d=\"M2 7h10M7 2l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>",
+      "css": ".ds-card { background: #FFFFFF; border: 1px solid #F3F4F6; border-radius: 0.75rem; padding: 1.5rem; transition: box-shadow 200ms ease-out, transform 200ms ease-out; } .ds-card:hover { box-shadow: 0 10px 40px rgba(27,18,51,0.12); transform: translateY(-2px); } .ds-card__title { font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-weight: 700; font-size: 1.125rem; color: #1B1233; margin: 0 0 0.75rem 0; line-height: 1.4; } .ds-card__body { font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-size: 0.9375rem; line-height: 1.6; color: rgba(27,18,51,0.70); margin: 0 0 1.25rem 0; } .ds-card__link { display: inline-flex; align-items: center; gap: 0.375rem; font-family: 'Nunito Sans', Calibri, Arial, sans-serif; font-size: 0.875rem; font-weight: 700; color: #F7B413; text-decoration: none; transition: gap 150ms; } .ds-card__link:hover { gap: 0.625rem; }"
+    },
+    {
+      "name": "Footer",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Dark ink footer with spectrum top rule, logo, link columns, and date strip.",
+      "html": "<footer class=\"ds-footer\"><div class=\"ds-footer__spectrum-rule\"></div><div class=\"ds-footer__inner\"><div class=\"ds-footer__brand\"><div class=\"ds-footer__logo-placeholder\">ICT AWARD</div><p class=\"ds-footer__tagline\">Honoring Excellence in the Technology Sector of Nepal and Beyond.</p></div><div class=\"ds-footer__group\"><h4 class=\"ds-footer__group-title\">Navigation</h4><ul class=\"ds-footer__links\"><li><a href=\"/\" class=\"ds-footer__link\">Home</a></li><li><a href=\"/about\" class=\"ds-footer__link\">About</a></li><li><a href=\"/categories\" class=\"ds-footer__link\">Categories</a></li></ul></div></div><div class=\"ds-footer__bottom\"><p class=\"ds-footer__copy\">© 2026 ICT Award Nepal</p><p class=\"ds-footer__dates\"><span class=\"ds-footer__live-dot\"></span> Grand Finale: <strong>December 18, 2026</strong></p></div></footer>",
+      "css": ".ds-footer { background: #1B1233; font-family: 'Nunito Sans', Calibri, Arial, sans-serif; } .ds-footer__spectrum-rule { height: 4px; width: 100%; background: linear-gradient(90deg, #4C2D75 0%, #6E2C68 25%, #9B2850 50%, #BD203A 75%, #C20F1A 100%); } .ds-footer__inner { max-width: 80rem; margin: 0 auto; padding: 4rem 1.5rem 2rem; display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; } .ds-footer__logo-placeholder { font-weight: 900; font-size: 1.25rem; color: #F7B413; margin-bottom: 1rem; } .ds-footer__tagline { font-size: 0.875rem; line-height: 1.6; color: rgba(255,255,255,0.60); max-width: 24rem; margin: 0; } .ds-footer__group-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #F7B413; margin: 0 0 1rem 0; } .ds-footer__links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; } .ds-footer__link { font-size: 0.875rem; color: rgba(255,255,255,0.60); text-decoration: none; transition: color 150ms; } .ds-footer__link:hover { color: #F7B413; } .ds-footer__bottom { max-width: 80rem; margin: 0 auto; padding: 2rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.10); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; } .ds-footer__copy { font-size: 0.875rem; color: rgba(255,255,255,0.60); margin: 0; } .ds-footer__dates { font-size: 0.875rem; color: rgba(255,255,255,0.60); margin: 0; display: flex; align-items: center; gap: 0.5rem; } .ds-footer__dates strong { color: #F7B413; font-weight: 700; } .ds-footer__live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #C20F1A; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Maker's Stage",
+    "overview": "The ICT Awards Nepal design system exists to stage excellence — not as a distant spectacle, but as an open invitation. The site IS the stage; applicants are the protagonists. A 21-year-old student reading the Rising Star category description should feel 'I could be up there,' not 'those people are impressive.' Every surface tips toward aspiration over ceremony, inclusion over prestige.\n\nThe palette — Trophy Gold on Deep Indigo Night, with a Signature Spectrum of indigo-to-red — is extracted directly from the ICT-AWARD-Logo.png. This is not a 'dark/gold awards site' cliché; every color has a logo source. The Signature Spectrum (Groups A through E) turns a navigation problem into a brand system: each group has its own voice within the same arc.\n\nThe typography is single-family Nunito Sans, pushed hard through weight contrast. At font-weight 900, headings read as muscular and proud; at 400, body text is warm and legible. No second family is introduced — weight does the work that most systems use a pairing to achieve.",
+    "keyCharacteristics": [
+      "Deep Indigo Night anchors hero and footer; cream and white breathe between sections",
+      "Trophy Gold marks achievement — CTAs, active states, accent words. Its scarcity makes it feel earned.",
+      "The Signature Spectrum orients group navigation via GROUP_COLOR map, not as ambient decoration",
+      "Pill-shaped buttons signal openness — confident and decisive",
+      "A spectrum gradient rule (48px × 4px) precedes every section heading — the system's consistent punctuation"
+    ],
+    "rules": [
+      { "name": "The Logo Source Rule", "body": "Every brand color traces back to ICT-AWARD-Logo.png. If a proposed color doesn't appear in the trophy gold, the AWARD wordmark spectrum, or the logo ink, it doesn't belong.", "section": "colors" },
+      { "name": "The Earned Gold Rule", "body": "Trophy Gold marks achievement. It is not a section background, a card fill, or an ambient tint. Its rarity on any given screen is what makes a CTA feel like the next step forward.", "section": "colors" },
+      { "name": "The Group Color Rule", "body": "Award group colors (A–E via GROUP_COLOR) are applied exclusively via inline style props. Dynamic Tailwind class construction is purged at build time and will silently break. Group E uses #C20F1A — the unified AA-safe red (== spectrum.e, live, gradient endpoint). All five groups pass WCAG AA ≥4.5:1 as normal text on white/cream/surface-alt (verified 2026-06-19).", "section": "colors" },
+      { "name": "The Weight-Is-Voice Rule", "body": "All typographic hierarchy is achieved through font-weight contrast (900 vs 700 vs 400), not through a second font family or size alone. Introducing a second family requires explicit justification.", "section": "typography" },
+      { "name": "The Uppercase Cap Rule", "body": "All-caps is reserved for label scale copy only — short labels at 0.75rem with letter-spacing. Never apply uppercase to body copy, card descriptions, or headings.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are unshadowed at rest. Shadow appears only as a response to state (hover, CTA significance, scroll). If everything carries a shadow, nothing is emphasized.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Trophy Gold (#F7B413) exclusively as an action and highlight color. Its scarcity is what makes it feel earned.",
+      "Do apply award group colors via inline style props using GROUP_COLOR from src/data/categories.ts.",
+      "Do use #C20F1A for Group E — the unified value for spectrum.e, live, gradient endpoint, and GROUP_COLOR.E. It passes WCAG AA on all light surfaces.",
+      "Do use ICT-AWARD-Logo-Dark-Bg.png on dark surfaces and ICT-AWARD-Logo.png on light surfaces. Always include onError fallback.",
+      "Do use the spectrum gradient for decorative rules and dividers only — not as text fill.",
+      "Do give every countdown/scroll animation a prefers-reduced-motion fallback.",
+      "Do cap body copy at 65–75ch. Use text-white/60 on dark backgrounds for body paragraphs.",
+      "Do use text-wrap: balance on all h1–h3 elements."
+    ],
+    "donts": [
+      "Don't use trophies, handshakes, or certificate imagery as hero visuals. Generic award-site templates misrepresent Nepal's forward-looking tech sector.",
+      "Don't introduce the blue-gradient dev-conference palette. This is a celebration, not a summit.",
+      "Don't mimic Fortune 500 award program grey palettes or formal corporate register.",
+      "Don't apply the Signature Spectrum gradient to text via background-clip: text.",
+      "Don't use border-left thicker than 1px as a colored accent on cards or list items.",
+      "Don't add a tiny uppercase tracked eyebrow above every section heading.",
+      "Don't render Trophy Gold as small text on light backgrounds — it fails WCAG AA.",
+      "Don't add a dark-mode toggle. The light/dark surface rhythm is intentional.",
+      "Don't use overflow: hidden on any container that parents a dropdown — the navbar dropdown will clip."
+    ]
+  }
+}
