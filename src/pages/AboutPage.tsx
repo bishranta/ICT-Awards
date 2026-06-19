@@ -60,7 +60,7 @@ function FAQAccordion() {
       {FAQS.map((faq) => (
         <div
           key={faq.id}
-          className="bg-surface-alt border border-gray-100 rounded-xl overflow-hidden hover:border-gold/20 transition-colors"
+          className="bg-surface-alt border border-border-subtle rounded-xl overflow-hidden hover:border-gold/20 transition-colors"
         >
           <button
             className="w-full flex items-center justify-between px-6 py-4 text-left"
@@ -74,7 +74,7 @@ function FAQAccordion() {
           </button>
           {open === faq.id && (
             <div className="px-6 pb-4">
-              <p className="text-ink/60 leading-relaxed text-sm">{faq.answer}</p>
+              <p className="text-ink/80 leading-relaxed text-sm">{faq.answer}</p>
             </div>
           )}
         </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* Introduction */}
-      <section id="introduction" className="bg-white section-padding">
+      <section id="introduction" className="bg-surface section-padding">
         <div className="container-max">
           <div className="max-w-3xl">
             <SectionHeading
@@ -101,7 +101,7 @@ export default function AboutPage() {
               The ICT Award is a prestigious award in Nepal given to individuals, innovations, and organizations for outstanding achievements and excellence in ICT. This includes innovative use of technology, exceptional contributions to the ICT industry, and outstanding products and services.
             </p>
             <p className="text-ink/70 leading-relaxed mb-4">
-              The ICT Award accelerates progress on the SDGs based on the "four I's" framework: <span className="text-gold font-semibold">Infrastructure, Investment, Innovation, and Inclusivity</span>. ICT forms the backbone of the digital economy and has the potential to fast-forward progress on SDGs and improve lives.
+              The ICT Award accelerates progress on the SDGs based on the "four I's" framework: <span className="text-spectrum-a font-semibold">Infrastructure, Investment, Innovation, and Inclusivity</span>. ICT forms the backbone of the digital economy and has the potential to fast-forward progress on SDGs and improve lives.
             </p>
             <p className="text-ink/70 leading-relaxed mb-8">
               Join us as we honor outstanding contributions that inspire pride, unity, and innovation within the ICT sector of Nepal and beyond.
@@ -111,12 +111,12 @@ export default function AboutPage() {
           {/* Significance */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {SIGNIFICANCE.map((item) => (
-              <div key={item.title} className="bg-surface-alt border border-gray-100 rounded-xl p-5 hover:border-gold/20 transition-colors">
+              <div key={item.title} className="bg-surface-alt border border-border-subtle rounded-xl p-5 hover:border-gold/20 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
                   <RenderIcon name={item.icon} size={18} className="text-gold" />
                 </div>
                 <h3 className="text-ink font-bold text-sm mb-1">{item.title}</h3>
-                <p className="text-ink/50 text-xs leading-relaxed">{item.desc}</p>
+                <p className="text-ink/80 text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -132,8 +132,8 @@ export default function AboutPage() {
             className="mb-10"
           />
 
-          <div className="bg-white rounded-xl p-4 border border-gold/20 mb-6 text-sm text-ink/60 leading-relaxed">
-            <span className="text-gold font-bold">Core Evaluation Factors:</span> Impact on the ICT industry · Level of innovation and originality · Quality and execution of work · Creativity and societal relevance. Over <span className="text-ink font-semibold">25 jury meetings</span> are conducted throughout the evaluation period.
+          <div className="bg-surface rounded-xl p-4 border border-gold/20 mb-6 text-sm text-ink/80 leading-relaxed">
+            <span className="text-spectrum-a font-bold">Core Evaluation Factors:</span> Impact on the ICT industry · Level of innovation and originality · Quality and execution of work · Creativity and societal relevance. Over <span className="text-ink font-semibold">25 jury meetings</span> are conducted throughout the evaluation period.
           </div>
 
           {/* Group Tabs */}
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 onClick={() => setActiveSelectionGroup(g)}
                 className={clsx(
                   'px-5 py-2.5 rounded-full text-sm font-bold transition-all',
-                  activeSelectionGroup === g ? 'bg-gold text-ink' : 'border border-gold/30 text-gold hover:bg-gold/10'
+                  activeSelectionGroup === g ? 'bg-gold text-ink' : 'border border-gold/30 text-ink hover:bg-gold/10'
                 )}
               >
                 {g === 'A' ? 'Startup & Innovation' : g === 'B' ? 'Individual Excellence' : 'Organizations'}
@@ -154,8 +154,8 @@ export default function AboutPage() {
 
           <div className="space-y-3">
             {SELECTION_STEPS[activeSelectionGroup].map((step, idx) => (
-              <div key={idx} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl px-5 py-4">
-                <div className="w-7 h-7 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-gold text-xs font-black flex-shrink-0">
+              <div key={idx} className="flex items-start gap-4 bg-surface border border-border-subtle rounded-xl px-5 py-4">
+                <div className="w-7 h-7 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center text-ink text-xs font-black flex-shrink-0">
                   {idx + 1}
                 </div>
                 <p className="text-ink/70 text-sm leading-relaxed">{step}</p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
       </section>
 
       {/* History Timeline */}
-      <section id="history" className="bg-white section-padding">
+      <section id="history" className="bg-surface section-padding">
         <div className="container-max">
           <SectionHeading
             title="ICT Award History"
@@ -180,18 +180,18 @@ export default function AboutPage() {
               {HISTORY.map((entry, idx) => (
                 <div key={entry.year} className="flex gap-6 group">
                   <div className="relative flex flex-col items-center flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-white border-2 border-gold/40 group-hover:border-gold flex items-center justify-center transition-colors z-10">
-                      <span className="text-gold font-black text-xs">{entry.year}</span>
+                    <div className="w-12 h-12 rounded-full bg-surface border-2 border-gold/40 group-hover:border-gold flex items-center justify-center transition-colors z-10">
+                      <span className="text-spectrum-a font-black text-xs">{entry.year}</span>
                     </div>
                   </div>
                   <div className={clsx(
                     'flex-1 rounded-xl p-5 border transition-colors',
                     idx % 2 === 0
-                      ? 'bg-surface-alt border-gray-100 hover:border-gold/20'
-                      : 'bg-white border-gray-100 hover:border-gold/20'
+                      ? 'bg-surface-alt border-border-subtle hover:border-gold/20'
+                      : 'bg-surface border-border-subtle hover:border-gold/20'
                   )}>
                     {entry.milestone && (
-                      <span className="inline-block bg-gold/10 text-gold text-xs font-bold px-2 py-0.5 rounded-full mb-2">
+                      <span className="inline-block bg-gold/10 text-ink text-xs font-bold px-2 py-0.5 rounded-full mb-2">
                         {entry.milestone}
                       </span>
                     )}
@@ -212,18 +212,18 @@ export default function AboutPage() {
             subtitle="Our jury panel consists of industry experts, academicians, government representatives, and ICT professionals."
             className="mb-10"
           />
-          <div className="bg-white border border-gold/20 rounded-xl p-8 text-center">
+          <div className="bg-surface border border-gold/20 rounded-xl p-8 text-center">
             <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
               <HourglassHigh size={24} className="text-gold" />
             </div>
-            <p className="text-ink/60">Jury and Advisor lists for ICT Award 2026 will be updated soon.</p>
-            <p className="text-gold/70 text-sm mt-2">Check back after nominations open on July 17, 2026.</p>
+            <p className="text-ink/80">Jury and Advisor lists for ICT Award 2026 will be updated soon.</p>
+            <p className="text-spectrum-a text-sm mt-2">Check back after nominations open on July 17, 2026.</p>
           </div>
         </div>
       </section>
 
       {/* FAQs */}
-      <section id="faq" className="bg-white section-padding">
+      <section id="faq" className="bg-surface section-padding">
         <div className="container-max max-w-3xl">
           <SectionHeading
             title="Frequently Asked Questions"
@@ -233,7 +233,7 @@ export default function AboutPage() {
           <FAQAccordion />
 
           <div className="mt-10 text-center">
-            <p className="text-ink/50 mb-4">Have more questions?</p>
+            <p className="text-ink/80 mb-4">Have more questions?</p>
             <Link
               to="/apply"
               className="inline-flex items-center gap-2 bg-gold text-ink font-bold px-6 py-3 rounded-full hover:bg-gold-light transition-colors"

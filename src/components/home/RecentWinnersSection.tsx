@@ -14,7 +14,7 @@ export default function RecentWinnersSection() {
             title="ICT Award 2025 Winners"
             subtitle="Celebrating Nepal's most outstanding tech achievers from our 10th anniversary edition."
           />
-          <Link to="/winners/2025" className="text-gold font-bold hover:text-gold-dark flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+          <Link to="/winners/2025" className="text-spectrum-a font-bold hover:text-ink flex items-center gap-2 whitespace-nowrap flex-shrink-0">
             All Winners
             <ArrowRight size={16} />
           </Link>
@@ -24,19 +24,19 @@ export default function RecentWinnersSection() {
           {winners2025.map((w, idx) => (
             <div
               key={idx}
-              className="bg-white border border-gray-100 hover:border-gold/30 rounded-xl p-5 group transition-all hover:shadow-gold"
+              className="bg-surface border border-border-subtle hover:border-gold/30 rounded-xl p-5 group transition-all hover:shadow-gold"
             >
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
                   <Trophy size={18} className="text-gold" weight="fill" />
                 </div>
                 <div>
-                  <div className="text-gold text-xs font-bold uppercase tracking-wider mb-1">
+                  <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1">
                     {w.categoryName}
                   </div>
                   <div className="text-ink font-bold leading-tight">{w.winnerName}</div>
                   {w.organization && (
-                    <div className="text-ink/50 text-xs mt-0.5">{w.organization}</div>
+                    <div className="text-ink/80 text-xs mt-0.5">{w.organization}</div>
                   )}
                 </div>
               </div>

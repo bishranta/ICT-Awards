@@ -4,7 +4,7 @@ import clsx from 'clsx'
 
 export default function TimelineSection() {
   return (
-    <section className="bg-white section-padding">
+    <section className="bg-surface section-padding">
       <div className="container-max">
         <SectionHeading
           title="ICT Award 2026 Timeline"
@@ -15,7 +15,7 @@ export default function TimelineSection() {
 
         <div className="relative">
           {/* Horizontal line (desktop) */}
-          <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-gray-200" />
+          <div className="hidden md:block absolute top-8 left-0 right-0 h-px bg-border-light" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {ICT_2026_TIMELINE.map((event, idx) => (
@@ -26,24 +26,24 @@ export default function TimelineSection() {
                     'relative z-10 w-4 h-4 rounded-full border-2 mb-4 flex-shrink-0',
                     event.highlight
                       ? 'bg-gold border-gold shadow-gold-sm'
-                      : 'bg-white border-gray-300'
+                      : 'bg-surface border-border-strong'
                   )}
                 />
                 {/* Content */}
                 <div
                   className={clsx(
                     'rounded-xl p-4 w-full',
-                    event.highlight ? 'bg-gold/10 border border-gold/40' : 'bg-surface-alt border border-gray-100'
+                    event.highlight ? 'bg-gold/10 border border-gold/40' : 'bg-surface-alt border border-border-subtle'
                   )}
                 >
-                  <div className={clsx('text-xs font-bold uppercase tracking-widest mb-1', event.highlight ? 'text-gold' : 'text-ink/50')}>
+                  <div className={clsx('text-xs font-bold uppercase tracking-widest mb-1', event.highlight ? 'text-spectrum-a' : 'text-ink/80')}>
                     {event.date}
                   </div>
-                  <div className={clsx('font-bold text-sm', event.highlight ? 'text-gold' : 'text-ink')}>
+                  <div className={clsx('font-bold text-sm', event.highlight ? 'text-spectrum-a' : 'text-ink')}>
                     {event.label}
                   </div>
                   {event.description && (
-                    <p className="mt-1 text-xs text-ink/50">{event.description}</p>
+                    <p className="mt-1 text-xs text-ink/80">{event.description}</p>
                   )}
                 </div>
               </div>

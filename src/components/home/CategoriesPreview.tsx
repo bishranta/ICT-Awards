@@ -12,7 +12,7 @@ export default function CategoriesPreview() {
             title="Award Categories"
             subtitle="Recognition across 5 tracks covering innovation, individuals, organizations, and regional excellence."
           />
-          <Link to="/categories" className="text-gold font-bold hover:text-gold-dark flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+          <Link to="/categories" className="text-spectrum-a font-bold hover:text-ink flex items-center gap-2 whitespace-nowrap flex-shrink-0">
             View All Categories
             <ArrowRight size={16} />
           </Link>
@@ -26,7 +26,7 @@ export default function CategoriesPreview() {
               <Link
                 key={group.group}
                 to={`/categories#group-${group.group}`}
-                className="relative bg-white border border-gray-100 border-t-4 rounded-xl p-6 group transition-all hover:shadow-ink overflow-hidden"
+                className="relative bg-surface border border-border-subtle border-t-4 rounded-xl p-6 group transition-all hover:shadow-ink overflow-hidden"
                 style={{ borderTopColor: color }}
               >
                 {/* Watermark letter */}
@@ -41,12 +41,12 @@ export default function CategoriesPreview() {
                   <div className="text-xs uppercase tracking-widest font-bold mb-1" style={{ color }}>
                     Category {group.group}
                   </div>
-                  <h3 className="text-ink font-bold text-sm leading-tight mb-3 group-hover:text-gold transition-colors">
+                  <h3 className="text-ink font-bold text-sm leading-tight mb-3 group-hover:text-spectrum-a transition-colors">
                     {group.label}
                   </h3>
                   <ul className="space-y-1">
                     {cats.slice(0, 4).map((c) => (
-                      <li key={c.id} className="text-xs text-ink/50 flex items-center gap-1.5">
+                      <li key={c.id} className="text-xs text-ink/80 flex items-center gap-1.5">
                         <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
                         {c.name.replace(' ICT Award 2026', '').replace(' ICT Recognition 2026', '')}
                       </li>

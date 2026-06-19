@@ -153,15 +153,21 @@ export const CATEGORY_GROUPS: { group: CategoryGroup; label: string; description
 ]
 
 /**
- * Brand color per award group, sampled from the logo's AWARD-wordmark gradient
- * (indigo → red). Applied via inline `style` to avoid Tailwind JIT purging
- * dynamic class names. Append an 8-digit alpha suffix for tints, e.g.
- * `GROUP_COLOR[g] + '1A'` ≈ 10% opacity.
+ * Brand color per award group — the Signature Spectrum (indigo → red), matching
+ * the `spectrum` tokens in tailwind.config.ts. Applied via inline `style` to
+ * avoid Tailwind JIT purging dynamic class names. Append an 8-digit alpha suffix
+ * for tints, e.g. `GROUP_COLOR[g] + '1A'` ≈ 10% opacity.
+ *
+ * WCAG AA verified (2026-06-19): normal text on white / cream (#FEF9EE) / surface-alt (#F8F9FA).
+ * Contrast ratios (white / cream / surface-alt):
+ *   A 10.8 / 10.3 / 10.4  ·  B 9.4 / 9.0 / 9.1  ·  C 7.5 / 7.1 / 7.2
+ *   D 6.1 / 5.8 / 5.9     ·  E 6.2 / 5.9 / 6.0
+ * All ≥ 4.5:1. E uses #C20F1A (unified AA-safe red, == spectrum.e).
  */
 export const GROUP_COLOR: Record<CategoryGroup, string> = {
   A: '#4C2D75',
   B: '#6E2C68',
   C: '#9B2850',
   D: '#BD203A',
-  E: '#C20F1A', // logo red, darkened from #E0121E so small label text on white passes WCAG AA
+  E: '#C20F1A', // AA-safe red — unified value (== spectrum.e and live tokens)
 }

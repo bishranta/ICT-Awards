@@ -21,16 +21,16 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-ink overflow-hidden">
-      {/* Indigo glow top + warm gold glow bottom */}
+      {/* Logo-indigo glow top (ink.accent #4C2D75) + warm gold glow bottom (gold #F7B413) */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at 50% -10%, rgba(124,77,214,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 110%, rgba(247,179,19,0.10) 0%, transparent 55%)',
+            'radial-gradient(ellipse at 50% -10%, rgba(76,45,117,0.22) 0%, transparent 55%), radial-gradient(ellipse at 50% 110%, rgba(247,180,19,0.10) 0%, transparent 55%)',
         }}
       />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-12">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center mt-24 mb-12">
         {/* Badge */}
 
         {/* Logo (dark-background variant) */}
