@@ -17,6 +17,8 @@ export interface Winner {
   organization?: string
   isProvince?: boolean
   province?: string
+  photo?: string    // image URL/path; avatar-initials fallback used when absent
+  profile?: string  // short bio/description; placeholder text used when absent
 }
 
 export interface Stat {
