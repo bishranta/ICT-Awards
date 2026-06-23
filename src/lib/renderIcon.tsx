@@ -3,7 +3,7 @@ import {
   Buildings, GraduationCap, Users, Globe, Briefcase, Code,
   ClipboardText, CalendarCheck, CheckSquare, Television,
   Handshake, Target, Lightning, Medal,
-  Building, MapTrifold, DeviceMobile, UserCircle,
+  Building, MapTrifold, DeviceMobile, UserCircle, Factory,
 } from '@phosphor-icons/react'
 import type { Icon } from '@phosphor-icons/react'
 
@@ -12,7 +12,7 @@ const ICON_MAP: Record<string, Icon> = {
   Buildings, GraduationCap, Users, Globe, Briefcase, Code,
   ClipboardText, CalendarCheck, CheckSquare, Television,
   Handshake, Target, Lightning, Medal,
-  Building, MapTrifold, DeviceMobile, UserCircle,
+  Building, MapTrifold, DeviceMobile, UserCircle, Factory,
 }
 
 interface RenderIconProps {
@@ -25,6 +25,5 @@ interface RenderIconProps {
 export function RenderIcon({ name, size = 20, className, weight = 'regular' }: RenderIconProps) {
   const Icon = ICON_MAP[name]
   if (!Icon) return null
-  const classes = className ? `icon-spectrum ${className}` : 'icon-spectrum'
-  return <Icon size={size} className={classes} weight={weight} />
+  return <Icon size={size} className={className ?? 'icon-spectrum'} weight={weight} />
 }
