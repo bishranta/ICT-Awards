@@ -44,7 +44,7 @@ export default function WinnerCard({ winner, showYear = false }: WinnerCardProps
               {initials ? (
                 <span className="text-gold font-black text-lg leading-none">{initials}</span>
               ) : (
-                <Trophy size={22} className="text-gold" weight="fill" />
+                <Trophy size={22} className="icon-spectrum" weight="fill" />
               )}
             </div>
           )}

@@ -9,7 +9,7 @@ export default function CounterStat({ value, suffix, label, icon }: Stat) {
   return (
     <div ref={ref} className="flex flex-col items-center text-center p-6 group">
       <div className="w-8 h-8 flex items-center justify-center mb-2">
-        <RenderIcon name={icon} size={22} className="text-gold/70" />
+        <RenderIcon name={icon} size={22} />
       </div>
       <div className="text-4xl md:text-5xl font-black text-gold leading-none tabular-nums">
         {inView ? (

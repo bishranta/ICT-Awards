@@ -34,7 +34,7 @@ export default function PreActivitiesPage() {
               <div key={activity.id} className="gold-border-card">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <RenderIcon name={activity.icon} size={24} className="text-gold" />
+                    <RenderIcon name={activity.icon} size={24} />
                   </div>
                   <div>
                     <h3 className="text-ink font-bold text-xl mb-2">{activity.title}</h3>
@@ -60,7 +60,7 @@ export default function PreActivitiesPage() {
               <div key={activity.id} className="bg-surface-alt border border-border-subtle hover:border-gold/30 rounded-xl p-6 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <RenderIcon name={activity.icon} size={24} className="text-gold" />
+                    <RenderIcon name={activity.icon} size={24} />
                   </div>
                   <div>
                     <h3 className="text-ink font-bold text-xl mb-2">{activity.title}</h3>

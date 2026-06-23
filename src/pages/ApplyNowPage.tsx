@@ -61,7 +61,7 @@ export default function ApplyNowPage() {
                   <ul className="space-y-1.5">
                     {cats.map(c => (
                       <li key={c.id} className="flex items-center gap-2 text-sm text-ink/80">
-                        <RenderIcon name={c.icon ?? 'Star'} size={14} className="text-gold/70 flex-shrink-0" />
+                        <RenderIcon name={c.icon ?? 'Star'} size={14} className="flex-shrink-0" />
                         {c.name.replace(' ICT Award 2026', '').replace(' ICT Recognition 2026', '')}
                       </li>
                     ))}
