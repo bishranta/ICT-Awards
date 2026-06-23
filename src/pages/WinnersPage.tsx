@@ -16,7 +16,7 @@ type View = 'year' | 'category'
 
 export default function WinnersPage() {
   const { year: yearParam } = useParams()
-  const defaultYear = yearParam ? parseInt(yearParam) : 2025
+  const defaultYear = yearParam ? (parseInt(yearParam) || 2025) : 2025
 
   const [view, setView] = useState<View>('year')
   const [activeYear, setActiveYear] = useState(defaultYear)
@@ -113,8 +113,8 @@ export default function WinnersPage() {
                     — {mainWinners.length} Winners
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                    {mainWinners.map((w, idx) => (
-                      <WinnerCard key={idx} winner={w} showYear={false} />
+                    {mainWinners.map((w) => (
+                      <WinnerCard key={`${w.year}-${w.categoryId}`} winner={w} showYear={false} />
                     ))}
                   </div>
 
@@ -200,8 +200,8 @@ export default function WinnersPage() {
                     {categoryWinners.length} winner{categoryWinners.length !== 1 ? 's' : ''} across all editions
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {categoryWinners.map((w, idx) => (
-                      <WinnerCard key={idx} winner={w} showYear={true} />
+                    {categoryWinners.map((w) => (
+                      <WinnerCard key={`${w.year}-${w.categoryId}`} winner={w} showYear={true} />
                     ))}
                   </div>
                 </>

@@ -68,6 +68,14 @@ lite-youtube {
   }
 }
 
+/* Hide scrollbar while preserving scroll behaviour */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* Signature gradient text — for large/bold display headings only */
 .text-gradient-spectrum {
   /* Canonical 5-stop spectrum (matches tailwind.config.ts spectrum-gradient) */
