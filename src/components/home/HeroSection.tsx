@@ -54,14 +54,14 @@ export default function HeroSection() {
         <div className="w-16 h-1 bg-spectrum-gradient rounded-full mx-auto mb-6" />
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-balance text-white">
           Introducing The Biggest
           <br />
           <span className="text-gold">TECH AWARD</span>
           <span> OF Nepal</span>
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-lg md:text-xl text-white/60 max-w-lg mx-auto leading-relaxed">
           Honoring Excellence in the Technology Sector of Nepal and Beyond.
           Recognizing outstanding achievements in ICT since 2016.
         </p>

@@ -64,7 +64,7 @@ Defined in `tailwind.config.ts`. The palette is derived from the official logo (
 - Neutrals: `surface`, `surface-alt`, `surface-muted`, `border-light`, `text-muted`.
 - **Gradients**: `bg-gold-gradient` (CTAs); `bg-spectrum-gradient` (90° indigo→red — decorative brand accents only: heading underlines, dividers, hero/footer rules; never body text). **Shadows**: `shadow-gold`, `shadow-gold-sm`, `shadow-ink`.
 - **Gradient text**: the `.text-gradient-spectrum` helper (in `src/styles/globals.css`) clips the spectrum gradient to text — large/bold display headings only.
-- **Animation**: `animate-fade-up` (opacity + translateY, 0.6s). **Font**: Nunito Sans → Calibri → Arial (`font-sans`) / Georgia (`font-display`).
+- **Animation**: `animate-fade-up` (opacity + translateY, 0.6s). **Font**: Inter → Calibri → Arial (`font-sans`) / Georgia (`font-display`).
 
 ## Award Categories Structure
 

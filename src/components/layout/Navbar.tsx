@@ -84,7 +84,7 @@ export default function Navbar() {
                 >
                   {item.label}
                   {item.children && (
-                    <CaretDown size={12} className="opacity-60" />
+                    <CaretDown size={12} className="icon-spectrum opacity-60" />
                   )}
                 </NavLink>
 
@@ -122,7 +122,7 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={22} /> : <List size={22} />}
+            {mobileOpen ? <X size={22} className="icon-spectrum" /> : <List size={22} className="icon-spectrum" />}
           </button>
         </div>
       </div>

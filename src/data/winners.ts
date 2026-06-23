@@ -1,4 +1,5 @@
 import type { Winner } from '@/types'
+import { CATEGORIES } from '@/data/categories'
 
 export const WINNERS: Winner[] = [
   // 2016
@@ -131,3 +132,24 @@ export const WINNERS: Winner[] = [
 export const WINNER_YEARS = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 
 export const getWinnersByYear = (year: number) => WINNERS.filter(w => w.year === year)
+
+/** All winners for a given categoryId, sorted newest-first. */
+export const getWinnersByCategory = (categoryId: string): Winner[] =>
+  WINNERS.filter(w => w.categoryId === categoryId).sort((a, b) => b.year - a.year)
+
+/**
+ * Unique award categories that actually have at least one winner,
+ * preserving the A–E group order from CATEGORIES.
+ * Each entry uses the canonical name from CATEGORIES.
+ */
+const _winnerCategoryIds = new Set(WINNERS.filter(w => !w.isProvince).map(w => w.categoryId))
+export const WINNER_CATEGORIES = CATEGORIES.filter(c => _winnerCategoryIds.has(c.id)).map(c => ({
+  id: c.id,
+  name: c.name.replace(/ 2026$/, ''), // strip the current-year suffix for a timeless label
+  group: c.group,
+}))
+
+/** Profile text for a winner — returns the stored profile or a generic placeholder. */
+export const getWinnerProfile = (winner: Winner): string =>
+  winner.profile ??
+  `${winner.winnerName} was recognized with this ICT Award for outstanding contributions to Nepal's technology sector.`

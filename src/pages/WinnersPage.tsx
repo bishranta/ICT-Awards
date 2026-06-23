@@ -1,21 +1,40 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Trophy } from '@phosphor-icons/react'
-import { WINNERS, WINNER_YEARS, getWinnersByYear } from '@/data/winners'
+import {
+  WINNERS,
+  WINNER_YEARS,
+  WINNER_CATEGORIES,
+  getWinnersByYear,
+  getWinnersByCategory,
+} from '@/data/winners'
+import WinnerCard from '@/components/winners/WinnerCard'
 import clsx from 'clsx'
 
 const PROVINCES = ['Koshi', 'Madhesh', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpaschim']
 
+type View = 'year' | 'category'
+
 export default function WinnersPage() {
   const { year: yearParam } = useParams()
   const defaultYear = yearParam ? parseInt(yearParam) : 2025
-  const [activeYear, setActiveYear] = useState(defaultYear)
 
+  const [view, setView] = useState<View>('year')
+  const [activeYear, setActiveYear] = useState(defaultYear)
+  const [activeCategoryId, setActiveCategoryId] = useState(
+    WINNER_CATEGORIES[0]?.id ?? 'startup-award'
+  )
+
+  const totalWinners = WINNERS.length
+
+  // ── By Year data ──────────────────────────────────────────────────────────
   const allWinners = getWinnersByYear(activeYear)
   const mainWinners = allWinners.filter(w => !w.isProvince)
   const provinceWinners = allWinners.filter(w => w.isProvince)
 
-  const totalWinners = WINNERS.length
+  // ── By Category data ──────────────────────────────────────────────────────
+  const categoryWinners = getWinnersByCategory(activeCategoryId)
+  const activeCategoryName =
+    WINNER_CATEGORIES.find(c => c.id === activeCategoryId)?.name ?? activeCategoryId
 
   return (
     <div className="pt-20">
@@ -32,95 +51,165 @@ export default function WinnersPage() {
         </div>
       </section>
 
-      {/* Year Selector */}
-      <section className="bg-surface-muted sticky top-16 lg:top-20 z-30 border-b border-border-subtle">
+      {/* View Tabs */}
+      <section className="bg-surface border-b border-border-subtle">
         <div className="container-max px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-none">
-            {WINNER_YEARS.map((y) => (
+          <div className="flex gap-1 py-3">
+            {(['year', 'category'] as View[]).map(v => (
               <button
-                key={y}
-                onClick={() => setActiveYear(y)}
+                key={v}
+                onClick={() => setView(v)}
                 className={clsx(
-                  'flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all',
-                  activeYear === y
+                  'px-5 py-2 rounded-full text-sm font-bold transition-all',
+                  view === v
                     ? 'bg-gold text-ink shadow-gold-sm'
-                    : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
+                    : 'text-ink/70 hover:text-spectrum-a hover:bg-gold/10'
                 )}
               >
-                {y}
-                {y === 2025 && <span className="ml-1 text-xs opacity-70">10th</span>}
+                {v === 'year' ? 'By Year' : 'By Category'}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Winners Grid */}
-      <section className="bg-surface-alt section-padding">
-        <div className="container-max">
-          {mainWinners.length === 0 ? (
-            <p className="text-ink/70 text-center py-16">No winners data available for {activeYear}.</p>
-          ) : (
-            <>
-              <h2 className="text-xl font-black text-ink mb-6">
-                ICT Award <span className="text-spectrum-a">{activeYear}</span> — {mainWinners.length} Winners
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-                {mainWinners.map((w, idx) => (
-                  <div key={idx} className="gold-border-card group">
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
-                        <Trophy size={18} className="text-gold" weight="fill" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1 leading-tight">
-                          {w.categoryName}
-                        </div>
-                        <div className="text-ink font-bold leading-snug">{w.winnerName}</div>
-                        {w.organization && (
-                          <div className="text-ink/80 text-xs mt-1">{w.organization}</div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
+      {/* ── BY YEAR VIEW ──────────────────────────────────────────────────── */}
+      {view === 'year' && (
+        <>
+          {/* Year Selector */}
+          <section className="bg-surface-muted sticky top-16 lg:top-20 z-30 border-b border-border-subtle">
+            <div className="container-max px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-none">
+                {WINNER_YEARS.map((y) => (
+                  <button
+                    key={y}
+                    onClick={() => setActiveYear(y)}
+                    className={clsx(
+                      'flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all',
+                      activeYear === y
+                        ? 'bg-gold text-ink shadow-gold-sm'
+                        : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
+                    )}
+                  >
+                    {y}
+                    {y === 2025 && <span className="ml-1 text-xs opacity-70">10th</span>}
+                  </button>
                 ))}
               </div>
+            </div>
+          </section>
 
-              {/* Province Winners */}
-              {provinceWinners.length > 0 && (
+          {/* Winners Grid */}
+          <section className="bg-surface-alt section-padding">
+            <div className="container-max">
+              {mainWinners.length === 0 ? (
+                <p className="text-ink/70 text-center py-16">
+                  No winners data available for {activeYear}.
+                </p>
+              ) : (
                 <>
                   <h2 className="text-xl font-black text-ink mb-6">
-                    Province Startup ICT Recognition <span className="text-spectrum-a">{activeYear}</span>
+                    ICT Award <span className="text-spectrum-a">{activeYear}</span>{' '}
+                    — {mainWinners.length} Winners
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {PROVINCES.map((prov) => {
-                      const pw = provinceWinners.find(w => w.province === prov)
-                      return (
-                        <div
-                          key={prov}
-                          className={clsx(
-                            'rounded-xl p-4 border',
-                            pw
-                              ? 'bg-surface border-gold/20 hover:border-gold/40 transition-colors'
-                              : 'bg-surface border-border-subtle opacity-50'
-                          )}
-                        >
-                          <div className="text-xs text-spectrum-a font-bold uppercase tracking-wider mb-1">{prov} Province</div>
-                          {pw ? (
-                            <div className="text-ink font-bold text-sm">{pw.winnerName}</div>
-                          ) : (
-                            <div className="text-ink/65 text-sm">—</div>
-                          )}
-                        </div>
-                      )
-                    })}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                    {mainWinners.map((w, idx) => (
+                      <WinnerCard key={idx} winner={w} showYear={false} />
+                    ))}
+                  </div>
+
+                  {/* Province Winners */}
+                  {provinceWinners.length > 0 && (
+                    <>
+                      <h2 className="text-xl font-black text-ink mb-6">
+                        Province Startup ICT Recognition{' '}
+                        <span className="text-spectrum-a">{activeYear}</span>
+                      </h2>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {PROVINCES.map((prov) => {
+                          const pw = provinceWinners.find(w => w.province === prov)
+                          return (
+                            <div
+                              key={prov}
+                              className={clsx(
+                                'rounded-xl p-4 border',
+                                pw
+                                  ? 'bg-surface border-gold/20 hover:border-gold/40 transition-colors'
+                                  : 'bg-surface border-border-subtle opacity-50'
+                              )}
+                            >
+                              <div className="text-xs text-spectrum-a font-bold uppercase tracking-wider mb-1">
+                                {prov} Province
+                              </div>
+                              {pw ? (
+                                <div className="text-ink font-bold text-sm">{pw.winnerName}</div>
+                              ) : (
+                                <div className="text-ink/65 text-sm">—</div>
+                              )}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </>
+                  )}
+                </>
+              )}
+            </div>
+          </section>
+        </>
+      )}
+
+      {/* ── BY CATEGORY VIEW ──────────────────────────────────────────────── */}
+      {view === 'category' && (
+        <>
+          {/* Category Selector */}
+          <section className="bg-surface-muted sticky top-16 lg:top-20 z-30 border-b border-border-subtle">
+            <div className="container-max px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-none">
+                {WINNER_CATEGORIES.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategoryId(cat.id)}
+                    className={clsx(
+                      'flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap',
+                      activeCategoryId === cat.id
+                        ? 'bg-gold text-ink shadow-gold-sm'
+                        : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
+                    )}
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Category Winners Grid */}
+          <section className="bg-surface-alt section-padding">
+            <div className="container-max">
+              {categoryWinners.length === 0 ? (
+                <p className="text-ink/70 text-center py-16">
+                  No winners data available for this category.
+                </p>
+              ) : (
+                <>
+                  <h2 className="text-xl font-black text-ink mb-2">
+                    <span className="text-spectrum-a">{activeCategoryName}</span>
+                  </h2>
+                  <p className="text-ink/65 text-sm mb-6">
+                    {categoryWinners.length} winner{categoryWinners.length !== 1 ? 's' : ''} across all editions
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {categoryWinners.map((w, idx) => (
+                      <WinnerCard key={idx} winner={w} showYear={true} />
+                    ))}
                   </div>
                 </>
               )}
-            </>
-          )}
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
     </div>
   )
 }

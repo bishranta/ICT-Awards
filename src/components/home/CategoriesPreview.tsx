@@ -14,7 +14,7 @@ export default function CategoriesPreview() {
           />
           <Link to="/categories" className="text-spectrum-a font-bold hover:text-ink flex items-center gap-2 whitespace-nowrap flex-shrink-0">
             View All Categories
-            <ArrowRight size={16} />
+            <ArrowRight size={16} className="icon-spectrum" />
           </Link>
         </div>
 
