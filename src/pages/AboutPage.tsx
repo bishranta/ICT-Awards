@@ -69,7 +69,7 @@ function FAQAccordion() {
             <span className="font-semibold text-ink pr-4">{faq.question}</span>
             <CaretDown
               size={18}
-              className={clsx('text-gold flex-shrink-0 transition-transform', open === faq.id && 'rotate-180')}
+              className={clsx('icon-spectrum flex-shrink-0 transition-transform', open === faq.id && 'rotate-180')}
             />
           </button>
           {open === faq.id && (
@@ -113,7 +113,7 @@ export default function AboutPage() {
             {SIGNIFICANCE.map((item) => (
               <div key={item.title} className="bg-surface-alt border border-border-subtle rounded-xl p-5 hover:border-gold/20 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
-                  <RenderIcon name={item.icon} size={18} className="text-gold" />
+                  <RenderIcon name={item.icon} size={18} />
                 </div>
                 <h3 className="text-ink font-bold text-sm mb-1">{item.title}</h3>
                 <p className="text-ink/80 text-xs leading-relaxed">{item.desc}</p>
@@ -214,7 +214,7 @@ export default function AboutPage() {
           />
           <div className="bg-surface border border-gold/20 rounded-xl p-8 text-center">
             <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
-              <HourglassHigh size={24} className="text-gold" />
+              <HourglassHigh size={24} className="icon-spectrum" />
             </div>
             <p className="text-ink/80">Jury and Advisor lists for ICT Award 2026 will be updated soon.</p>
             <p className="text-spectrum-a text-sm mt-2">Check back after nominations open on July 17, 2026.</p>

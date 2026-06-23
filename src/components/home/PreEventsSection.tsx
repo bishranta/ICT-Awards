@@ -25,7 +25,7 @@ export default function PreEventsSection() {
           {featured.map((activity) => (
             <div key={activity.id} className="bg-surface rounded-xl p-6 shadow-sm hover:shadow-md border border-border-subtle hover:border-gold/30 transition-all group">
               <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
-                <RenderIcon name={activity.icon} size={20} className="text-gold" />
+                <RenderIcon name={activity.icon} size={20} />
               </div>
               <h3 className="font-bold text-ink text-lg mb-2 group-hover:text-spectrum-a transition-colors">
                 {activity.title}
