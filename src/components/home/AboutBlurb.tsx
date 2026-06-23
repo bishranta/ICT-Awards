@@ -35,7 +35,7 @@ export default function AboutBlurb() {
               className="inline-flex items-center gap-2 text-spectrum-a font-bold hover:gap-3 transition-all"
             >
               Know More
-              <ArrowRight size={16} />
+              <ArrowRight size={16} className="icon-spectrum" />
             </Link>
           </div>
 
@@ -43,7 +43,7 @@ export default function AboutBlurb() {
             {CARDS.map(({ label, text, Icon }) => (
               <div key={label} className="bg-surface rounded-xl p-5 shadow-sm border border-border-subtle hover:border-gold/30 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
-                  <Icon size={18} className="text-gold" />
+                  <Icon size={18} className="icon-spectrum" />
                 </div>
                 <div className="text-spectrum-a font-black text-sm uppercase tracking-widest mb-1">{label}</div>
                 <p className="text-ink/70 text-sm leading-relaxed">{text}</p>

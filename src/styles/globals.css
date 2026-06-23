@@ -9,6 +9,7 @@
 
   body {
     @apply font-sans bg-surface text-ink;
+    font-optical-sizing: auto;
     scrollbar-width: thin;
     scrollbar-color: #F7B413 #F1F3F5; /* gold token / surface-muted hex */
   }
@@ -48,6 +49,23 @@
 /* Lite YouTube embed override */
 lite-youtube {
   @apply rounded-xl overflow-hidden;
+}
+
+/* Spectrum gradient fill for icons — requires #spectrum-gradient defined in the DOM */
+.icon-spectrum path,
+.icon-spectrum circle,
+.icon-spectrum rect,
+.icon-spectrum polygon,
+.icon-spectrum polyline,
+.icon-spectrum ellipse {
+  fill: url(#spectrum-gradient);
+}
+
+/* Disable the timeline node ripple for reduced-motion users (component also gates this) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ripple {
+    animation: none !important;
+  }
 }
 
 /* Signature gradient text — for large/bold display headings only */

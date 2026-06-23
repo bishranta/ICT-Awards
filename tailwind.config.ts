@@ -39,8 +39,8 @@ const config: Config = {
         'text-muted': '#5A6472',    // retuned from #6B7280 for AA on small copy
       },
       fontFamily: {
-        sans: ['"Nunito Sans"', 'Calibri', 'Arial', 'sans-serif'],
-        display: ['"Nunito Sans"', 'Calibri', 'Georgia', 'serif'],
+        sans: ['"Inter"', 'Calibri', 'Arial', 'sans-serif'],
+        display: ['"Inter"', 'Calibri', 'Georgia', 'serif'],
       },
       backgroundImage: {
         // Canonical Signature Spectrum — 5 stops built from the spectrum tokens.
@@ -57,9 +57,15 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        // Pulsing rings on highlighted timeline nodes (decoded from the reference site).
+        ripple: {
+          '0%': { opacity: '0.6', transform: 'scale(1)' },
+          '100%': { opacity: '0', transform: 'scale(2.8)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out forwards',
+        ripple: 'ripple 2s ease-out infinite',
       },
     },
   },

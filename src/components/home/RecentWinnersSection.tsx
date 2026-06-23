@@ -16,7 +16,7 @@ export default function RecentWinnersSection() {
           />
           <Link to="/winners/2025" className="text-spectrum-a font-bold hover:text-ink flex items-center gap-2 whitespace-nowrap flex-shrink-0">
             All Winners
-            <ArrowRight size={16} />
+            <ArrowRight size={16} className="icon-spectrum" />
           </Link>
         </div>
 
@@ -28,7 +28,7 @@ export default function RecentWinnersSection() {
             >
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">
-                  <Trophy size={18} className="text-gold" weight="fill" />
+                  <Trophy size={18} className="icon-spectrum" weight="fill" />
                 </div>
                 <div>
                   <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1">

@@ -24,28 +24,29 @@ colors:
   text-muted: "#5A6472"
 typography:
   display:
-    fontFamily: "Nunito Sans, Calibri, Arial, sans-serif"
+    fontFamily: "Inter, Calibri, Arial, sans-serif"
     fontSize: "clamp(2.25rem, 7vw, 4.5rem)"
-    fontWeight: 900
+    fontWeight: 800
     lineHeight: 1.1
-    letterSpacing: "-0.02em"
+    letterSpacing: "normal"
   headline:
-    fontFamily: "Nunito Sans, Calibri, Arial, sans-serif"
+    fontFamily: "Inter, Calibri, Arial, sans-serif"
     fontSize: "clamp(1.875rem, 4vw, 2.25rem)"
-    fontWeight: 900
+    fontWeight: 700
     lineHeight: 1.2
+    letterSpacing: "-0.025em"
   title:
-    fontFamily: "Nunito Sans, Calibri, Arial, sans-serif"
+    fontFamily: "Inter, Calibri, Arial, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 700
     lineHeight: 1.4
   body:
-    fontFamily: "Nunito Sans, Calibri, Arial, sans-serif"
+    fontFamily: "Inter, Calibri, Arial, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.6
   label:
-    fontFamily: "Nunito Sans, Calibri, Arial, sans-serif"
+    fontFamily: "Inter, Calibri, Arial, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 700
     letterSpacing: "0.1em"
@@ -97,7 +98,7 @@ The ICT Awards Nepal design system exists to stage excellence — not as a dista
 
 The palette — Trophy Gold on Deep Indigo Night, with a Signature Spectrum of indigo-to-red — is extracted directly from the `ICT-AWARD-Logo.png`. This is not a "dark/gold awards site" cliché; every color has a logo source. The Signature Spectrum (Groups A through E) turns a navigation problem — five very different award tracks — into a brand system: each group has its own voice within the same arc. The depth comes from restraint, not decoration.
 
-The typography is single-family Nunito Sans, pushed hard through weight contrast. At font-weight 900, headings read as muscular and proud; at 400, body text is warm and legible. No second family is introduced — weight does the work that most systems use a pairing to achieve. The system explicitly rejects: trophies as hero imagery, stock photo handshakes, marble textures, and serif-heavy "prestige" aesthetics. It also rejects the blue-gradient dev-conference palette. Nepal's tech sector is alive and moving; the design should feel the same.
+The typography is single-family Inter, pushed hard through weight contrast. The hero display headline sits at weight 900 — muscular and proud; section headings at 700 — confident and elegant; body text at 400 — warm and legible. No second family is introduced — weight does the work that most systems use a pairing to achieve. The system explicitly rejects: trophies as hero imagery, stock photo handshakes, marble textures, and serif-heavy "prestige" aesthetics. It also rejects the blue-gradient dev-conference palette. Nepal's tech sector is alive and moving; the design should feel the same.
 
 **Key Characteristics:**
 - Deep Indigo Night anchors hero and footer; cream and white breathe between sections
@@ -146,10 +147,10 @@ Every color in this system traces back to `ICT-AWARD-Logo.png`. When a new color
 
 ## 3. Typography
 
-**Display Font:** Nunito Sans (with Calibri, Arial, system sans-serif fallback)
-**Body Font:** Nunito Sans — same family; weight contrast carries the hierarchy
+**Display Font:** Inter (with Calibri, Arial, system sans-serif fallback) — variable font, full weight range 100–900, optical sizing active
+**Body Font:** Inter — same family; weight contrast carries the hierarchy
 
-**Character:** Nunito Sans at weight 900 is muscular and proud — rounded terminals that stop short of playful, aggressive enough to hold its own against the dark indigo backgrounds and gold fills. At weight 400, it's warm and modern, accessible to a wide public audience. The single-family decision concentrates all voice into weight contrast rather than splitting personality across a pairing — right for a brand that must feel both official (ICTC Nepal) and aspirational (The Maker's Stage).
+**Character:** Inter at weight 900 is precise and powerful — neutral geometric construction with tight optical fit, aggressive enough to hold its own against the dark indigo backgrounds and gold fills. At weight 700, section headings read as confident and refined rather than heavy. At weight 400, body text is clean and legible at any size. The single-family decision concentrates all voice into weight contrast rather than splitting personality across a pairing — right for a brand that must feel both official (ICTC Nepal) and aspirational (The Maker's Stage).
 
 ### Hierarchy
 - **Display** (weight 900, `clamp(2.25rem, 7vw, 4.5rem)`, lh 1.1, ls -0.02em): Hero headline only. One per page. The `<h1>` on HeroSection. Never apply this scale to a section heading.
@@ -160,7 +161,7 @@ Every color in this system traces back to `ICT-AWARD-Logo.png`. When a new color
 
 ### Named Rules
 
-**The Weight-Is-Voice Rule.** All typographic hierarchy is achieved through font-weight contrast (900 vs 700 vs 400), not through a second font family or through size alone. Introducing a second family requires explicit justification against the brand's single-voice intent.
+**The Weight-Is-Voice Rule.** All typographic hierarchy is achieved through font-weight contrast — **800** (hero display `<h1>` only) / **700** (section headings, titles, labels) / **400** (body prose) — not through a second font family or size alone. Introducing a second family requires explicit justification against the brand's single-voice intent.
 
 **The Uppercase Cap Rule.** All-caps is reserved for `label` scale copy only — short labels at 0.75rem with `letter-spacing: 0.1em`. Never apply `uppercase` to body copy, card descriptions, or headings.
 
