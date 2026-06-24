@@ -35,10 +35,15 @@ export interface TimelineEvent {
   highlight?: boolean
 }
 
+export interface HistoryCard {
+  milestone?: string   // badge label
+  description: string
+  image?: string       // URL/path; placeholder shown when absent
+}
+
 export interface HistoryEntry {
   year: number
-  description: string
-  milestone?: string
+  cards: HistoryCard[]
 }
 
 export interface FAQ {
