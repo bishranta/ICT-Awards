@@ -31,7 +31,7 @@ All content lives as typed static arrays/objects in `src/data/`. Pages and compo
 
 ### Type Definitions
 
-All shared TypeScript interfaces are in `src/types/index.ts` (`Category`, `Winner`, `TimelineEvent`, `FAQ`, `TvEpisode`, `PreActivity`, etc.). Data files import from there; don't define types inline.
+All shared TypeScript interfaces are in `src/types/index.ts` (`Category`, `CategoryGroup`, `Winner`, `Stat`, `TimelineEvent`, `HistoryEntry`, `FAQ`, `TvEpisode`, `GrandFinale`, `PreActivity`, `NavItem`). Data files import from there; don't define types inline.
 
 ### Icons
 
@@ -41,9 +41,10 @@ Use `<RenderIcon name="..." size={} weight="..." />` (component) or `renderIcon(
 
 ### Component Organization
 
-- `src/components/home/` — section components used only on the home page (hero, stats, timeline, etc.)
+- `src/components/home/` — section components used only on the home page (HeroSection, StatsSection, TimelineSection, CategoriesPreview, RecentWinnersSection, PreEventsSection, AboutBlurb)
 - `src/components/layout/` — shell components (Navbar, Footer, PageWrapper)
-- `src/components/ui/` — reusable primitives (Button, SectionHeading, GoldDivider, CounterStat, YoutubeEmbed)
+- `src/components/ui/` — reusable primitives (SectionHeading, CounterStat, YoutubeEmbed)
+- `src/components/winners/` — components used only on the Winners page (WinnerCard, etc.)
 - `src/pages/` — one file per route; pages compose sections and pull from `src/data/`
 
 ### Path Alias
@@ -75,7 +76,7 @@ Categories are grouped A–E (`src/data/categories.ts`):
 - **D** — International
 - **E** — Province Recognition
 
-The `CategoriesPage` supports optional `:group` URL param to filter by group.
+The `CategoriesPage` supports optional `:group` URL param to filter by group. `WinnersPage` similarly supports optional `:year` param.
 
 Each group has a brand color in `GROUP_COLOR` (`src/data/categories.ts`), spanning the indigo→red spectrum (A indigo → E red). Apply these via inline `style` (e.g. `borderTopColor: color`, `backgroundColor: color + '1A'` for a ~10% tint) — **not** dynamic Tailwind classes like `bg-spectrum-${group}`, which the JIT compiler purges. Group E uses a darkened red (`#C20F1A`) so small label text on light passes WCAG AA.
 

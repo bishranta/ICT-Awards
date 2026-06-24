@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { CaretDown, FunnelSimple } from '@phosphor-icons/react'
 import {
   WINNERS,
   WINNER_YEARS,
@@ -19,7 +20,17 @@ export default function WinnersPage() {
   const defaultYear = yearParam ? (parseInt(yearParam) || 2025) : 2025
 
   const [view, setView] = useState<View>('year')
+  const [sortOpen, setSortOpen] = useState(false)
+  const sortRef = useRef<HTMLDivElement>(null)
   const [activeYear, setActiveYear] = useState(defaultYear)
+
+  useEffect(() => {
+    const close = (e: MouseEvent) => {
+      if (sortRef.current && !sortRef.current.contains(e.target as Node)) setSortOpen(false)
+    }
+    document.addEventListener('mousedown', close)
+    return () => document.removeEventListener('mousedown', close)
+  }, [])
   const [activeCategoryId, setActiveCategoryId] = useState(
     WINNER_CATEGORIES[0]?.id ?? 'startup-award'
   )
@@ -51,24 +62,37 @@ export default function WinnersPage() {
         </div>
       </section>
 
-      {/* View Tabs */}
+      {/* Sort by dropdown */}
       <section className="bg-surface border-b border-border-subtle">
         <div className="container-max px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-1 py-3">
-            {(['year', 'category'] as View[]).map(v => (
-              <button
-                key={v}
-                onClick={() => setView(v)}
-                className={clsx(
-                  'px-5 py-2 rounded-full text-sm font-bold transition-all',
-                  view === v
-                    ? 'bg-gold text-ink shadow-gold-sm'
-                    : 'text-ink/70 hover:text-spectrum-a hover:bg-gold/10'
-                )}
-              >
-                {v === 'year' ? 'By Year' : 'By Category'}
-              </button>
-            ))}
+          <div className="flex items-center gap-2 py-3" ref={sortRef}>
+            <button
+              onClick={() => setSortOpen(!sortOpen)}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold border border-border-subtle hover:border-gold/40 transition-colors text-ink/70"
+            >
+              <FunnelSimple size={14} />
+              Sort by: {view === 'year' ? 'Year' : 'Category'}
+              <CaretDown size={12} className={clsx('transition-transform duration-150', sortOpen && 'rotate-180')} />
+            </button>
+
+            {sortOpen && (
+              <div className="flex gap-1">
+                {(['year', 'category'] as View[]).map(v => (
+                  <button
+                    key={v}
+                    onClick={() => { setView(v); setSortOpen(false) }}
+                    className={clsx(
+                      'px-5 py-2 rounded-full text-sm font-bold transition-all',
+                      view === v
+                        ? 'bg-gold text-ink shadow-gold-sm'
+                        : 'text-ink/70 hover:text-spectrum-a hover:bg-gold/10'
+                    )}
+                  >
+                    {v === 'year' ? 'By Year' : 'By Category'}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
