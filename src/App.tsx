@@ -1,7 +1,12 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Navigate, createBrowserRouter, RouterProvider } from 'react-router-dom'
 import PageWrapper from '@/components/layout/PageWrapper'
+import AboutLayout from '@/components/layout/AboutLayout'
 import HomePage from '@/pages/HomePage'
-import AboutPage from '@/pages/AboutPage'
+import IntroductionPage from '@/pages/about/IntroductionPage'
+import SelectionPage from '@/pages/about/SelectionPage'
+import HistoryPage from '@/pages/about/HistoryPage'
+import TeamPage from '@/pages/about/TeamPage'
+import FaqPage from '@/pages/about/FaqPage'
 import CategoriesPage from '@/pages/CategoriesPage'
 import PreActivitiesPage from '@/pages/PreActivitiesPage'
 import WinnersPage from '@/pages/WinnersPage'
@@ -14,7 +19,18 @@ const router = createBrowserRouter([
     element: <PageWrapper />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: 'about', element: <AboutPage /> },
+      {
+        path: 'about',
+        element: <AboutLayout />,
+        children: [
+          { index: true, element: <Navigate to="introduction" replace /> },
+          { path: 'introduction', element: <IntroductionPage /> },
+          { path: 'selection', element: <SelectionPage /> },
+          { path: 'history', element: <HistoryPage /> },
+          { path: 'team', element: <TeamPage /> },
+          { path: 'faq', element: <FaqPage /> },
+        ],
+      },
       { path: 'categories', element: <CategoriesPage /> },
       { path: 'categories/:group', element: <CategoriesPage /> },
       { path: 'pre-activities', element: <PreActivitiesPage /> },

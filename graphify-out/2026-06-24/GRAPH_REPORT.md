@@ -1,16 +1,16 @@
-# Graph Report - ICT-Awards  (2026-06-24)
+# Graph Report - ICT-Awards  (2026-06-19)
 
 ## Corpus Check
-- 58 files · ~63,604 words
+- 57 files · ~62,007 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 491 nodes · 502 edges · 44 communities (34 shown, 10 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 35 edges (avg confidence: 0.84)
+- 482 nodes · 491 edges · 37 communities (27 shown, 10 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 33 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7c53ab4`
+- Built from commit: `b30e8ed8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -49,13 +49,6 @@
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
 - [[_COMMUNITY_Community 36|Community 36]]
-- [[_COMMUNITY_Community 37|Community 37]]
-- [[_COMMUNITY_Community 38|Community 38]]
-- [[_COMMUNITY_Community 39|Community 39]]
-- [[_COMMUNITY_Community 40|Community 40]]
-- [[_COMMUNITY_Community 41|Community 41]]
-- [[_COMMUNITY_Community 42|Community 42]]
-- [[_COMMUNITY_Community 43|Community 43]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 20 edges
@@ -96,27 +89,27 @@
 - **Unified Design Skill Ecosystem (design + brand + design-system + ui-styling)** — skills_design_skill, skills_brand_skill, skills_design_system_skill, skills_ui_styling_skill [EXTRACTED 1.00]
 - **Spectrum Token + Category Color System + Gradient** — concept_spectrum_gradient, concept_group_color_map, concept_award_wordmark_gradient [EXTRACTED 1.00]
 
-## Communities (44 total, 10 thin omitted)
+## Communities (37 total, 10 thin omitted)
 
 ### Community 0 - "ICT Award Core Concepts"
-Cohesion: 0.07
-Nodes (23): 5 Award Category Tracks (A-E), Grand Finale Countdown (Dec 18 2026), ICT Award Nepal, Spectrum Gradient Brand Design Pattern, CATEGORIES, CATEGORY_GROUP_LABELS, CATEGORY_GROUPS, GROUP_COLOR (+15 more)
+Cohesion: 0.09
+Nodes (18): 5 Award Category Tracks (A-E), ICT Award Nepal, CATEGORIES, CATEGORY_GROUP_LABELS, CATEGORY_GROUPS, GROUP_COLOR, FAQS, HISTORY (+10 more)
 
 ### Community 1 - "Pre-Activities & Icon System"
-Cohesion: 0.06
-Nodes (26): Static Data Layer Pattern, Icon Name String Abstraction, GrandFinale Data, GRAND_FINALES, TV_EPISODES, PRE_ACTIVITIES, ICT_2026_TIMELINE, ICON_MAP (+18 more)
+Cohesion: 0.08
+Nodes (17): Icon Name String Abstraction, PRE_ACTIVITIES, ICT_2026_TIMELINE, ICON_MAP, RenderIcon Component, renderIcon Function, RenderIconProps, AboutPage() (+9 more)
 
 ### Community 2 - "TypeScript App Config"
 Cohesion: 0.09
 Nodes (22): compilerOptions, allowImportingTsExtensions, baseUrl, ignoreDeprecations, isolatedModules, jsx, lib, module (+14 more)
 
 ### Community 3 - "Media & Static Data Layer"
-Cohesion: 0.15
-Nodes (11): STATS, Category, CategoryGroup, FAQ, GrandFinale, HistoryEntry, NavItem, PreActivity (+3 more)
+Cohesion: 0.07
+Nodes (27): Static Data Layer Pattern, GrandFinale Data, GRAND_FINALES, TV_EPISODES, STATS, getWinnersByYear Function, getWinnersByYear(), WINNER_YEARS (+19 more)
 
 ### Community 4 - "Layout & Brand Components"
-Cohesion: 0.15
-Nodes (8): ScrollToTop Behavior, Footer(), footerLinks, NAV_ITEMS, Navbar(), PageWrapper(), App(), router
+Cohesion: 0.09
+Nodes (14): Grand Finale Countdown (Dec 18 2026), ScrollToTop Behavior, Spectrum Gradient Brand Design Pattern, GRAND_FINALE, HeroSection(), CountdownTime, useCountdown(), Footer() (+6 more)
 
 ### Community 5 - "Project Dependencies"
 Cohesion: 0.07
@@ -135,8 +128,8 @@ Cohesion: 0.06
 Nodes (37): Banner Art Direction Styles (22 styles), Brand Sync Workflow (brand-guidelines -> design-tokens), Persisted Design System (MASTER.md + page overrides), shadcn/ui + Tailwind CSS Component Stack, Slide Contextual Decision System (CSVs + emotion arcs), Three-Layer Token Architecture (primitive -> semantic -> component), UI/UX Rule Categories (10 priority levels), Banner Design Skill (+29 more)
 
 ### Community 9 - "Type Definitions & Stats"
-Cohesion: 0.22
-Nodes (8): Available Domains, Available Stacks, How to Use, Output Formats, Prerequisites, Rule Categories by Priority, Search Reference, UI/UX Pro Max - Design Intelligence
+Cohesion: 0.05
+Nodes (38): Accessibility, Available Domains, Available Stacks, Common Rules for Professional UI, Common Sticking Points, Example Workflow, How to Use, How to Use This Skill (+30 more)
 
 ### Community 10 - "Award Categories"
 Cohesion: 0.06
@@ -157,10 +150,6 @@ Nodes (4): TypeScript App Config, TypeScript Node Config, TypeScript Root Config
 ### Community 15 - "Tailwind Color Palette"
 Cohesion: 0.67
 Nodes (3): Gold Color Palette, Spectrum Gradient Palette, Tailwind Config
-
-### Community 17 - "UI Button Primitive"
-Cohesion: 0.13
-Nodes (16): getWinnersByYear Function, getWinnerProfile(), getWinnersByCategory(), getWinnersByYear(), WINNER_CATEGORIES, WINNER_YEARS, _winnerCategoryIds, WINNERS (+8 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.09
@@ -198,36 +187,12 @@ Nodes (8): Accessibility & Inclusion, Anti-references, Brand Personality, Design
 Cohesion: 0.33
 Nodes (5): References (Knowledge Base), Routing, Slides, Subcommands, When to Use
 
-### Community 37 - "Community 37"
-Cohesion: 0.33
-Nodes (6): Accessibility, Interaction, Layout, Light/Dark Mode, Pre-Delivery Checklist, Visual Quality
-
-### Community 38 - "Community 38"
-Cohesion: 0.33
-Nodes (6): How to Use This Skill, Step 1: Analyze User Requirements, Step 2: Generate Design System (REQUIRED), Step 2b: Persist Design System (Master + Overrides Pattern), Step 3: Supplement with Detailed Searches (as needed), Step 4: Stack Guidelines (React Native)
-
-### Community 39 - "Community 39"
-Cohesion: 0.40
-Nodes (5): Common Rules for Professional UI, Icons & Visual Elements, Interaction (App), Layout & Spacing, Light/Dark Mode Contrast
-
-### Community 40 - "Community 40"
-Cohesion: 0.40
-Nodes (5): Example Workflow, Step 1: Analyze Requirements, Step 2: Generate Design System (REQUIRED), Step 3: Supplement with Detailed Searches (as needed), Step 4: Stack Guidelines
-
-### Community 41 - "Community 41"
-Cohesion: 0.50
-Nodes (4): Common Sticking Points, Pre-Delivery Checklist, Query Strategy, Tips for Better Results
-
-### Community 42 - "Community 42"
-Cohesion: 0.50
-Nodes (4): Must Use, Recommended, Skip, When to Apply
-
 ## Ambiguous Edges - Review These
 - `TimelineSection()` → `YoutubeEmbed()`  [AMBIGUOUS]
   src/components/ui/YoutubeEmbed.tsx · relation: semantically_similar_to
 
 ## Knowledge Gaps
-- **303 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+298 more)
+- **299 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+294 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -236,15 +201,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `TimelineSection()` and `YoutubeEmbed()`?**
   _Edge tagged AMBIGUOUS (relation: semantically_similar_to) - confidence is low._
-- **Why does `ICT_2026_TIMELINE` connect `Pre-Activities & Icon System` to `ICT Award Core Concepts`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `SectionHeading()` connect `ICT Award Core Concepts` to `UI Button Primitive`?**
+- **Why does `ICT_2026_TIMELINE` connect `Pre-Activities & Icon System` to `Media & Static Data Layer`, `Layout & Brand Components`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `HeroSection()` connect `Layout & Brand Components` to `ICT Award Core Concepts`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `useCountdown()` connect `Layout & Brand Components` to `Pre-Activities & Icon System`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _305 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _301 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `ICT Award Core Concepts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06890756302521009 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08994708994708994 - nodes in this community are weakly interconnected._
 - **Should `Pre-Activities & Icon System` be split into smaller, more focused modules?**
-  _Cohesion score 0.06006006006006006 - nodes in this community are weakly interconnected._
-- **Should `TypeScript App Config` be split into smaller, more focused modules?**
-  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08307692307692308 - nodes in this community are weakly interconnected._

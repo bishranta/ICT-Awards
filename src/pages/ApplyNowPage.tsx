@@ -1,5 +1,6 @@
+import clsx from 'clsx'
 import { Link } from 'react-router-dom'
-import { CATEGORIES, CATEGORY_GROUPS } from '@/data/categories'
+import { CATEGORIES, CATEGORY_GROUPS, GROUP_COLOR } from '@/data/categories'
 import { ICT_2026_TIMELINE } from '@/data/timeline'
 import { RenderIcon } from '@/lib/renderIcon'
 
@@ -31,13 +32,14 @@ export default function ApplyNowPage() {
             {ICT_2026_TIMELINE.map((event, idx) => (
               <div
                 key={idx}
-                className={`flex items-center gap-4 p-4 rounded-xl border ${
+                className={clsx(
+                  'flex items-center gap-4 p-4 rounded-xl border',
                   event.highlight ? 'bg-gold/10 border-gold/30' : 'bg-surface border-border-subtle'
-                }`}
+                )}
               >
-                <div className={`w-3 h-3 rounded-full flex-shrink-0 ${event.highlight ? 'bg-gold' : 'bg-border-strong'}`} />
+                <div className={clsx('w-3 h-3 rounded-full flex-shrink-0', event.highlight ? 'bg-gold' : 'bg-border-strong')} />
                 <div className="flex-1">
-                  <div className={`font-bold ${event.highlight ? 'text-spectrum-a' : 'text-ink'}`}>{event.label}</div>
+                  <div className={clsx('font-bold', event.highlight ? 'text-spectrum-a' : 'text-ink')}>{event.label}</div>
                   <div className="text-ink/80 text-sm">{event.date}</div>
                 </div>
               </div>
@@ -56,7 +58,7 @@ export default function ApplyNowPage() {
               const cats = CATEGORIES.filter(c => c.group === group.group)
               return (
                 <div key={group.group} className="bg-surface border border-border-subtle rounded-xl p-6">
-                  <div className="text-xs text-spectrum-a font-bold uppercase tracking-widest mb-1">Category {group.group}</div>
+                  <div className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: GROUP_COLOR[group.group] }}>Category {group.group}</div>
                   <h3 className="text-ink font-bold text-lg mb-3">{group.label}</h3>
                   <ul className="space-y-1.5">
                     {cats.map(c => (
