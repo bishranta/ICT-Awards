@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { ArrowLeft, Image as ImageIcon, MapPin, Television, UserCircle } from '@phosphor-icons/react'
 import { EDITIONS } from '@/data/editions'
@@ -6,6 +7,23 @@ import { GRAND_FINALES } from '@/data/media'
 import WinnerCard from '@/components/winners/WinnerCard'
 import YoutubeEmbed from '@/components/ui/YoutubeEmbed'
 import SectionHeading from '@/components/ui/SectionHeading'
+
+function EditionLogo({ logo, year }: { logo?: string; year: number }) {
+  const [err, setErr] = useState(false)
+  if (logo && !err) {
+    return (
+      <div className="flex-shrink-0 w-48 md:w-56 bg-white/5 rounded-2xl border border-white/10 p-5 flex items-center justify-center">
+        <img
+          src={logo}
+          alt={`ICT Award ${year} logo`}
+          onError={() => setErr(true)}
+          className="max-h-32 max-w-full object-contain"
+        />
+      </div>
+    )
+  }
+  return null
+}
 
 const EDITION_ORDINALS: Record<number, string> = {
   2016: '1st', 2017: '2nd', 2018: '3rd', 2019: '4th', 2020: '5th',
@@ -28,46 +46,53 @@ export default function EditionDetailPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-ink section-padding">
-        <div className="h-1 w-full bg-spectrum-gradient absolute top-20 left-0" />
+      <section className="bg-ink section-padding relative overflow-hidden">
+        <div className="h-1 w-full bg-spectrum-gradient absolute top-0 left-0" />
         <div className="container-max">
           <Link
             to="/editions"
-            className="inline-flex items-center gap-1.5 text-white/60 hover:text-gold text-sm font-semibold mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-white/60 hover:text-gold text-sm font-semibold mb-8 transition-colors"
           >
             <ArrowLeft size={15} /> All Editions
           </Link>
 
-          <div className="text-gold text-sm font-bold uppercase tracking-widest mb-2">
-            {ordinal} Edition
-          </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-2">
-            ICT Award {edition.year}
-          </h1>
-          {edition.title && (
-            <p className="text-white/50 text-lg">{edition.title}</p>
-          )}
+          <div className="flex flex-col md:flex-row md:items-center gap-8">
+            {/* Edition logo */}
+            <EditionLogo logo={edition.logo} year={edition.year} />
 
-          {/* Key details row */}
-          <div className="flex flex-wrap gap-4 mt-6">
-            {edition.venue && (
-              <div className="flex items-center gap-2 text-white/60 text-sm">
-                <MapPin size={15} className="text-gold" />
-                {edition.venue}
+            {/* Text block */}
+            <div>
+              <div className="text-gold text-sm font-bold uppercase tracking-widest mb-2">
+                {ordinal} Edition
               </div>
-            )}
-            {edition.chiefGuest && (
-              <div className="flex items-center gap-2 text-white/60 text-sm">
-                <UserCircle size={15} className="text-gold" />
-                {edition.chiefGuest}
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-2">
+                ICT Award {edition.year}
+              </h1>
+              {edition.title && (
+                <p className="text-white/50 text-lg mb-4">{edition.title}</p>
+              )}
+              {/* Key details */}
+              <div className="flex flex-col gap-2 mt-2">
+                {edition.venue && (
+                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <MapPin size={15} className="text-gold flex-shrink-0" />
+                    {edition.venue}
+                  </div>
+                )}
+                {edition.chiefGuest && (
+                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <UserCircle size={15} className="text-gold flex-shrink-0" />
+                    {edition.chiefGuest}
+                  </div>
+                )}
+                {edition.broadcast && (
+                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <Television size={15} className="text-gold flex-shrink-0" />
+                    {edition.broadcast}
+                  </div>
+                )}
               </div>
-            )}
-            {edition.broadcast && (
-              <div className="flex items-center gap-2 text-white/60 text-sm">
-                <Television size={15} className="text-gold" />
-                {edition.broadcast}
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </section>

@@ -1,7 +1,30 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Image as ImageIcon, ArrowRight } from '@phosphor-icons/react'
 import { EDITIONS } from '@/data/editions'
 import SectionHeading from '@/components/ui/SectionHeading'
+
+function EditionLogoCell({ logo, year }: { logo?: string; year: number }) {
+  const [err, setErr] = useState(false)
+  if (logo && !err) {
+    return (
+      <div className="w-full aspect-video bg-ink flex items-center justify-center border-b border-border-subtle p-4">
+        <img
+          src={logo}
+          alt={`ICT Award ${year} logo`}
+          onError={() => setErr(true)}
+          className="max-h-full max-w-full object-contain"
+        />
+      </div>
+    )
+  }
+  return (
+    <div className="w-full aspect-video bg-surface-muted flex flex-col items-center justify-center gap-2 border-b border-border-subtle">
+      <ImageIcon size={28} className="text-ink/20" />
+      <span className="text-ink/25 text-xs font-medium tracking-wide">ICT Award {year}</span>
+    </div>
+  )
+}
 
 const sorted = [...EDITIONS].sort((a, b) => b.year - a.year)
 
@@ -36,11 +59,8 @@ export default function EditionsPage() {
                 to={`/editions/${edition.year}`}
                 className="group bg-surface rounded-xl border border-border-subtle hover:border-gold/30 hover:shadow-gold transition-all overflow-hidden"
               >
-                {/* Gallery placeholder */}
-                <div className="w-full aspect-video bg-surface-muted flex flex-col items-center justify-center gap-2 border-b border-border-subtle">
-                  <ImageIcon size={28} className="text-ink/20" />
-                  <span className="text-ink/25 text-xs font-medium tracking-wide">ICT Award {edition.year}</span>
-                </div>
+                {/* Edition logo */}
+                <EditionLogoCell logo={edition.logo} year={edition.year} />
 
                 <div className="p-5">
                   <div className="text-spectrum-a text-xs font-bold uppercase tracking-wider mb-1">

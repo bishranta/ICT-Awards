@@ -3,12 +3,14 @@ import type { Edition } from '@/types'
 export const EDITIONS: Edition[] = [
   {
     year: 2016,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2016.jpg',
     intro: 'The first ICT Award was held in 2016, marking the beginning of Nepal\'s most prestigious technology recognition. Five awards in two categories were presented at the hall of the World Trade Center. The award was distributed in the presence of the then Hon\'ble Minister of Communications and Information Technology, Sherdhan Rai.',
     venue: 'World Trade Center, Kathmandu',
     chiefGuest: 'Hon\'ble Minister Sherdhan Rai, Ministry of Communications and IT',
   },
   {
     year: 2017,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2017.jpg',
     intro: 'The second edition of ICT Award was held on August 17, 2017 at Hotel Yak & Yeti. In the 2017 edition, awards were given in 4 different categories. The winner was honored by the then Hon\'ble Minister of Communications and Information Technology, Mohan Basnet.',
     venue: 'Hotel Yak & Yeti, Kathmandu',
     chiefGuest: 'Hon\'ble Minister Mohan Basnet, Ministry of Communications and IT',
@@ -16,6 +18,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2018,
+    logo: '/Past-Logos-of-ICT-Award/ICT%20Award%202018.jpg',
     intro: 'The third edition of the ICT Awards was held on August 17, 2018 at the Radisson Hotel. In the 2018 edition, 4 new categories were added and awards were given in 7 different categories. The winner was honored by the then Hon\'ble Minister of Communications and Information Technology, Gokul Prasad Baskota.',
     venue: 'Radisson Hotel, Kathmandu',
     chiefGuest: 'Hon\'ble Minister Gokul Prasad Baskota, Ministry of Communications and IT',
@@ -23,6 +26,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2019,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2019.jpg',
     intro: 'The fourth edition of the ICT Award was held on August 17, 2019 at Soaltee Crowne Plaza and was attended by more than 600 people. The awards were presented in 9 different categories in the presence of Hon\'ble Minister for Education, Science and Technology, Giriraj Mani Pokhrel.',
     venue: 'Soaltee Crowne Plaza, Kathmandu',
     chiefGuest: 'Hon\'ble Minister Giriraj Mani Pokhrel, Ministry of Education, Science and Technology',
@@ -30,6 +34,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2020,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2020.png',
     title: 'Huawei ICT Award 2020',
     intro: 'The Huawei ICT Award 2020 was awarded in 11 different categories with more than 400 online nominations. A committee of 14 jury members and 14 jury advisors was selected to evaluate all nominations. More than 25 jury meetings, presentations, speed dating, and field visits were conducted. More than 30 national and international organizations collaborated to make the event a grand success.\n\nThe grand finale was held on December 23, 2020 at Soaltee Crowne Plaza with more than 300 participants. The program was broadcast live on Himalaya TV, Dish Home Channel, and other social media platforms.',
     venue: 'Soaltee Crowne Plaza, Kathmandu',
@@ -37,6 +42,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2021,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2021.png',
     title: 'F1Soft ICT Award 2021',
     intro: 'The F1Soft ICT Award 2021 was awarded in 11 different categories with more than 500 online nominations. A committee of 12 jury members and 15 jury advisors was selected to evaluate all nominations. More than 25 jury meetings, presentations, speed dating, and field visits were conducted. More than 30 national and international organizations collaborated to make the event a grand success.\n\nThe grand finale was held on December 17, 2021 at The Soaltee Kathmandu. More than 1,000 people participated. The program was broadcast live on Himalaya TV, Dish Home Channel, and other social media platforms.',
     venue: 'The Soaltee Kathmandu',
@@ -44,6 +50,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2022,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2022.png',
     title: 'InfoDevelopers ICT Award 2022',
     intro: 'The InfoDevelopers ICT Award 2022 was awarded in 12 different categories with more than 800 online nominations. A committee of 12 jury members and 15 jury advisors was selected to evaluate all nominations. More than 25 jury meetings, presentations, speed dating, and field visits were conducted. More than 30 national and international organizations collaborated to make the event a grand success.\n\nThe grand finale was held on December 23, 2022 at The Soaltee Kathmandu. More than 1,000 people participated. The program was broadcast live on Kantipur TV HD, Kantipur Cineplex, and other social media platforms.',
     venue: 'The Soaltee Kathmandu',
@@ -51,6 +58,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2023,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2023.png',
     title: 'upGrad ICT Award 2023',
     intro: 'The grand finale of the upGrad ICT Award 2023 was concluded at The Soaltee Kathmandu on December 22, 2023 (6th Poush, 2080). The event brought to conclusion over a dozen pre-events and over 5 months of the selection process, followed by 25 jury meetings, presentations, speed dating, and field visits. A committee of 30+ national and international jury members and advisors evaluated more than 700 online nominations across 15 categories.\n\nThe grand finale was inaugurated by Communication Minister Rekha Sharma. The event was also attended by Finance Minister Prakash Sharan Mahar, Karnali Province\'s Law Minister Krishna Bahadur GC, and other high-ranking officials from various ministries, founders, and CEOs from ICT firms in Nepal and abroad — altogether over 800 participants. The program was broadcast live on Kantipur Cineplex, Kantipur TV HD, Hamro Patro, and other social media.',
     venue: 'The Soaltee Kathmandu',
@@ -59,6 +67,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2024,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2024.png',
     title: 'inDrive ICT Award 2024',
     intro: 'The grand finale of the inDrive ICT Award 2024 was held at the Hyatt Regency Kathmandu on December 20, 2024 (5th Poush, 2081). This event marked the culmination of over a dozen pre-events and six months of rigorous selection, including 25+ jury meetings, presentations, speed-dating sessions, and field visits. A distinguished panel of over 30 national and international jury members and advisors meticulously evaluated more than 800 online nominations across 16 categories.\n\nThe grand finale was inaugurated by the Chief Guest, Honorable Minister Prithvi Subba Gurung, Ministry of Communication and Information Technology. The event drew a remarkable crowd of over 15,000 attendees, including founders and CEOs from ICT companies in Nepal and abroad. The ceremony was broadcast live on Kantipur Cineplex, Kantipur TV HD, Hamro Patro, and various social media platforms.',
     venue: 'Hyatt Regency Kathmandu',
@@ -67,6 +76,7 @@ export const EDITIONS: Edition[] = [
   },
   {
     year: 2025,
+    logo: '/Past-Logos-of-ICT-Award/ICT-Award-2025.png',
     title: 'inDrive ICT Award 2025',
     intro: 'The tenth edition of the inDrive ICT Award 2025, organized by Living with ICT in association with NEPALPAY QR and TingTing, powered by Sasto Tickets, MIT, and KMC, reached its grand conclusion at The Plaza, Pulchwok, Lalitpur on December 19, 2025. Following a series of pre-events, a rigorous 6-month selection process, and a month-long television program, the grand finale featured awards in more than 15 categories, along with recognition given to the best startups from all seven provinces.\n\nThe awards were bestowed after a meticulous selection process involving five stages, considering more than 800 online applications. The inauguration was led by Hon\'ble Minister of Communication and Information Technology, Jagadish Kharel, with the gracious presence of the Vice Chairperson of the National Planning Commission, Dr. Prakash Kumar Shrestha, and other senior government officials. The event drew participation from over 1,000 professionals and was broadcast live on Himalaya Television HD.',
     venue: 'The Plaza, Pulchwok, Lalitpur',

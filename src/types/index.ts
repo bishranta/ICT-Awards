@@ -92,6 +92,7 @@ export interface Edition {
   venue?: string
   chiefGuest?: string
   broadcast?: string
+  logo?: string
 }
 
 export interface TeamMember {
