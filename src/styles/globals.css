@@ -76,6 +76,22 @@ lite-youtube {
   display: none;
 }
 
+/* Glimpses carousel — continuous ticker (duplicated track, -50% = one full pass) */
+@keyframes glimpse-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-glimpse {
+  animation: glimpse-scroll 30s linear infinite;
+}
+.glimpse-ticker:hover .animate-glimpse,
+.glimpse-ticker:focus-within .animate-glimpse {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-glimpse { animation: none; }
+}
+
 /* Signature gradient text — for large/bold display headings only */
 .text-gradient-spectrum {
   /* Canonical 5-stop spectrum (matches tailwind.config.ts spectrum-gradient) */

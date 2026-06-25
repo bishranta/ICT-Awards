@@ -1,4 +1,20 @@
-import type { TvEpisode, GrandFinale } from '@/types'
+import type { TvEpisode, GrandFinale, MediaCoverage } from '@/types'
+
+export const MEDIA_COVERAGES: MediaCoverage[] = [
+  { id: 'mc-1',  outlet: 'Annapurna Express',  url: 'https://theannapurnaexpress.com/story/60800/' },
+  { id: 'mc-2',  outlet: 'Techpana',            url: 'https://www.techpana.com/2025/154581/ict-awards-nepal-10th-edition-24-winners' },
+  { id: 'mc-3',  outlet: 'Nepal Profit',         url: 'https://nepalprofit.com/2025/12/41337/' },
+  { id: 'mc-4',  outlet: 'Business 360',         url: 'https://www.b360nepal.com/detail/27272/10th-ict-awards-finale-highlights-ict-role-in-disaster-response-election-readiness' },
+  { id: 'mc-5',  outlet: 'Shilapatra',            url: 'https://shilapatra.com/detail/173870' },
+  { id: 'mc-6',  outlet: 'ICT Side',             url: 'https://ictside.com/indrive-ict-award-2025-concluded-startups-organizations-and-personalities-in-the-technology-sector-honored-across-17-categories/' },
+  { id: 'mc-7',  outlet: 'Businesspana',          url: 'https://businesspana.com/more/update/30074/' },
+  { id: 'mc-8',  outlet: 'Bizpati',              url: 'https://bizpati.com/2025/12/186103/' },
+  { id: 'mc-9',  outlet: 'ICT Samachar',         url: 'https://ictsamachar.com/news/indrive-ict-awards-2025-concluded-technology-startups-organizations-and-individuals-honored-in-17-categories/' },
+  { id: 'mc-10', outlet: 'Desh Sanchar',          url: 'https://deshsanchar.com/2025/12/21/1128839/' },
+  { id: 'mc-11', outlet: 'Good Nepal',            url: 'https://www.goodnepal.com/detail/244' },
+  { id: 'mc-12', outlet: 'Nepali Telecom',        url: 'https://www.nepalitelecom.com/ict-award-2025' },
+  { id: 'mc-13', outlet: 'DC Nepal',              url: 'https://www.dcnepal.com/2025/12/724120/' },
+]
 
 export const GRAND_FINALES: GrandFinale[] = [
   { year: 2025, youtubeId: 'sWBu8PpOQg8' },

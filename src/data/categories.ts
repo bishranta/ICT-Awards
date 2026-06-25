@@ -64,7 +64,7 @@ export const CATEGORIES: Category[] = [
     group: 'B',
     name: 'Woman Icon ICT Award 2026',
     description: 'Honors a distinguished female leader who has made significant contributions to Nepal\'s ICT sector. Recognizes achievements and leadership of women advancing the tech industry.',
-    eligibility: 'Female leaders who have contributed to Nepal\'s ICT sector for at least 12 years. Self-nomination or nomination by others accepted.',
+    eligibility: 'Female leaders who have contributed to Nepal\'s ICT sector for at least 15 years. Self-nomination or nomination by others accepted.',
     icon: 'Code',
   },
   {
@@ -131,7 +131,7 @@ export const CATEGORIES: Category[] = [
     group: 'E',
     name: 'Province Startup ICT Recognition 2026',
     description: 'Special recognition for startups registered and operating within one of Nepal\'s seven provinces. Encourages balanced entrepreneurial development across the country by highlighting promising startups outside the Kathmandu Valley.',
-    eligibility: 'Startups incorporated on or after Fiscal Year 2077/078 and operating within any of Nepal\'s seven provinces.',
+    eligibility: 'Startups incorporated on or after Fiscal Year 2078/079 and operating within any of Nepal\'s seven provinces.',
     icon: 'MapTrifold',
   },
 ]

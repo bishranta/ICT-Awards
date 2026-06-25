@@ -6,12 +6,16 @@ import IntroductionPage from '@/pages/about/IntroductionPage'
 import SelectionPage from '@/pages/about/SelectionPage'
 import HistoryPage from '@/pages/about/HistoryPage'
 import TeamPage from '@/pages/about/TeamPage'
+import JuryPage from '@/pages/about/JuryPage'
+import AdvisorsPage from '@/pages/about/AdvisorsPage'
 import FaqPage from '@/pages/about/FaqPage'
 import CategoriesPage from '@/pages/CategoriesPage'
 import PreActivitiesPage from '@/pages/PreActivitiesPage'
 import WinnersPage from '@/pages/WinnersPage'
 import MediaPage from '@/pages/MediaPage'
 import ApplyNowPage from '@/pages/ApplyNowPage'
+import EditionsPage from '@/pages/EditionsPage'
+import EditionDetailPage from '@/pages/EditionDetailPage'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +32,8 @@ const router = createBrowserRouter([
           { path: 'selection', element: <SelectionPage /> },
           { path: 'history', element: <HistoryPage /> },
           { path: 'team', element: <TeamPage /> },
+          { path: 'jury', element: <JuryPage /> },
+          { path: 'advisors', element: <AdvisorsPage /> },
           { path: 'faq', element: <FaqPage /> },
         ],
       },
@@ -38,6 +44,8 @@ const router = createBrowserRouter([
       { path: 'winners/:year', element: <WinnersPage /> },
       { path: 'media', element: <MediaPage /> },
       { path: 'apply', element: <ApplyNowPage /> },
+      { path: 'editions', element: <EditionsPage /> },
+      { path: 'editions/:year', element: <EditionDetailPage /> },
     ],
   },
 ])

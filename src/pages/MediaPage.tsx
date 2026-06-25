@@ -1,13 +1,38 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Television, VideoCamera } from '@phosphor-icons/react'
-import { TV_EPISODES, GRAND_FINALES } from '@/data/media'
+import {
+  Television, VideoCamera, Newspaper, FileText,
+  DownloadSimple, FilmSlate, ArrowSquareOut,
+} from '@phosphor-icons/react'
+import { TV_EPISODES, GRAND_FINALES, MEDIA_COVERAGES } from '@/data/media'
 import YoutubeEmbed from '@/components/ui/YoutubeEmbed'
 import SectionHeading from '@/components/ui/SectionHeading'
 import clsx from 'clsx'
 
-type Tab = 'tv-shows' | 'grand-finale'
+type Tab = 'tv-shows' | 'grand-finale' | 'media-coverages' | 'press-notes' | 'downloads' | 'promo-videos'
+
+const TABS: { id: Tab; label: string; icon: React.ElementType }[] = [
+  { id: 'tv-shows',        label: 'TV Shows',        icon: Television },
+  { id: 'grand-finale',    label: 'Grand Finale',    icon: VideoCamera },
+  { id: 'media-coverages', label: 'Media Coverages', icon: Newspaper },
+  { id: 'press-notes',     label: 'Press Notes',     icon: FileText },
+  { id: 'downloads',       label: 'Downloads',       icon: DownloadSimple },
+  { id: 'promo-videos',    label: 'Promo Videos',    icon: FilmSlate },
+]
+
 const TV_YEARS = [2025, 2024, 2023, 2022]
+
+function ComingSoon({ label }: { label: string }) {
+  return (
+    <div className="flex flex-col items-center justify-center py-24 text-center">
+      <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+        <FilmSlate size={28} className="text-ink/30" />
+      </div>
+      <p className="text-ink font-semibold">{label}</p>
+      <p className="text-ink/50 text-sm mt-1">Content will be available soon.</p>
+    </div>
+  )
+}
 
 export default function MediaPage() {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -24,10 +49,10 @@ export default function MediaPage() {
         <div className="container-max">
           <div className="w-12 h-1 bg-gold rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-black text-ink">
-            Media & <span className="text-spectrum-a">Videos</span>
+            Media & <span className="text-spectrum-a">Coverage</span>
           </h1>
           <p className="mt-4 text-ink/80 max-w-xl mx-auto">
-            Watch ICT Award TV shows, grand finale broadcasts, and recap videos from past editions.
+            TV shows, grand finale broadcasts, press coverage, and more from every ICT Award edition.
           </p>
         </div>
       </section>
@@ -35,20 +60,18 @@ export default function MediaPage() {
       {/* Tab Nav */}
       <div className="bg-surface-muted border-b border-border-subtle sticky top-16 lg:top-20 z-30">
         <div className="container-max px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-1 py-3">
-            {(['tv-shows', 'grand-finale'] as Tab[]).map((tab) => (
+          <div className="flex gap-1 py-3 overflow-x-auto">
+            {TABS.map(({ id, label, icon: Icon }) => (
               <button
-                key={tab}
-                onClick={() => setTab(tab)}
+                key={id}
+                onClick={() => setTab(id)}
                 className={clsx(
-                  'flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold transition-all',
-                  activeTab === tab ? 'bg-gold text-ink' : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
+                  'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all flex-shrink-0',
+                  activeTab === id ? 'bg-gold text-ink' : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
                 )}
               >
-                {tab === 'tv-shows'
-                  ? <><Television size={16} /> TV Shows</>
-                  : <><VideoCamera size={16} /> Grand Finale</>
-                }
+                <Icon size={15} />
+                {label}
               </button>
             ))}
           </div>
@@ -64,7 +87,7 @@ export default function MediaPage() {
                 title="TV Show Episodes"
                 subtitle="ICT Award's annual TV series broadcast on national television featuring top finalists."
               />
-              <div className="flex gap-2">
+              <div className="flex gap-2 flex-shrink-0">
                 {TV_YEARS.map((y) => (
                   <button
                     key={y}
@@ -122,6 +145,66 @@ export default function MediaPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Media Coverages */}
+      {activeTab === 'media-coverages' && (
+        <section className="bg-surface-alt section-padding">
+          <div className="container-max">
+            <SectionHeading
+              title="Media Coverages"
+              subtitle="Press and online coverage of ICT Award from leading Nepali media outlets."
+              className="mb-10"
+            />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {MEDIA_COVERAGES.map((item, i) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 p-4 bg-surface rounded-xl border border-border-subtle hover:border-gold/30 hover:shadow-gold-sm transition-all group"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="text-ink/30 font-mono text-xs w-5 text-right flex-shrink-0">{i + 1}</span>
+                    <span className="font-semibold text-ink group-hover:text-spectrum-a transition-colors">{item.outlet}</span>
+                  </div>
+                  <ArrowSquareOut size={16} className="text-ink/30 group-hover:text-spectrum-a transition-colors flex-shrink-0" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Press Notes */}
+      {activeTab === 'press-notes' && (
+        <section className="bg-surface-alt section-padding">
+          <div className="container-max">
+            <SectionHeading title="Press Notes" subtitle="Official press releases and notes from ICT Award." className="mb-10" />
+            <ComingSoon label="Press notes coming soon" />
+          </div>
+        </section>
+      )}
+
+      {/* Downloads */}
+      {activeTab === 'downloads' && (
+        <section className="bg-surface-alt section-padding">
+          <div className="container-max">
+            <SectionHeading title="Downloads" subtitle="Logos, branding assets, and official documents." className="mb-10" />
+            <ComingSoon label="Downloads coming soon" />
+          </div>
+        </section>
+      )}
+
+      {/* Promo Videos */}
+      {activeTab === 'promo-videos' && (
+        <section className="bg-surface-alt section-padding">
+          <div className="container-max">
+            <SectionHeading title="Promo Videos" subtitle="Official promotional videos and highlights from ICT Award." className="mb-10" />
+            <ComingSoon label="Promo videos coming soon" />
           </div>
         </section>
       )}
