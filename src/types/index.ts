@@ -56,6 +56,8 @@ export interface MediaCoverage {
   id: string
   outlet: string
   url: string
+  thumbnail?: string
+  title?: string
 }
 
 export interface TvEpisode {
