@@ -14,11 +14,11 @@ const footerLinks = [
   {
     title: 'About',
     links: [
-      { label: 'Introduction', to: '/about#introduction' },
-      { label: 'Selection Procedure', to: '/about#selection' },
-      { label: 'History', to: '/about#history' },
-      { label: 'Team & Jury', to: '/about#team' },
-      { label: 'FAQs', to: '/about#faq' },
+      { label: 'Introduction', to: '/about/introduction' },
+      { label: 'Selection Procedure', to: '/about/selection' },
+      { label: 'History', to: '/about/history' },
+      { label: 'Team & Jury', to: '/about/team' },
+      { label: 'FAQs', to: '/about/faq' },
     ],
   },
   {
