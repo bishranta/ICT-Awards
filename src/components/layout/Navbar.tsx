@@ -15,12 +15,15 @@ const NAV_ITEMS = [
       { label: 'Introduction', to: '/about/introduction' },
       { label: 'Selection Procedure', to: '/about/selection' },
       { label: 'ICT Award History', to: '/about/history' },
-      { label: 'Team & Jury', to: '/about/team' },
+      { label: 'Team', to: '/about/team' },
+      { label: 'Jury Members', to: '/about/jury' },
+      { label: 'Advisors', to: '/about/advisors' },
       { label: 'FAQs', to: '/about/faq' },
     ],
   },
   { label: 'Categories', to: '/categories' },
   { label: 'Pre-Activities', to: '/pre-activities' },
+  { label: 'Flashbacks', to: '/editions' },
   { label: 'Winners', to: '/winners' },
   {
     label: 'Media',
@@ -28,6 +31,10 @@ const NAV_ITEMS = [
     children: [
       { label: 'TV Shows', to: '/media?tab=tv-shows' },
       { label: 'Grand Finale', to: '/media?tab=grand-finale' },
+      { label: 'Media Coverages', to: '/media?tab=media-coverages' },
+      { label: 'Press Notes', to: '/media?tab=press-notes' },
+      { label: 'Downloads', to: '/media?tab=downloads' },
+      { label: 'Promo Videos', to: '/media?tab=promo-videos' },
     ],
   },
 ]
@@ -110,7 +117,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               to="/apply"
-              className="bg-gold text-ink font-bold px-5 py-2.5 rounded-full text-sm hover:bg-gold-light transition-colors shadow-gold-sm"
+              className="bg-gold text-ink font-bold px-5 py-2.5 rounded-full text-sm hover:bg-gold-light transition-colors"
             >
               Apply Now
             </Link>

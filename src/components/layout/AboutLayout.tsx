@@ -4,7 +4,9 @@ const NAV = [
   { to: '/about/introduction', label: 'Introduction' },
   { to: '/about/selection', label: 'Selection Process' },
   { to: '/about/history', label: 'History' },
-  { to: '/about/team', label: 'Team & Jury' },
+  { to: '/about/team', label: 'Team' },
+  { to: '/about/jury', label: 'Jury Members' },
+  { to: '/about/advisors', label: 'Advisors' },
   { to: '/about/faq', label: 'FAQs' },
 ]
 

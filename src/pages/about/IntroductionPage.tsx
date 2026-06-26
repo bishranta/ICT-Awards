@@ -11,6 +11,7 @@ const SIGNIFICANCE = [
   { icon: 'Briefcase', title: 'Economic Development', desc: "Elevates technology-led solutions supporting Nepal's goals from digital inclusion to health and governance." },
   { icon: 'Users', title: 'Empowering Communities', desc: 'Recognizes projects addressing local challenges, amplifying social impact at grassroots level.' },
   { icon: 'Buildings', title: 'Shaping National Agenda', desc: 'With backing from government, academia, and industry, influences digital policy and ICT ecosystem.' },
+  { icon: 'Globe', title: 'Celebrating Diversity in Tech', desc: 'Spanning e-governance, fintech, edtech, agritech, healthtech, and more — highlighting technology\'s wide-ranging potential to drive change.' },
 ]
 
 export default function IntroductionPage() {
@@ -29,6 +30,10 @@ export default function IntroductionPage() {
       </p>
       <p className="text-ink/70 leading-relaxed mb-10">
         Join us as we honor outstanding contributions that inspire pride, unity, and innovation within the ICT sector of Nepal and beyond.
+      </p>
+
+      <p className="text-ink/70 leading-relaxed mb-10">
+        As we commemorate a decade of digital excellence, the 11th edition of the ICT Award is more than just an award — it's a celebration of Nepal's progress toward becoming a digitally empowered nation. It reflects how far we've come, while igniting the vision for the future: a Nepal where technology is inclusive, empowering, and transformative.
       </p>
 
       <h3 className="text-ink font-bold text-base mb-4">Why the ICT Award Matters</h3>
