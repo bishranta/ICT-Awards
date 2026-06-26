@@ -117,7 +117,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               to="/apply"
-              className="bg-gold text-ink font-bold px-5 py-2.5 rounded-full text-sm hover:bg-gold-light transition-colors shadow-gold-sm"
+              className="bg-gold text-ink font-bold px-5 py-2.5 rounded-full text-sm hover:bg-gold-light transition-colors"
             >
               Apply Now
             </Link>

@@ -21,7 +21,7 @@ export default function CtaBanner() {
         </p>
         <Link
           to="/apply"
-          className="inline-block bg-gold text-ink font-black px-8 py-4 rounded-full text-base hover:bg-gold-light transition-colors shadow-gold"
+          className="inline-block bg-gold text-ink font-black px-8 py-4 rounded-full text-base hover:bg-gold-light transition-colors"
         >
           Apply Now
         </Link>
