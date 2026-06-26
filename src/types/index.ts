@@ -52,6 +52,14 @@ export interface FAQ {
   answer: string
 }
 
+export interface MediaCoverage {
+  id: string
+  outlet: string
+  url: string
+  thumbnail?: string
+  title?: string
+}
+
 export interface TvEpisode {
   id: string
   year: number
@@ -77,4 +85,32 @@ export interface NavItem {
   label: string
   href: string
   children?: { label: string; href: string }[]
+}
+
+export interface Edition {
+  year: number
+  title?: string
+  intro: string
+  venue?: string
+  chiefGuest?: string
+  broadcast?: string
+  logo?: string
+}
+
+export interface TeamMember {
+  name: string
+  role: string
+  photo?: string
+}
+
+export interface JuryMember {
+  name: string
+  designation: string
+  organization?: string
+  photo?: string
+}
+
+export interface AdvisorGroup {
+  title: string
+  members: JuryMember[]
 }
