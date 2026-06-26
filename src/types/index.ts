@@ -100,12 +100,14 @@ export interface Edition {
 export interface TeamMember {
   name: string
   role: string
+  photo?: string
 }
 
 export interface JuryMember {
   name: string
   designation: string
   organization?: string
+  photo?: string
 }
 
 export interface AdvisorGroup {
