@@ -59,31 +59,12 @@ export default function Footer() {
             </Link>
 
             <p className="text-white/55 text-sm leading-relaxed max-w-xs">
-              Recognizing Nepal's most impactful ICT innovations, startups, and changemakers since 2008.
+              Living with ICT (LwICT) is a prominent tech media organization and digital initiative in Nepal. 
+              Living with ICT and its flagship event ICT Award contributes significantly to the growth and recognition of Nepal’s ICT sector, 
+              fostering a culture of innovation and excellence in technology-driven initiatives. 
+              It works on various aspects and domains of digital transformation.
             </p>
 
-            {/* Social icons */}
-            <div className="flex flex-wrap gap-2.5">
-              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center text-white/50 hover:bg-gold hover:text-ink transition-all"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
-            </div>
-
-            <p className="text-white/35 text-xs">
-              A joint initiative of{' '}
-              <span className="text-white/55 font-medium">Living with ICT</span>
-              {' '}&amp;{' '}
-              <span className="text-white/55 font-medium">ICT Foundation Nepal</span>
-            </p>
           </div>
 
           {/* Explore */}
@@ -142,6 +123,22 @@ export default function Footer() {
               </div>
 
             </div>
+
+            {/* Social icons */}
+            <div className="flex flex-wrap gap-2.5 mt-5">
+              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center text-white/50 hover:bg-gold hover:text-ink transition-all"
+                >
+                  <Icon size={15} />
+                </a>
+              ))}
+            </div>
           </div>
 
         </div>
@@ -153,18 +150,12 @@ export default function Footer() {
           <p className="text-white/35 text-xs">
             © {new Date().getFullYear()} ICT Award Nepal. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs">
-            <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-live animate-pulse flex-shrink-0" />
-              <span className="text-white/45">Nominations Open:</span>
-              <span className="text-gold font-semibold">July 17, 2026</span>
-            </div>
-            <span className="text-white/15">|</span>
-            <div className="flex items-center gap-1.5">
-              <span className="text-white/45">Grand Finale:</span>
-              <span className="text-gold font-semibold">December 18, 2026</span>
-            </div>
-          </div>
+          <p className="text-white/35 text-xs">
+            A joint initiative of{' '}
+            <span className="text-white/55 font-medium">Living with ICT</span>
+            {' '}&amp;{' '}
+            <span className="text-white/55 font-medium">ICT Foundation Nepal</span>
+          </p>
         </div>
       </div>
     </footer>
