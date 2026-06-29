@@ -50,15 +50,13 @@ export const ADVISOR_GROUPS: AdvisorGroup[] = [
       { name: 'Mr. Bikram Shrestha', designation: 'President', organization: 'Nepal Internet Foundation', photo: '/Advisors/Jury Advisors/Mr. Bikram Shrestha.jpg' },
     ],
   },
-  {
-    title: 'South Asia Jury',
-    members: [
-      { name: 'Mr. Adnan Faisal', designation: 'Founder & CEO', organization: 'ScaleX, Pakistan', photo: '/Advisors/South Asia Jury/Mr. Adnan Faisal.png' },
-      { name: 'Dr. Bhoj Raj Ghimire', designation: 'Asst. Prof & Head – School of Technology', organization: 'Nepal Open University, Nepal', photo: '/Advisors/South Asia Jury/Dr. Bhoj Raj Ghimire.png' },
-      { name: 'Dr. Chaminda Weerabaddana', designation: 'Specialist – Health Informatics', organization: 'Ministry of Health and Mass Media, Sri Lanka', photo: '/Advisors/South Asia Jury/Dr. Chaminda Weerabaddana.jpeg' },
-      { name: 'Mr. Hempal Shrestha', designation: 'Knowledge Management Specialist', organization: 'ICT Foundation Nepal, Nepal', photo: '/Advisors/South Asia Jury/Mr. Hempal Shrestha.png' },
-      { name: 'Dr. Madan Mohan Alevoor Rao', designation: 'Research Director', organization: 'Your Story Media, India', photo: '/Advisors/South Asia Jury/Dr. Madan Mohan Alevoor Rao.jpg' },
-      { name: 'Mr. Pavel Sarwar', designation: 'Co-Founder', organization: 'Youth Hub, Bangladesh', photo: '/Advisors/South Asia Jury/Mr. Pavel Sarwar.png' },
-    ],
-  },
+]
+
+export const SOUTH_ASIA_JURY: JuryMember[] = [
+  { name: 'Mr. Adnan Faisal', designation: 'Founder & CEO', organization: 'ScaleX, Pakistan', photo: '/Advisors/South Asia Jury/Mr. Adnan Faisal.png' },
+  { name: 'Dr. Bhoj Raj Ghimire', designation: 'Asst. Prof & Head – School of Technology', organization: 'Nepal Open University, Nepal', photo: '/Advisors/South Asia Jury/Dr. Bhoj Raj Ghimire.png' },
+  { name: 'Dr. Chaminda Weerabaddana', designation: 'Specialist – Health Informatics', organization: 'Ministry of Health and Mass Media, Sri Lanka', photo: '/Advisors/South Asia Jury/Dr. Chaminda Weerabaddana.jpeg' },
+  { name: 'Mr. Hempal Shrestha', designation: 'Knowledge Management Specialist', organization: 'ICT Foundation Nepal, Nepal', photo: '/Advisors/South Asia Jury/Mr. Hempal Shrestha.png' },
+  { name: 'Dr. Madan Mohan Alevoor Rao', designation: 'Research Director', organization: 'Your Story Media, India', photo: '/Advisors/South Asia Jury/Dr. Madan Mohan Alevoor Rao.jpg' },
+  { name: 'Mr. Pavel Sarwar', designation: 'Co-Founder', organization: 'Youth Hub, Bangladesh', photo: '/Advisors/South Asia Jury/Mr. Pavel Sarwar.png' },
 ]

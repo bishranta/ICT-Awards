@@ -7,7 +7,7 @@ export default function AdvisorsPage() {
     <div>
       <SectionHeading
         title="Advisors"
-        subtitle="Advisory bodies guiding the ICT Award selection process."
+        // subtitle="Advisory bodies guiding the ICT Award selection process."
         className="mb-8"
       />
 

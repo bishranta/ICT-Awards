@@ -49,6 +49,7 @@ export default function InfoSection() {
           title="Everything You Need to Know"
           subtitle="A complete overview of the ICT Award process — from categories to the judging panel."
           className="mb-10"
+          centered
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {BLOCKS.map(({ icon: Icon, label, text, to }) => (

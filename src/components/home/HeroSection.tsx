@@ -82,7 +82,7 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        {/* Countdown */}
+        {/* Countdown
         {!expired && (
           <div className="mt-14">
             <p className="text-white/50 text-sm uppercase tracking-widest font-semibold mb-4">
@@ -98,7 +98,7 @@ export default function HeroSection() {
               <CountdownBox value={seconds} label="Seconds" />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )
