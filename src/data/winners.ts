@@ -88,7 +88,7 @@ export const WINNERS: Winner[] = [
   { year: 2024, categoryId: 'rising-star', categoryName: 'Rising Star Innovation ICT Award', winnerName: 'SpeakUp Nepal' },
   { year: 2024, categoryId: 'social-innovation', categoryName: 'Social Innovation ICT Award', winnerName: 'GeoKrishi' },
   { year: 2024, categoryId: 'south-asia-startup', categoryName: 'South Asia Startup ICT Award', winnerName: 'Hyphen SCs, India' },
-  { year: 2024, categoryId: 'woman-icon', categoryName: 'Woman Icon ICT Award', winnerName: 'Bandana Sharma' },
+  { year: 2024, categoryId: 'woman-icon', categoryName: 'Woman Icon ICT Award', winnerName: 'Ms. Bandana Sharma' },
   { year: 2024, categoryId: 'pioneer-award', categoryName: 'Pioneer ICT Award', winnerName: 'Prof. Dr. Suresh Raj Sharma', organization: 'Founding Vice Chancellor, Kathmandu University' },
   { year: 2024, categoryId: 'professional-excellence', categoryName: 'Professional Excellence ICT Award', winnerName: 'Dr. Bishesh Khanal', organization: 'Co-Founder, Director & Research Scientist, NAAMII' },
   { year: 2024, categoryId: 'entrepreneur-award', categoryName: 'Entrepreneur ICT Award', winnerName: 'Mr. Manohar Adhikari', organization: 'Managing Director, Foodmandu' },

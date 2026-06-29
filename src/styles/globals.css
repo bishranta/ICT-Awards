@@ -76,6 +76,18 @@ lite-youtube {
   display: none;
 }
 
+/* Thin, muted scrollbar for in-card overflow */
+.scrollbar-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(27 18 51 / 0.2) transparent;
+}
+.scrollbar-subtle::-webkit-scrollbar { width: 4px; }
+.scrollbar-subtle::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-subtle::-webkit-scrollbar-thumb {
+  background: rgb(27 18 51 / 0.2);
+  border-radius: 9999px;
+}
+
 /* Glimpses carousel — continuous ticker (duplicated track, -50% = one full pass) */
 @keyframes glimpse-scroll {
   from { transform: translateX(0); }
