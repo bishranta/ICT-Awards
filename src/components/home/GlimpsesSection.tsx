@@ -15,7 +15,7 @@ function GlimpseCard({ year }: { year: number }) {
   return (
     <Link
       to={`/editions/${year}`}
-      className="group block bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-gold/30 hover:shadow-gold-sm transition-colors"
+      className="group block bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-gold/30 hover:shadow-gold-sm transition-all"
     >
       {logo && !err ? (
         <div className="w-full aspect-video bg-ink flex items-center justify-center p-3">
@@ -23,7 +23,7 @@ function GlimpseCard({ year }: { year: number }) {
             src={logo}
             alt={`ICT Award ${year}`}
             onError={() => setErr(true)}
-            className="max-h-full max-w-full object-contain"
+            className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       ) : (
