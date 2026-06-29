@@ -3,7 +3,7 @@ import { MagnifyingGlass, Lightbulb, Users, Gear, ArrowRight } from '@phosphor-i
 import SectionHeading from '@/components/ui/SectionHeading'
 
 const CARDS = [
-  { label: 'WHAT', text: 'With participation from diverse sectors, the ICT Awards reflects the diversity of national interaction.', Icon: MagnifyingGlass },
+  { label: 'WHAT', text: 'With participation from diverse sectors, the ICT Award reflects the diversity of national interaction.', Icon: MagnifyingGlass },
   { label: 'WHY', text: 'We have made these awards an annual event with the hope to act as a catalyst for growth of the ICT sector.', Icon: Lightbulb },
   { label: 'WHO', text: 'We are an ICT Media that caters to information which matters in technology, developments, practices and trends.', Icon: Users },
   { label: 'HOW', text: 'Through rigorous evaluation by industry experts, government representatives, and academic professionals.', Icon: Gear },

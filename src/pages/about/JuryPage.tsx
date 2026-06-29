@@ -1,4 +1,4 @@
-import { JURY_2025 } from '@/data/jury'
+import { JURY_2025, SOUTH_ASIA_JURY } from '@/data/jury'
 import SectionHeading from '@/components/ui/SectionHeading'
 import PersonCard from '@/components/ui/PersonCard'
 
@@ -7,7 +7,7 @@ export default function JuryPage() {
     <div>
       <SectionHeading
         title="Jury Members"
-        subtitle="ICT Award 2025 jury panel — 2026 list will be updated before nominations open."
+        // subtitle="ICT Award 2025 jury panel — 2026 list will be updated before nominations open."
         className="mb-8"
       />
 
@@ -25,6 +25,23 @@ export default function JuryPage() {
             photo={member.photo}
           />
         ))}
+      </div>
+
+      <div className="mt-10">
+        <h3 className="text-ink font-bold text-base mb-4 pb-2 border-b border-border-subtle">
+          South Asia Jury
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {SOUTH_ASIA_JURY.map(member => (
+            <PersonCard
+              key={member.name}
+              name={member.name}
+              designation={member.designation}
+              organization={member.organization}
+              photo={member.photo}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

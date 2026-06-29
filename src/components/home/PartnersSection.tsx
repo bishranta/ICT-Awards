@@ -13,6 +13,7 @@ export default function PartnersSection() {
           title="Partners & Supporters"
           subtitle="Organizations and contributors who make the ICT Award possible."
           className="mb-10"
+          centered
         />
 
         {/* Joint initiative */}

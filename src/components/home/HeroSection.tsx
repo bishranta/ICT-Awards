@@ -1,23 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useCountdown } from '@/hooks/useCountdown'
-
-const GRAND_FINALE = new Date('2026-12-18T00:00:00')
-
-function CountdownBox({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <div className="bg-white/5 border border-white/10 rounded-xl w-16 md:w-20 h-16 md:h-20 flex items-center justify-center backdrop-blur-sm">
-        <span className="text-2xl md:text-3xl font-black text-gold tabular-nums">
-          {String(value).padStart(2, '0')}
-        </span>
-      </div>
-      <span className="mt-2 text-xs text-white/50 uppercase tracking-widest font-semibold">{label}</span>
-    </div>
-  )
-}
 
 export default function HeroSection() {
-  const { days, hours, minutes, seconds, expired } = useCountdown(GRAND_FINALE)
 
   return (
     <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-ink overflow-hidden">
@@ -82,7 +65,7 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        {/* Countdown */}
+        {/* Countdown
         {!expired && (
           <div className="mt-14">
             <p className="text-white/50 text-sm uppercase tracking-widest font-semibold mb-4">
@@ -98,7 +81,7 @@ export default function HeroSection() {
               <CountdownBox value={seconds} label="Seconds" />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )

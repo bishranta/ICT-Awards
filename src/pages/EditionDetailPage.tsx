@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, Image as ImageIcon, MapPin, Television, UserCircle } from '@phosphor-icons/react'
+import { ArrowLeft, MapPin, Television, UserCircle } from '@phosphor-icons/react'
 import { EDITIONS } from '@/data/editions'
 import { WINNERS } from '@/data/winners'
 import { GRAND_FINALES } from '@/data/media'
+import { GALLERIES } from '@/data/galleries'
 import WinnerCard from '@/components/winners/WinnerCard'
 import YoutubeEmbed from '@/components/ui/YoutubeEmbed'
 import SectionHeading from '@/components/ui/SectionHeading'
+import PhotoGallery from '@/components/ui/PhotoGallery'
 
 function EditionLogo({ logo, year }: { logo?: string; year: number }) {
   const [err, setErr] = useState(false)
@@ -108,22 +110,11 @@ export default function EditionDetailPage() {
         </div>
       </section>
 
-      {/* Photo gallery placeholder */}
+      {/* Photo gallery */}
       <section className="bg-surface-alt section-padding">
         <div className="container-max">
           <SectionHeading title="Photo Gallery" subtitle={`Highlights from ICT Award ${edition.year}.`} className="mb-8" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {Array.from({ length: 8 }).map((_, i) => (
-              // ponytail: placeholder until real gallery photos are provided
-              <div
-                key={i}
-                className="aspect-video rounded-xl bg-surface-muted border border-border-subtle flex flex-col items-center justify-center gap-2"
-              >
-                <ImageIcon size={22} className="text-ink/20" />
-                <span className="text-ink/20 text-xs">Photo {i + 1}</span>
-              </div>
-            ))}
-          </div>
+          <PhotoGallery photos={GALLERIES[y] ?? []} year={edition.year} />
         </div>
       </section>
 

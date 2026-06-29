@@ -29,7 +29,7 @@ export const GRAND_FINALES: GrandFinale[] = [
 
 export const TV_EPISODES: TvEpisode[] = [
   // 2025 — Himalaya TV HD
-  { id: 'ep-2025-1', year: 2025, episodeNumber: 1, youtubeId: 'SkjnzcXhNT', channel: 'Himalaya TV HD' },
+  { id: 'ep-2025-1', year: 2025, episodeNumber: 1, youtubeId: 'nGeGEkW06oY', channel: 'Himalaya TV HD' },
   { id: 'ep-2025-2', year: 2025, episodeNumber: 2, youtubeId: 'om-I7z926AI', channel: 'Himalaya TV HD' },
   { id: 'ep-2025-3', year: 2025, episodeNumber: 3, youtubeId: 'b8dqzOlUrhw', channel: 'Himalaya TV HD' },
   { id: 'ep-2025-4', year: 2025, episodeNumber: 4, youtubeId: 'ny50R5Iy2PM', channel: 'Himalaya TV HD' },
