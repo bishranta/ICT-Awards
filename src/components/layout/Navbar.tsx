@@ -96,17 +96,26 @@ export default function Navbar() {
                 </NavLink>
 
                 {item.children && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-1 w-52 bg-surface border border-border-subtle rounded-xl shadow-md py-2 z-50">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.label}
-                        to={child.to}
-                        className="block px-4 py-2.5 text-sm text-ink/70 hover:text-spectrum-a hover:bg-gold/5 transition-colors"
-                        onClick={() => setActiveDropdown(null)}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 z-50 pt-2">
+                    {(() => {
+                      const half = Math.ceil(item.children.length / 2)
+                      const col1 = item.children.slice(0, half)
+                      const col2 = item.children.slice(half)
+                      return (
+                        <div className="bg-surface border border-border-subtle rounded-xl shadow-md py-2 flex divide-x divide-gold">
+                          <div className="flex flex-col">
+                            {col1.map((child) => (
+                              <Link key={child.label} to={child.to} className="px-4 py-2.5 text-sm text-ink/70 hover:text-spectrum-a hover:bg-gold/5 transition-colors whitespace-nowrap" onClick={() => setActiveDropdown(null)}>{child.label}</Link>
+                            ))}
+                          </div>
+                          <div className="flex flex-col">
+                            {col2.map((child) => (
+                              <Link key={child.label} to={child.to} className="px-4 py-2.5 text-sm text-ink/70 hover:text-spectrum-a hover:bg-gold/5 transition-colors whitespace-nowrap" onClick={() => setActiveDropdown(null)}>{child.label}</Link>
+                            ))}
+                          </div>
+                        </div>
+                      )
+                    })()}
                   </div>
                 )}
               </div>

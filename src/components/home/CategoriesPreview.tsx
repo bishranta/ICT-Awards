@@ -7,12 +7,13 @@ export default function CategoriesPreview() {
   return (
     <section className="bg-cream section-padding">
       <div className="container-max">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="relative mb-12">
           <SectionHeading
             title="Award Categories"
             subtitle="Recognition across 5 tracks covering innovation, individuals, organizations, and regional excellence."
+            centered
           />
-          <Link to="/categories" className="text-spectrum-a font-bold hover:text-ink flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+          <Link to="/categories" className="mt-4 flex justify-center text-spectrum-a font-bold hover:text-ink items-center gap-2 whitespace-nowrap md:mt-0 md:absolute md:top-0 md:right-0">
             View All Categories
             <ArrowRight size={16} className="icon-spectrum" />
           </Link>
