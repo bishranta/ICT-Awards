@@ -147,6 +147,7 @@ export const CATEGORIES: Category[] = [
     name: 'Province Startup ICT Recognition 2026',
     description: 'This special recognition is dedicated to startups that are registered and operating within one of Nepal\'s seven provinces. It celebrates emerging provincial startups that have demonstrated notable growth, innovation, and impact in their respective regions. The aim is to encourage balanced entrepreneurial development across the country by highlighting promising startups from outside the Kathmandu Valley.',
     eligibility: 'Startups incorporated on or after Fiscal Year 2078/079 and operating within any of Nepal\'s seven provinces.',
+    previousWinner: 'Koshi: Medicab Technologies Pvt. Ltd., Madhesh: Janaki Soft International Pvt. Ltd., Bagmati:  Cloud Mandap Pvt. Ltd., Gandaki: Brand Builder Pvt. Ltd., Lumbini: Golden Technosoft IT Solution, Karnali: Everest Wireless Network Pvt. Ltd., Sudurpaschim: Busy Infotex Pvt. Ltd.',
     icon: 'MapTrifold',
   },
 ]
