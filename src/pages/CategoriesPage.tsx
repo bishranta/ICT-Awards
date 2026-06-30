@@ -51,8 +51,8 @@ export default function CategoriesPage() {
                 {cats.map((cat) => (
                   <div
                     key={cat.id}
-                    className="gold-border-card group"
-                    style={{ borderLeftColor: color }}
+                    className="gold-border-card spectrum-card group h-full"
+                    style={{ '--group-color': color } as React.CSSProperties}
                   >
                     <div className="flex items-start gap-4">
                       <div
@@ -62,10 +62,10 @@ export default function CategoriesPage() {
                         <RenderIcon name={cat.icon ?? 'Star'} size={20} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-bold text-ink text-lg leading-tight mb-2 group-hover:text-spectrum-a transition-colors">
+                        <h3 className="spectrum-card-heading font-bold text-ink text-lg leading-tight mb-2 transition-colors duration-200">
                           {cat.name}
                         </h3>
-                        <p className="text-ink/80 text-sm leading-relaxed mb-3">
+                        <p className="text-ink/80 text-sm leading-relaxed mb-3 desc-scroll-5 scrollbar-subtle pr-2">
                           {cat.description}
                         </p>
                         {cat.eligibility && (
@@ -73,6 +73,9 @@ export default function CategoriesPage() {
                             <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color }}>Eligibility</div>
                             <p className="text-ink/80 text-xs leading-relaxed">{cat.eligibility}</p>
                           </div>
+                        )}
+                        {cat.previousWinner && (
+                          <p className="text-ink/60 text-xs leading-relaxed mt-3">{cat.previousWinner}</p>
                         )}
                       </div>
                     </div>

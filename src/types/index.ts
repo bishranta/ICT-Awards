@@ -6,6 +6,7 @@ export interface Category {
   name: string
   description: string
   eligibility?: string
+  previousWinner?: string
   icon?: string
 }
 
