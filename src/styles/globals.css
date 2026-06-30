@@ -44,6 +44,26 @@
     @apply border-l-4 border-gold bg-surface rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-300;
     border-color: theme('colors.border-subtle'); /* #F3F4F6 — @apply can't resolve border-border-subtle at CSS-process time */
   }
+
+  /* 5-line scrollable description — font-relative so it respects text-sm's em */
+  .desc-scroll-5 {
+    max-height: calc(1.625em * 5); /* leading-relaxed (1.625) × 5 lines */
+    overflow-y: auto;
+  }
+
+  /* ponytail: CSS var trick for dynamic group-color heading on hover — Tailwind JIT can't do group-hover:text-[var] */
+  .spectrum-card {
+    border-left-color: transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .spectrum-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.14);
+    border-left-color: var(--group-color);
+  }
+  .spectrum-card:hover .spectrum-card-heading {
+    color: var(--group-color);
+  }
 }
 
 /* Lite YouTube embed override */
