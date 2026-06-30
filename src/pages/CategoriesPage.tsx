@@ -74,6 +74,9 @@ export default function CategoriesPage() {
                             <p className="text-ink/80 text-xs leading-relaxed">{cat.eligibility}</p>
                           </div>
                         )}
+                        {cat.previousWinner && (
+                          <p className="text-ink/60 text-xs leading-relaxed mt-3">{cat.previousWinner}</p>
+                        )}
                       </div>
                     </div>
                   </div>
