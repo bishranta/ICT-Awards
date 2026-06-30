@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICT Award-The Biggest Tech Award of Nepal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:          #F7B413;
+      --gold-dark:     #CF7B0E;
+      --gold-light:    #FDCE62;
+      --ink:           #1B1233;
+      --ink-light:     #2C1A52;
+      --ink-accent:    #4C2D75;
+      --cream:         #FEF9EE;
+      --surface:       #FFFFFF;
+      --surface-alt:   #F8F9FA;
+      --surface-muted: #F1F3F5;
+      --border:        #E5E7EB;
+      --text-muted:    #5A6472;
+      --spectrum:      linear-gradient(90deg, #4C2D75 0%, #6E2C68 25%, #9B2850 50%, #BD203A 75%, #C20F1A 100%);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', Calibri, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--surface);
+      color: var(--ink);
+    }
+
+    /* ── Spectrum top bar ── */
+    .spectrum-bar {
+      height: 4px;
+      background: var(--spectrum);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--cream);
+    }
+
+    /* Decorative background pattern */
+    .bg-pattern {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    /* Soft radial wash */
+    .bg-pattern::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 55% at 15% 20%, rgba(76,45,117,0.06) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 45% at 85% 75%, rgba(247,180,19,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 35% at 70% 10%, rgba(155,40,80,0.05) 0%, transparent 55%);
+    }
+
+    /* Dot grid */
+    .bg-dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(27,18,51,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    }
+
+    /* Floating decorative circles */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(1px);
+    }
+    .orb-1 {
+      width: 320px; height: 320px;
+      top: -80px; left: -80px;
+      background: radial-gradient(circle, rgba(76,45,117,0.07) 0%, transparent 70%);
+    }
+    .orb-2 {
+      width: 260px; height: 260px;
+      bottom: -60px; right: -60px;
+      background: radial-gradient(circle, rgba(247,180,19,0.09) 0%, transparent 70%);
+    }
+    .orb-3 {
+      width: 180px; height: 180px;
+      top: 40%; right: 8%;
+      background: radial-gradient(circle, rgba(155,40,80,0.06) 0%, transparent 70%);
+    }
+
+    /* Decorative SVG shapes */
+    .deco-ring {
+      position: absolute;
+      opacity: 0.12;
+    }
+    .deco-ring-1 {
+      width: 200px; height: 200px;
+      top: 8%; left: 6%;
+    }
+    .deco-ring-2 {
+      width: 140px; height: 140px;
+      bottom: 10%; right: 10%;
+    }
+
+    /* ── Content card ── */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+      animation: fade-up 0.65s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Icon container */
+    .icon-wrap {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 2rem;
+      border-radius: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(27,18,51,0.08), 0 1px 3px rgba(27,18,51,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Subtle gold corner accent on icon box */
+    .icon-wrap::after {
+      content: '';
+      position: absolute;
+      top: -1px; right: -1px;
+      width: 28px; height: 28px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      border-top-right-radius: 24px;
+      pointer-events: none;
+    }
+
+    .icon-wrap svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.38rem 1rem;
+      border-radius: 999px;
+      background: rgba(247,180,19,0.1);
+      border: 1px solid rgba(247,180,19,0.38);
+      color: var(--gold-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.35; }
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .underline-accent {
+      display: block;
+      height: 3px;
+      width: 72px;
+      border-radius: 999px;
+      background: var(--spectrum);
+      margin: 0.85rem auto 1.6rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.8;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* Divider with flair */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 2rem auto;
+      max-width: 280px;
+    }
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .divider-diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* Contact */
+    .contact {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .contact a {
+      color: var(--ink-accent);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1.5px solid rgba(76,45,117,0.22);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact a:hover {
+      color: var(--ink);
+      border-color: var(--ink-accent);
+    }
+
+    /* ── Logo ── */
+    .logo {
+      height: 200px;
+      width: auto;
+      margin: 0 auto 2rem;
+      display: block;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 1.25rem 2rem;
+      text-align: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="spectrum-bar"></div>
+
+  <main>
+
+
+    <!-- Main content -->
+    <div class="content">
+
+        
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Under Maintenance
+        </div>
+        
+        <img
+          src="ICT-AWARD-Logo.png"
+          alt="ICT Awards Nepal"
+          class="logo"
+          onerror="this.src='/logos/ICT-AWARD-Logo-Dark-Bg.png'"
+        />
+
+      <h1>We'll Be Back Soon</h1>
+      <span class="underline-accent"></span>
+
+      <p>
+        The ICT Awards Nepal website is currently undergoing scheduled maintenance
+        to bring you an improved experience. We appreciate your patience.
+      </p>
+
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+      </div>
+
+      <p class="contact">
+        For urgent inquiries, contact us at<br />
+        <a href="mailto:event@livingwithict.com">event@livingwithict.com</a>
+      </p>
+      <p class="contact">
+        +977-9851141348, +977-9801263604, +977-9801263601
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ICT Awards Nepal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
