@@ -10,19 +10,17 @@ function GroupCard({ group: g, className = '' }: { group: typeof CATEGORY_GROUPS
   return (
     <Link
       to={`/categories#group-${g.group}`}
-      className={`relative bg-surface border border-border-subtle rounded-xl p-6 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden h-full flex flex-col ${className}`}
+      className={`relative bg-surface border border-border-subtle border-t-4 rounded-xl p-6 group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg overflow-hidden h-full flex flex-col ${className}`}
+      style={{ borderTopColor: color }}
     >
       {/* ponytail: color overlay avoids dynamic hover:bg-[color] which JIT purges */}
       <span
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl pointer-events-none"
+        className="absolute -top-1 right-0 bottom-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{ backgroundColor: color }}
         aria-hidden="true"
       />
       <div className="relative z-10 flex flex-col flex-1">
-        <div className="text-xs uppercase tracking-widest font-bold mb-1 text-ink/60 group-hover:text-white/70 transition-colors duration-300">
-          Category {g.group}
-        </div>
-        <h3 className="text-ink font-bold text-sm leading-tight mb-3 group-hover:text-cream transition-colors duration-300">
+        <h3 className="text-ink font-bold text-lg leading-tight mb-3 group-hover:text-cream transition-colors duration-300">
           {g.label}
         </h3>
         <ul className="space-y-1 flex-1">
@@ -33,9 +31,9 @@ function GroupCard({ group: g, className = '' }: { group: typeof CATEGORY_GROUPS
             </li>
           ))}
         </ul>
-        <div className="mt-4 flex items-center gap-1 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-          <span className="text-xs text-white/80 font-semibold">Explore</span>
-          <ArrowRight size={12} className="text-white/80" />
+        <div className="mt-4 flex items-center gap-1 -translate-x-1 group-hover:translate-x-0 transition-all duration-300">
+          <span className="text-xs font-semibold text-ink/50 group-hover:text-cream transition-colors duration-300">Explore</span>
+          <ArrowRight size={12} className="text-ink/50 group-hover:text-cream transition-colors duration-300" />
         </div>
       </div>
     </Link>
