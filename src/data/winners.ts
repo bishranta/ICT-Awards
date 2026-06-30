@@ -484,7 +484,7 @@ export const WINNERS: Winner[] = [
   {
     year: 2022, categoryId: 'digital-governance', categoryName: 'Digital Governance ICT Award',
     winnerName: 'Department of Foreign Employment (DoFE)',
-    photo: '/Winners/2022/Digital Governance.JPG',
+    photo: '/Winners/2022/Digital Governance.jpg',
     profile: 'Recognized for transforming labor migration services through digital platforms, safeguarding and empowering millions of Nepali foreign workers with transparent processes.',
     website: '',
     linkedin: '',
