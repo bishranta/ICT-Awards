@@ -20,6 +20,8 @@ export interface Winner {
   province?: string
   photo?: string    // image URL/path; avatar-initials fallback used when absent
   profile?: string  // short bio/description; placeholder text used when absent
+  website?: string  // official website URL
+  linkedin?: string // LinkedIn profile or company page URL
 }
 
 export interface Stat {

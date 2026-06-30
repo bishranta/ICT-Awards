@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { CaretDown, FunnelSimple } from '@phosphor-icons/react'
+import { CaretDown, FunnelSimple, CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react'
 import {
   WINNERS,
   WINNER_YEARS,
@@ -34,6 +34,10 @@ export default function WinnersPage() {
   const [activeCategoryId, setActiveCategoryId] = useState(
     WINNER_CATEGORIES[0]?.id ?? 'startup-award'
   )
+  const categoryScrollRef = useRef<HTMLDivElement>(null)
+  const scroll = (dir: 'left' | 'right') => {
+    categoryScrollRef.current?.scrollBy({ left: dir === 'left' ? -500 : 500, behavior: 'smooth' })
+  }
 
   const totalWinners = WINNERS.length
 
@@ -136,9 +140,9 @@ export default function WinnersPage() {
                     ICT Award <span className="text-spectrum-a">{activeYear}</span>{' '}
                     — {mainWinners.length} Winners
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
                     {mainWinners.map((w) => (
-                      <WinnerCard key={`${w.year}-${w.categoryId}`} winner={w} showYear={false} />
+                      <WinnerCard key={`${w.year}-${w.categoryId}-${w.winnerName}`} winner={w} />
                     ))}
                   </div>
 
@@ -149,7 +153,7 @@ export default function WinnersPage() {
                         Province Startup ICT Recognition{' '}
                         <span className="text-spectrum-a">{activeYear}</span>
                       </h2>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {PROVINCES.map((prov) => {
                           const pw = provinceWinners.find(w => w.province === prov)
                           return (
@@ -189,21 +193,35 @@ export default function WinnersPage() {
           {/* Category Selector */}
           <section className="bg-surface-muted sticky top-16 lg:top-20 z-30 border-b border-border-subtle">
             <div className="container-max px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-none">
-                {WINNER_CATEGORIES.map((cat) => (
-                  <button
-                    key={cat.id}
-                    onClick={() => setActiveCategoryId(cat.id)}
-                    className={clsx(
-                      'flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap',
-                      activeCategoryId === cat.id
-                        ? 'bg-gold text-ink shadow-gold-sm'
-                        : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
-                    )}
-                  >
-                    {cat.name}
-                  </button>
-                ))}
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => scroll('left')}
+                  className="flex-shrink-0 p-1.5 rounded-full text-ink/40 hover:text-ink hover:bg-gold/10 transition-colors"
+                >
+                  <CaretLeftIcon size={16} weight="bold" />
+                </button>
+                <div ref={categoryScrollRef} className="flex items-center gap-2 overflow-x-auto py-4 scrollbar-none flex-1">
+                  {WINNER_CATEGORIES.map((cat) => (
+                    <button
+                      key={cat.id}
+                      onClick={() => setActiveCategoryId(cat.id)}
+                      className={clsx(
+                        'flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap',
+                        activeCategoryId === cat.id
+                          ? 'bg-gold text-ink shadow-gold-sm'
+                          : 'text-ink/80 hover:text-spectrum-a hover:bg-gold/10'
+                      )}
+                    >
+                      {cat.name}
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={() => scroll('right')}
+                  className="flex-shrink-0 p-1.5 rounded-full text-ink/40 hover:text-ink hover:bg-gold/10 transition-colors"
+                >
+                  <CaretRightIcon size={16} weight="bold" />
+                </button>
               </div>
             </div>
           </section>
@@ -225,7 +243,7 @@ export default function WinnersPage() {
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {categoryWinners.map((w) => (
-                      <WinnerCard key={`${w.year}-${w.categoryId}`} winner={w} showYear={true} />
+                      <WinnerCard key={`${w.year}-${w.categoryId}-${w.winnerName}`} winner={w} />
                     ))}
                   </div>
                 </>
