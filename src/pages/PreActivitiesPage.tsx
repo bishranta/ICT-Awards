@@ -38,7 +38,7 @@ export default function PreActivitiesPage() {
                   </div>
                   <div>
                     <h3 className="text-ink font-bold text-xl mb-2">{activity.title}</h3>
-                    <p className="text-ink/80 leading-relaxed">{activity.description}</p>
+                    <p className="text-ink/80 leading-relaxed max-h-[4.875em] overflow-y-auto pr-1 scrollbar-subtle">{activity.description}</p>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export default function PreActivitiesPage() {
                   </div>
                   <div>
                     <h3 className="text-ink font-bold text-xl mb-2">{activity.title}</h3>
-                    <p className="text-ink/80 leading-relaxed">{activity.description}</p>
+                    <p className="text-ink/80 leading-relaxed max-h-[4.875em] overflow-y-auto pr-1 scrollbar-subtle">{activity.description}</p>
                   </div>
                 </div>
               </div>

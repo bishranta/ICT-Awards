@@ -12,7 +12,7 @@ const BLOCKS = [
   {
     icon: ClipboardText,
     label: 'How to Enter',
-    text: 'Applicants fill the registration form and must ensure they fulfill all criteria and guidelines. Entry is FREE.',
+    text: 'The applicants have to fill the registration form to apply. They must ensure they fulfill all criteria and guidelines required. Entry is entirely FREE throughout the entire process, with no fees involved at any stage of participation. ',
     to: '/apply',
   },
   {
@@ -30,7 +30,7 @@ const BLOCKS = [
   {
     icon: CalendarCheck,
     label: 'Schedule',
-    text: 'Multiple programs and events are scheduled prior to the grand event — presentations, Q&A, public voting and more.',
+    text: 'Multiple programs and activities are scheduled prior to the grand event, including the Grand Jury Presentation, Speed Dating Sessions (one-on-one Q&A rounds with each jury member), Field Visits and Office Evaluations,  public voting, and more.',
     to: '/pre-activities',
   },
   {
