@@ -3,7 +3,7 @@
 export const PRE_ACTIVITY_GALLERIES: Record<string, string[]> = {
   "startup-idea-fest": [
     "/Startup & Idea Fest/1 (46).jpg",
-    "/Startup & Idea Fest/7th - Startup fest of 80+ startups.jpg",
+    "/Startup & Idea Fest/Startup fest of 80+ startups.jpg",
     "/Startup & Idea Fest/477793271_1379584986497066_8365578918612336596_n.jpg",
     "/Startup & Idea Fest/479251775_1379585443163687_4582225473885466389_n.jpg",
     "/Startup & Idea Fest/487936267_1422731318849099_833773978036130822_n.jpg",
