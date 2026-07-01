@@ -36,7 +36,7 @@ export default function WinnerCard({ winner }: WinnerCardProps) {
 
         {/* Photo */}
         <div className="px-4 pt-4">
-          <div className="w-full aspect-square rounded-xl overflow-hidden border border-gold/15 bg-gold/5 flex items-center justify-center">
+          <div className="w-full aspect-square rounded-xl overflow-hidden border border-gold/15 bg-white flex items-center justify-center">
             {showPhoto ? (
               <img
                 src={winner.photo}
