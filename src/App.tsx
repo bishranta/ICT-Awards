@@ -16,6 +16,7 @@ import MediaPage from '@/pages/MediaPage'
 import ApplyNowPage from '@/pages/ApplyNowPage'
 import EditionsPage from '@/pages/EditionsPage'
 import EditionDetailPage from '@/pages/EditionDetailPage'
+import PreActivityDetailPage from '@/pages/PreActivityDetailPage'
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       { path: 'categories', element: <CategoriesPage /> },
       { path: 'categories/:group', element: <CategoriesPage /> },
       { path: 'pre-activities', element: <PreActivitiesPage /> },
+      { path: 'pre-activities/:slug', element: <PreActivityDetailPage /> },
       { path: 'winners', element: <WinnersPage /> },
       { path: 'winners/:year', element: <WinnersPage /> },
       { path: 'media', element: <MediaPage /> },
