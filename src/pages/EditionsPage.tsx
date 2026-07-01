@@ -8,12 +8,12 @@ function EditionLogoCell({ logo, year }: { logo?: string; year: number }) {
   const [err, setErr] = useState(false)
   if (logo && !err) {
     return (
-      <div className="w-full aspect-video bg-ink flex items-center justify-center border-b border-border-subtle p-4">
+      <div className="w-full aspect-video bg-white flex items-center justify-center border-b border-border-subtle p-4">
         <img
           src={logo}
           alt={`ICT Award ${year} logo`}
           onError={() => setErr(true)}
-          className="max-h-full max-w-full object-contain"
+          className="max-h-full max-w-full object-contain object-center"
         />
       </div>
     )
@@ -52,7 +52,7 @@ export default function EditionsPage() {
             subtitle="From the inaugural 2016 ceremony to the 10th anniversary in 2025."
             className="mb-10"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {sorted.map((edition) => (
               <Link
                 key={edition.year}

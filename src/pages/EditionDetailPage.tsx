@@ -143,10 +143,12 @@ export default function EditionDetailPage() {
               subtitle={`Honoring ${mainWinners.length + provinceWinners.length} outstanding achievers across all categories.`}
               className="mb-10"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-              {mainWinners.map((w, i) => (
-                <WinnerCard key={`${w.categoryId}-${i}`} winner={w} />
-              ))}
+            <div className={mainWinners.length > 12 ? 'overflow-y-auto max-h-[60rem] pr-1' : ''}>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+                {mainWinners.map((w, i) => (
+                  <WinnerCard key={`${w.categoryId}-${i}`} winner={w} />
+                ))}
+              </div>
             </div>
 
             {provinceWinners.length > 0 && (

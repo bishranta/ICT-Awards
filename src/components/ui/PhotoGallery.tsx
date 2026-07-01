@@ -10,7 +10,7 @@ interface PhotoGalleryProps {
 export default function PhotoGallery({ photos, year }: PhotoGalleryProps) {
   const [open, setOpen] = useState<number | null>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
-  const scrollable = photos.length > 8
+  const scrollable = photos.length > 12
 
   const scrollByRow = (dir: 1 | -1) => {
     const el = scrollRef.current
@@ -38,9 +38,9 @@ export default function PhotoGallery({ photos, year }: PhotoGalleryProps) {
     <div className="relative">
       <div
         ref={scrollRef}
-        className={scrollable ? 'overflow-y-auto max-h-[22rem] pr-1' : ''}
+        className={scrollable ? 'overflow-y-auto max-h-[33rem] pr-1' : ''}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1">
           {photos.map((photo, i) => (
             <button
               key={photo}

@@ -60,7 +60,7 @@ export default function WinnerCard({ winner }: WinnerCardProps) {
         <div className="px-4 pt-3 pb-4 flex items-end justify-between gap-2">
           <p className="text-ink/90 font-semibold text-base leading-snug">{winner.winnerName}</p>
           <span className="flex-shrink-0 flex items-center gap-0.5 text-xs font-semibold text-spectrum-a/70 group-hover:text-spectrum-a transition-colors whitespace-nowrap">
-            Learn more <ArrowRightIcon size={12} weight="bold" />
+            <ArrowRightIcon size={12} weight="bold" />
           </span>
         </div>
       </div>

@@ -8,10 +8,30 @@ import {
   getWinnersByYear,
   getWinnersByCategory,
 } from '@/data/winners'
+import { CATEGORIES, CATEGORY_GROUP_LABELS, GROUP_COLOR } from '@/data/categories'
+import type { CategoryGroup, Winner } from '@/types'
 import WinnerCard from '@/components/winners/WinnerCard'
 import clsx from 'clsx'
 
 const PROVINCES = ['Koshi', 'Madhesh', 'Bagmati', 'Gandaki', 'Lumbini', 'Karnali', 'Sudurpaschim']
+
+const CATEGORY_GROUP_MAP: Record<string, CategoryGroup> = {
+  ...Object.fromEntries(CATEGORIES.map(c => [c.id, c.group])),
+  // Startup/product-style recognitions not in the formal category list — grouped with A.
+  'jury-mention': 'A',
+  'public-choice': 'A',
+  'crisis-response': 'A',
+}
+const GROUP_ORDER: CategoryGroup[] = ['A', 'B', 'C', 'D', 'E']
+
+function groupWinnersByCategory(winners: Winner[]) {
+  const groups: Partial<Record<CategoryGroup, Winner[]>> = {}
+  for (const w of winners) {
+    const group = CATEGORY_GROUP_MAP[w.categoryId] ?? 'A'
+    ;(groups[group] ??= []).push(w)
+  }
+  return groups
+}
 
 type View = 'year' | 'category'
 
@@ -45,6 +65,7 @@ export default function WinnersPage() {
   const allWinners = getWinnersByYear(activeYear)
   const mainWinners = allWinners.filter(w => !w.isProvince)
   const provinceWinners = allWinners.filter(w => w.isProvince)
+  const mainWinnerGroups = groupWinnersByCategory(mainWinners)
 
   // ── By Category data ──────────────────────────────────────────────────────
   const categoryWinners = getWinnersByCategory(activeCategoryId)
@@ -140,19 +161,47 @@ export default function WinnersPage() {
                     ICT Award <span className="text-spectrum-a">{activeYear}</span>{' '}
                     — {mainWinners.length} Winners
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-                    {mainWinners.map((w) => (
-                      <WinnerCard key={`${w.year}-${w.categoryId}-${w.winnerName}`} winner={w} />
-                    ))}
-                  </div>
+
+                  {GROUP_ORDER.map((group) => {
+                    const groupWinners = mainWinnerGroups[group]
+                    if (!groupWinners || groupWinners.length === 0) return null
+                    const color = GROUP_COLOR[group]
+                    return (
+                      <div key={group} className="mb-10">
+                        <div className="flex items-center gap-2.5 mb-4">
+                          <span
+                            className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black text-white"
+                            style={{ backgroundColor: color }}
+                          >
+                            {group}
+                          </span>
+                          <h3 className="text-base font-bold" style={{ color }}>
+                            {CATEGORY_GROUP_LABELS[group]}
+                          </h3>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                          {groupWinners.map((w) => (
+                            <WinnerCard key={`${w.year}-${w.categoryId}-${w.winnerName}`} winner={w} />
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  })}
 
                   {/* Province Winners */}
                   {provinceWinners.length > 0 && (
-                    <>
-                      <h2 className="text-xl font-black text-ink mb-6">
-                        Province Startup ICT Recognition{' '}
-                        <span className="text-spectrum-a">{activeYear}</span>
-                      </h2>
+                    <div className="mb-10">
+                      <div className="flex items-center gap-2.5 mb-4">
+                        <span
+                          className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black text-white"
+                          style={{ backgroundColor: GROUP_COLOR.E }}
+                        >
+                          E
+                        </span>
+                        <h3 className="text-base font-bold" style={{ color: GROUP_COLOR.E }}>
+                          {CATEGORY_GROUP_LABELS.E}
+                        </h3>
+                      </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                         {PROVINCES.map((prov) => {
                           const pw = provinceWinners.find(w => w.province === prov)
@@ -178,7 +227,7 @@ export default function WinnersPage() {
                           )
                         })}
                       </div>
-                    </>
+                    </div>
                   )}
                 </>
               )}
@@ -241,7 +290,7 @@ export default function WinnersPage() {
                   <p className="text-ink/65 text-sm mb-6">
                     {categoryWinners.length} winner{categoryWinners.length !== 1 ? 's' : ''} across all editions
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {categoryWinners.map((w) => (
                       <WinnerCard key={`${w.year}-${w.categoryId}-${w.winnerName}`} winner={w} />
                     ))}

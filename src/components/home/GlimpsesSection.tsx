@@ -18,7 +18,7 @@ function GlimpseCard({ year }: { year: number }) {
       className="group block bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-gold/30 hover:shadow-gold-sm transition-all"
     >
       {logo && !err ? (
-        <div className="w-full aspect-video bg-ink flex items-center justify-center p-3">
+        <div className="w-full aspect-video bg-white flex items-center justify-center p-3">
           <img
             src={logo}
             alt={`ICT Award ${year}`}
