@@ -8,11 +8,11 @@ export default function ApplyNowPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-surface section-padding text-center">
+      <section className="bg-surface page-header-padding text-center">
         <div className="container-max max-w-3xl">
-          <div className="w-12 h-1 bg-gold rounded-full mx-auto mb-4" />
+          <div className="w-12 h-1 bg-spectrum-gradient rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-6xl font-black text-ink">
-            Apply for <span className="text-spectrum-a">ICT Award 2026</span>
+            Apply for <span className="text-gradient-spectrum">ICT Award 2026</span>
           </h1>
           <p className="mt-6 text-lg text-ink/70 leading-relaxed">
             Nominations open <strong className="text-spectrum-a">July 17, 2026</strong>. Applications are completely free — apply to any category you qualify for.

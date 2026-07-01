@@ -8,7 +8,7 @@ function EditionLogoCell({ logo, year }: { logo?: string; year: number }) {
   const [err, setErr] = useState(false)
   if (logo && !err) {
     return (
-      <div className="w-full aspect-video bg-white flex items-center justify-center border-b border-border-subtle p-4">
+      <div className="w-full aspect-video bg-white flex items-center justify-center border-b border-border-subtle p-6">
         <img
           src={logo}
           alt={`ICT Award ${year} logo`}
@@ -32,11 +32,11 @@ export default function EditionsPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-surface section-padding text-center">
+      <section className="bg-surface page-header-padding text-center">
         <div className="container-max">
-          <div className="w-12 h-1 bg-gold rounded-full mx-auto mb-4" />
+          <div className="w-12 h-1 bg-spectrum-gradient rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-black text-ink">
-            Glimpses of <span className="text-spectrum-a">Past Events</span>
+            Glimpses of <span className="text-gradient-spectrum">Past Events</span>
           </h1>
           <p className="mt-4 text-ink/80 max-w-xl mx-auto">
             A decade of ICT excellence — explore each edition of Nepal's biggest tech award.

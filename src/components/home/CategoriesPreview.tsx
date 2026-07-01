@@ -44,7 +44,7 @@ export default function CategoriesPreview() {
   return (
     <section className="bg-cream section-padding">
       <div className="container-max">
-        <div className="relative mb-12">
+        <div className="relative mb-10">
           <SectionHeading
             title="Award Categories"
             subtitle="Recognition across 5 Categories covering innovation, individuals, organizations, and regional excellence."

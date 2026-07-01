@@ -60,7 +60,7 @@ export default function NewsPreview() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {PREVIEW.map((item) => (
             <NewsCard key={item.id} item={item} />
           ))}

@@ -41,7 +41,7 @@ export default function AboutBlurb() {
 
           <div className="grid grid-cols-2 gap-4">
             {CARDS.map(({ label, text, Icon }) => (
-              <div key={label} className="bg-surface rounded-xl p-5 shadow-sm border border-border-subtle hover:border-gold/30 transition-colors">
+              <div key={label} className="bg-surface rounded-xl p-6 shadow-sm border border-border-subtle hover:border-gold/30 transition-colors">
                 <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
                   <Icon size={18} className="icon-spectrum" />
                 </div>

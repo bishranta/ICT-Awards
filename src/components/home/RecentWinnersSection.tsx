@@ -9,7 +9,7 @@ export default function RecentWinnersSection() {
   return (
     <section className="bg-surface-alt section-padding">
       <div className="container-max">
-        <div className="relative mb-12">
+        <div className="relative mb-10">
           <SectionHeading
             title="ICT Award 2025 Winners"
             subtitle="Celebrating Nepal's most outstanding tech achievers from our 10th anniversary edition."
@@ -25,7 +25,7 @@ export default function RecentWinnersSection() {
           {winners2025.map((w, idx) => (
             <div
               key={idx}
-              className="bg-surface border border-border-subtle hover:border-gold/30 rounded-xl p-5 group transition-all hover:shadow-gold"
+              className="bg-surface border border-border-subtle hover:border-gold/30 rounded-xl p-6 group transition-all hover:shadow-gold"
             >
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center flex-shrink-0">

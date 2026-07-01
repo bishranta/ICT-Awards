@@ -29,7 +29,7 @@ export default function TimelineSection() {
           title="ICT Award 2026 Timeline"
           subtitle="Key milestones for the 11th edition of Nepal's most prestigious tech award."
           centered
-          className="mb-12"
+          className="mb-10"
         />
 
         <div ref={ref} className="relative">

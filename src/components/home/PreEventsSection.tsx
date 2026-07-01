@@ -10,7 +10,7 @@ export default function PreEventsSection() {
   return (
     <section className="bg-cream section-padding">
       <div className="container-max">
-        <div className="relative mb-12">
+        <div className="relative mb-10">
           <SectionHeading
             title="Pre-Award Activities"
             subtitle="An ecosystem of events, mentoring, and outreach that runs alongside the award selection process."

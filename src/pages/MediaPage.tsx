@@ -81,11 +81,11 @@ export default function MediaPage() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-surface section-padding text-center">
+      <section className="bg-surface page-header-padding text-center">
         <div className="container-max">
-          <div className="w-12 h-1 bg-gold rounded-full mx-auto mb-4" />
+          <div className="w-12 h-1 bg-spectrum-gradient rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-black text-ink">
-            Media & <span className="text-spectrum-a">Coverage</span>
+            Media & <span className="text-gradient-spectrum">Coverage</span>
           </h1>
           <p className="mt-4 text-ink/80 max-w-xl mx-auto">
             TV shows, grand finale broadcasts, press coverage, and more from every ICT Award edition.

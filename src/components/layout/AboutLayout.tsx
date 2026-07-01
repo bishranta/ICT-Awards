@@ -37,7 +37,7 @@ export default function AboutLayout() {
       </div>
 
       <div className="container-max">
-        <div className="flex gap-10 py-10 lg:py-16">
+        <div className="flex gap-10 py-16 lg:py-24">
           {/* Desktop sidebar */}
           <aside className="hidden md:block w-52 flex-shrink-0">
             <nav className="sticky top-24 space-y-1">
