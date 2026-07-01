@@ -57,6 +57,10 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'modal-in': {
+          '0%': { opacity: '0', transform: 'translateY(8px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         // Pulsing rings on highlighted timeline nodes (decoded from the reference site).
         ripple: {
           '0%': { opacity: '0.6', transform: 'scale(1)' },
@@ -65,6 +69,7 @@ const config: Config = {
       },
       animation: {
         'fade-up': 'fade-up 0.6s ease-out forwards',
+        'modal-in': 'modal-in 0.15s ease-out forwards',
         ripple: 'ripple 2s ease-out infinite',
       },
     },

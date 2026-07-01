@@ -41,7 +41,7 @@ export default function FaqPage() {
       <SectionHeading
         title="Frequently Asked Questions"
         subtitle="Everything you need to know about applying for the ICT Award 2026."
-        className="mb-10"
+        className="mb-8"
       />
       <FAQAccordion />
       <div className="mt-10 text-center">

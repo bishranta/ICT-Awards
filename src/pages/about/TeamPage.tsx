@@ -8,7 +8,7 @@ export default function TeamPage() {
       <SectionHeading
         title="Our Team"
         subtitle="The dedicated professionals behind the ICT Award."
-        className="mb-10"
+        className="mb-8"
       />
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {TEAM.map(member => (

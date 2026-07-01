@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Image as ImageIcon, ArrowRight, CaretLeft, CaretRight } from '@phosphor-icons/react'
 import { EDITIONS } from '@/data/editions'
@@ -6,7 +6,24 @@ import SectionHeading from '@/components/ui/SectionHeading'
 
 const YEARS = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 const LOGO_MAP = Object.fromEntries(EDITIONS.map(e => [e.year, e.logo]))
-const VISIBLE = 4
+
+// Cards visible at once, matching the sm/lg breakpoints used elsewhere on the site.
+function useVisibleCount() {
+  const [visible, setVisible] = useState(1)
+  useEffect(() => {
+    const sm = window.matchMedia('(min-width: 640px)')
+    const lg = window.matchMedia('(min-width: 1024px)')
+    const update = () => setVisible(lg.matches ? 4 : sm.matches ? 2 : 1)
+    update()
+    sm.addEventListener('change', update)
+    lg.addEventListener('change', update)
+    return () => {
+      sm.removeEventListener('change', update)
+      lg.removeEventListener('change', update)
+    }
+  }, [])
+  return visible
+}
 
 function GlimpseCard({ year }: { year: number }) {
   const [err, setErr] = useState(false)
@@ -18,7 +35,7 @@ function GlimpseCard({ year }: { year: number }) {
       className="group block bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-gold/30 hover:shadow-gold-sm transition-all"
     >
       {logo && !err ? (
-        <div className="w-full aspect-video bg-white flex items-center justify-center p-3">
+        <div className="w-full aspect-video bg-white flex items-center justify-center p-6">
           <img
             src={logo}
             alt={`ICT Award ${year}`}
@@ -37,13 +54,19 @@ function GlimpseCard({ year }: { year: number }) {
 }
 
 export default function GlimpsesSection() {
+  const visible = useVisibleCount()
   const [idx, setIdx] = useState(0)
-  const max = YEARS.length - VISIBLE
+  const max = YEARS.length - visible
+
+  // Clamp the index when the visible count shrinks/grows (e.g. rotating a phone).
+  useEffect(() => {
+    setIdx(i => Math.min(i, max))
+  }, [max])
 
   return (
     <section className="bg-surface-alt section-padding">
       <div className="container-max">
-        <div className="relative mb-8">
+        <div className="relative mb-10">
           <SectionHeading
             title="Glimpses of Past Events"
             subtitle="A decade of celebrations — explore every ICT Award edition."
@@ -57,14 +80,14 @@ export default function GlimpsesSection() {
           </Link>
         </div>
 
-        <div className="relative">
+        <div className="relative px-8 sm:px-0">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${idx * (100 / VISIBLE)}%)` }}
+              style={{ transform: `translateX(-${idx * (100 / visible)}%)` }}
             >
               {YEARS.map(year => (
-                <div key={year} style={{ width: `${100 / VISIBLE}%` }} className="px-2 flex-shrink-0">
+                <div key={year} style={{ width: `${100 / visible}%` }} className="px-2 flex-shrink-0">
                   <GlimpseCard year={year} />
                 </div>
               ))}
@@ -74,7 +97,7 @@ export default function GlimpsesSection() {
           <button
             onClick={() => setIdx(i => Math.max(0, i - 1))}
             disabled={idx === 0}
-            className="absolute -left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface border border-border-subtle shadow-sm flex items-center justify-center text-ink hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="absolute left-0 sm:-left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface border border-border-subtle shadow-sm flex items-center justify-center text-ink hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Previous"
           >
             <CaretLeft size={16} weight="bold" />
@@ -83,7 +106,7 @@ export default function GlimpsesSection() {
           <button
             onClick={() => setIdx(i => Math.min(max, i + 1))}
             disabled={idx === max}
-            className="absolute -right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-surface border border-border-subtle shadow-sm flex items-center justify-center text-ink hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className="absolute right-0 sm:-right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface border border-border-subtle shadow-sm flex items-center justify-center text-ink hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             aria-label="Next"
           >
             <CaretRight size={16} weight="bold" />

@@ -39,7 +39,7 @@ export default function IntroductionPage() {
       <h3 className="text-ink font-bold text-base mb-4">Why the ICT Award Matters</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {SIGNIFICANCE.map((item) => (
-          <div key={item.title} className="bg-surface-alt border border-border-subtle rounded-xl p-5 hover:border-gold/20 transition-colors">
+          <div key={item.title} className="bg-surface-alt border border-border-subtle rounded-xl p-6 hover:border-gold/20 transition-colors">
             <div className="w-9 h-9 rounded-lg bg-gold/10 flex items-center justify-center mb-3">
               <RenderIcon name={item.icon} size={18} />
             </div>

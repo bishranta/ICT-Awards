@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { XIcon, MedalIcon } from '@phosphor-icons/react'
 import { ArrowSquareOutIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
 import type { Winner } from '@/types'
@@ -31,7 +32,7 @@ export default function WinnerModal({ winner, onClose }: WinnerModalProps) {
     }
   }, [onClose])
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={onClose}
@@ -41,7 +42,7 @@ export default function WinnerModal({ winner, onClose }: WinnerModalProps) {
 
       {/* Panel */}
       <div
-        className="relative z-10 bg-surface rounded-2xl shadow-ink w-full max-w-2xl animate-fade-up"
+        className="relative z-10 bg-surface rounded-2xl shadow-ink w-full max-w-2xl animate-modal-in"
         onClick={e => e.stopPropagation()}
       >
         {/* Header: category · year */}
@@ -125,6 +126,7 @@ export default function WinnerModal({ winner, onClose }: WinnerModalProps) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }

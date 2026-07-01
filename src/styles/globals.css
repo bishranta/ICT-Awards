@@ -36,6 +36,11 @@
     @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
   }
 
+  /* Lighter padding for short page-header sections (title + one-line subtitle) — section-padding is too roomy for that little content */
+  .page-header-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 lg:py-16;
+  }
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }
@@ -122,6 +127,8 @@ lite-youtube {
 }
 @media (prefers-reduced-motion: reduce) {
   .animate-glimpse { animation: none; }
+  .animate-fade-up { animation: none; }
+  .animate-modal-in { animation: none; }
 }
 
 /* Signature gradient text — for large/bold display headings only */

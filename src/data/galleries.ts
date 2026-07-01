@@ -90,7 +90,6 @@ export const GALLERIES: Record<number, string[]> = {
   2023: [
     "/Flashbacks/2023/2023 (1).jpg",
     "/Flashbacks/2023/2023 (2).jpg",
-    "/Flashbacks/2023/2023 (2).jpg",
     "/Flashbacks/2023/2023 (3).jpg",
     "/Flashbacks/2023/2023 (5).jpg",
     "/Flashbacks/2023/2023 (6).jpg",

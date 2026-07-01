@@ -1,9 +1,11 @@
 import SectionHeading from '@/components/ui/SectionHeading'
 
 const JOINT_PARTNERS = [
-  { name: 'Living with ICT', abbr: 'LwICT' },
-  { name: 'IFN', abbr: 'IFN' },
+  { name: 'Living with ICT', logo: '/Partner/LWICT.png' },
+  { name: 'IFN', logo: '/Partner/IFN-final-Logo.png' },
 ]
+
+const EVENT_PARTNER = { name: 'Global Spark', logo: '/Partner/Global Spark.png' }
 
 export default function PartnersSection() {
   return (
@@ -17,32 +19,27 @@ export default function PartnersSection() {
         />
 
         {/* Joint initiative */}
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-ink/40 mb-4">Joint Initiative of</p>
-          <div className="flex flex-wrap gap-4">
-            {JOINT_PARTNERS.map(({ name, abbr }) => (
-              // ponytail: logo placeholder until official partner logos are provided
+          <div className="flex flex-wrap justify-center gap-4">
+            {JOINT_PARTNERS.map(({ name, logo }) => (
               <div
-                key={abbr}
-                className="flex items-center gap-3 bg-surface border border-border-subtle rounded-xl px-6 py-4"
+                key={name}
+                className="w-64 h-32 flex items-center justify-center bg-surface border border-border-subtle rounded-xl px-8 py-6"
               >
-                <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-ink font-black text-xs">{abbr.slice(0, 2)}</span>
-                </div>
-                <span className="text-ink font-semibold text-sm">{name}</span>
+                <img src={logo} alt={name} className="max-h-full max-w-full object-contain" />
               </div>
             ))}
           </div>
         </div>
 
         {/* Event management partner */}
-        <div>
+        <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-ink/40 mb-4">Event Management Partner</p>
-          <div className="inline-flex items-center gap-3 bg-surface border border-border-subtle rounded-xl px-6 py-4">
-            <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-              <span className="text-ink font-black text-xs">GS</span>
+          <div className="flex justify-center">
+            <div className="w-64 h-32 flex items-center justify-center bg-surface border border-border-subtle rounded-xl px-8 py-6">
+              <img src={EVENT_PARTNER.logo} alt={EVENT_PARTNER.name} className="max-h-full max-w-full object-contain" />
             </div>
-            <span className="text-ink font-semibold text-sm">Global Spark</span>
           </div>
         </div>
       </div>

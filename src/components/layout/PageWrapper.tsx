@@ -12,6 +12,18 @@ function ScrollToTop() {
   return null
 }
 
+function PageTransition() {
+  const { pathname } = useLocation()
+  // Key by the top-level segment only, so switching tabs within a nested layout
+  // (e.g. /about/introduction -> /about/team) doesn't retrigger the entrance animation.
+  const section = pathname.split('/')[1] ?? ''
+  return (
+    <div key={section} className="animate-fade-up">
+      <Outlet />
+    </div>
+  )
+}
+
 function ScrollToTopButton() {
   const [visible, setVisible] = useState(false)
 
@@ -51,7 +63,7 @@ export default function PageWrapper() {
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">
-        <Outlet />
+        <PageTransition />
       </main>
       <Footer />
       <ScrollToTopButton />

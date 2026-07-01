@@ -8,7 +8,7 @@ export default function CategoriesPage() {
   return (
     <div className="pt-20">
       {/* Page Header */}
-      <section className="bg-surface section-padding text-center">
+      <section className="bg-surface page-header-padding text-center">
         <div className="container-max">
           <div className="w-12 h-1 bg-spectrum-gradient rounded-full mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-black text-ink">
