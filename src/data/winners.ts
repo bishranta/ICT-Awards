@@ -395,7 +395,7 @@ export const WINNERS: Winner[] = [
   {
     year: 2021, categoryId: 'public-choice', categoryName: 'Public Choice ICT Award',
     winnerName: 'BugV',
-    photo: '',
+    photo: '/Winners/2021/bugv.png',
     profile: 'A community-favourite cybersecurity platform enabling ethical hackers and businesses to collaborate on vulnerability discovery and responsible disclosure in Nepal.',
     website: '',
     linkedin: '',
